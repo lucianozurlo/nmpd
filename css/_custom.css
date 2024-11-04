@@ -1,0 +1,45 @@
+.fusion .next-project-wrap,
+.ccexquisite .next-project-wrap,
+.wellted .next-project-wrap {
+    background-color: #131316;
+}
+
+.iqperfetto .next-project-wrap,
+.skinpro .next-project-wrap,
+.kali .next-project-wrap,
+.pilltrack .next-project-wrap {
+    background-color: #e6e6e6;
+}
+
+.fusion #project-nav .next-hero-title.primary-font-title span,
+.fusion #project-nav .next-hero-subtitle span,
+.iqperfetto #project-nav .next-hero-title.primary-font-title span,
+.iqperfetto #project-nav .next-hero-subtitle span,
+.skinpro #project-nav .next-hero-title.primary-font-title span,
+.skinpro #project-nav .next-hero-subtitle span,
+.ccexquisite #project-nav .next-hero-title.primary-font-title span,
+.ccexquisite #project-nav .next-hero-subtitle span {
+    color: #131316;
+}
+
+.kali #project-nav .next-hero-title.primary-font-title span,
+.kali #project-nav .next-hero-subtitle span,
+.pilltrack #project-nav .next-hero-title.primary-font-title span,
+.pilltrack #project-nav .next-hero-subtitle span,
+.wellted #project-nav .next-hero-title.primary-font-title span,
+.wellted #project-nav .next-hero-subtitle span {
+    color: #e6e6e6;
+}
+
+.fusion .next-hero-progress span,
+.iqperfetto .next-hero-progress span,
+.skinpro .next-hero-progress span,
+.ccexquisite .next-hero-progress span {
+    background-color: #e6e6e6;
+}
+
+.kali .next-hero-progress span,
+.pilltrack .next-hero-progress span,
+.wellted .next-hero-progress span {
+    background-color: #131316;
+}

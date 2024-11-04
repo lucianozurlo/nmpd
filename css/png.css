@@ -1,0 +1,19 @@
+.scroll-bound {
+    height: 350vh;
+}
+
+.scroll-bound .image-sequence {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: calc(100vh - 100px);
+    padding-top: 100px;
+}
+
+.image-sequence img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
