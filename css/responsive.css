@@ -742,7 +742,10 @@
    .content-full-width {
       padding: 0;
    }
-
+   .wrapper-videos video {
+      width: 100%;
+      max-width: unset;
+   }
    .video-scroll {
       max-width: 90%;
       margin: 0 5% !important;
