@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Alpha video test</title>
+      <style>
+         body {
+            background-color: #9c1;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+         }
+
+         video {
+            max-width: 60vw;
+            max-height: 60vh;
+         }
+      </style>
+   </head>
+   <body>
+      <video id="alphaVideo" muted playsinline autoplay loop>
+         <source src="clip-alpha-q.mov" type='video/quicktime; codecs="hvc1"' />
+         <source src="clip-alpha.webm" type='video/webm; codecs="vp9"' />
+      </video>
+
+      <script>
+         // iOS a veces no respeta autoplay sin interacción, forzamos manualmente
+         window.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('alphaVideo');
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+               playPromise
+                  .then(() => {
+                     // OK
+                  })
+                  .catch((error) => {
+                     // iOS bloqueó, podría requerir user interaction (raro si muted)
+                     console.warn('Autoplay bloqueado:', error);
+                  });
+            }
+         });
+      </script>
+   </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .content {
+            padding: 50px;
+            width: 100vw;
+            height: 100vh;
+            max-width: 100vw;
+            max-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #131316;
+        }
+
+        .animation-wrapper {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+        }
+
+        .animation-wrapper {
+            position: relative;
+            display: inline-block;
+            max-height: calc(100vh - 100px);
+            max-width: calc(100vw - 100px);
+            border-radius: 20px;
+        }
+
+        .frame {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animation-wrapper" id="fusion-loop-massage">
+        <img class="frame" src="" alt="fusion-loop-massage">
+    </div>
+
+    <script>
+
+        // Configuración de las secuencias
+        const sequences = [
+            {
+                id: "fusion-loop-massage",
+                baseName: "fusion-loop-massage",
+                totalFrames: 3,
+                frameRate: 30,
+            }
+        ];
+
+        function getFrameSrc(baseName, frame) {
+            return `projects/_vid4k/${baseName}${String(frame).padStart(2, "0")}.png`;
+        }
+
+        sequences.forEach(({id, baseName, totalFrames, frameRate}) => {
+            const container = document.getElementById(id);
+            const frameElement = container.querySelector('.frame');
+            let currentFrame = 1;
+
+            const images = [];
+            let loadedCount = 0;
+
+            for (let i = 1; i <= totalFrames; i++) {
+                const img = new Image();
+                img.src = getFrameSrc(baseName, i);
+                img.onload = () => {
+                    loadedCount++;
+                    if (loadedCount === totalFrames) {
+                        // Todas las imágenes precargadas
+                        // Establecer el primer frame antes de iniciar el intervalo
+                        frameElement.src = getFrameSrc(baseName, 1);
+                        frameElement.style.display = 'block';
+
+                        setInterval(() => {
+                            currentFrame = currentFrame < totalFrames ? currentFrame + 1 : 1;
+                            frameElement.src = getFrameSrc(baseName, currentFrame);
+                        }, 1000 / frameRate);
+                    }
+                };
+                img.onerror = () => console.error(`Error al cargar: ${img.src}`);
+                images.push(img);
+            }
+        });
+    </script>
+</body>
+
+</html>

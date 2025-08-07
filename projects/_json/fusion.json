@@ -1,0 +1,6 @@
+{
+    "intro": ["iqperfetto-intro.png","iqperfetto-intro-alpha.png","fusion-intro.png", "fusion-intro-alpha.png"],
+    "seq": [
+        { "prefix": "fusion-loop-massage", "start": 1, "end": 3 }
+      ]
+}

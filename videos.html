@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <style>
+         body {
+            margin: 0;
+         }
+
+         .content-videos {
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            max-width: 100vw;
+            max-height: 100vh;
+            background-color: #131316;
+         }
+
+         .content-videos.lightBg {
+            background-color: #eaeaea;
+         }
+
+         .content-videos.lightBg.ios {
+            background-color: #e6e6e6;
+         }
+
+         .content-videos.lightBg.safari {
+            background-color: #eaeaea;
+         }
+
+         .wrapper-videos {
+            position: relative;
+            display: inline-block;
+            height: fit-content;
+            width: fit-content;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+
+         .wrapper-videos::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+               linear-gradient(to right, #131316, #13131600) 0 0 / 2% 100%,
+               linear-gradient(to left, #131316, #13131600) 100% 0 / 2% 100%,
+               linear-gradient(to bottom, #131316, #13131600) 0 0 / 100% 3%,
+               linear-gradient(to top, #131316, #13131600) 0 100% / 100% 3%;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            z-index: 2;
+            border-radius: 20px;
+         }
+
+         .lightBg .wrapper-videos::before {
+            background:
+               linear-gradient(to right, #eaeaea, #eaeaea00) 0 0 / 7% 100%,
+               linear-gradient(to left, #eaeaea, #eaeaea00) 100% 0 / 7% 100%,
+               linear-gradient(to bottom, #eaeaea, #eaeaea00) 0 0 / 100% 5%,
+               linear-gradient(to top, #eaeaea, #eaeaea00) 0 100% / 100% 5%;
+            background-repeat: no-repeat;
+         }
+
+         .lightBg.ios .wrapper-videos::before {
+            background:
+               linear-gradient(to right, #e6e6e6, #e6e6e600) 0 0 / 7% 100%,
+               linear-gradient(to left, #e6e6e6, #e6e6e600) 100% 0 / 7% 100%,
+               linear-gradient(to bottom, #e6e6e6, #e6e6e600) 0 0 / 100% 5%,
+               linear-gradient(to top, #e6e6e6, #e6e6e600) 0 100% / 100% 5%;
+            background-repeat: no-repeat;
+         }
+
+         .lightBg.safari .wrapper-videos::before {
+            background:
+               linear-gradient(to right, #eaeaea, #eaeaea00) 0 0 / 7% 100%,
+               linear-gradient(to left, #eaeaea, #eaeaea00) 100% 0 / 7% 100%,
+               linear-gradient(to bottom, #eaeaea, #eaeaea00) 0 0 / 100% 5%,
+               linear-gradient(to top, #eaeaea, #eaeaea00) 0 100% / 100% 5%;
+            background-repeat: no-repeat;
+         }
+
+         #wellted-selfcleaning.wrapper-videos::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+               linear-gradient(to right, #131316, #13131600) 0 0 / 2% 100%,
+               linear-gradient(to left, #131316, #13131600) 100% 0 / 2% 100%,
+               linear-gradient(to bottom, #131316, #13131600) 0 0 / 100% 4.5%,
+               linear-gradient(to top, #131316, #13131600) 0 100% / 100% 4.5%;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            z-index: 2;
+            border-radius: 20px;
+         }
+
+         .wrapper-videos video {
+            border-radius: 20px;
+            display: block;
+            position: relative;
+            z-index: 1;
+            max-height: 100vh;
+            max-width: 100vw;
+            /* clip-path: inset(10px 15px 20px 5px); */
+            clip-path: inset(1px);
+         }
+
+         .frame-seq {
+            max-height: 100vh;
+            max-width: 100vw;
+            object-fit: contain;
+         }
+      </style>
+   </head>
+
+   <body>
+      <div class="content-videos">
+         <div class="wrapper-videos">
+            <video autoplay muted loop playsinline>
+               <source src="projects/_vid/ccexquisite-loop-color.mp4" type="video/mp4" />
+            </video>
+         </div>
+      </div>
+      <div class="content-videos">
+         <div class="wrapper-videos" id="fusion-loop-massage">
+            <img class="frame-seq" src="" alt="fusion-loop-massage" />
+         </div>
+      </div>
+      <div class="content-videos lightBg">
+         <div class="wrapper-videos">
+            <video autoplay muted loop playsinline preload="true">
+               <source src="projects/_vid/skinpro-loop-accesories.mp4" type="video/mp4" />
+            </video>
+         </div>
+      </div>
+      <div class="content-videos">
+         <div id="wellted-selfcleaning" class="wrapper-videos">
+            <video class="video-scroll" autoplay loop muted preload playsinline>
+               <source src="projects/_vid/wellted-scroll-selfcleaning.mp4" type="video/mp4" />
+            </video>
+         </div>
+      </div>
+      <div class="content-videos">
+         <div class="wrapper-videos">
+            <video class="video-scroll" autoplay loop muted preload playsinline>
+               <source src="projects/_vid/wellted-loop-360.mp4" type="video/mp4" />
+            </video>
+         </div>
+      </div>
+      <div class="content-videos">
+         <div class="wrapper-videos">
+            <video class="video-scroll" autoplay loop muted preload playsinline>
+               <source src="projects/_vid/wellted-loop-color.mp4" type="video/mp4" />
+            </video>
+         </div>
+      </div>
+
+      <script>
+         const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+         // Detección iOS
+         const esIOS = /iPhone|iPad|iPod/.test(userAgent);
+
+         // Detección Safari (excluyendo Chrome/Chromium/Firefox)
+         // Comprobamos que contenga "Safari" y no "Chrome", "CriOS" (Chrome iOS) o "Firefox"
+         const esSafari =
+            userAgent.includes('Safari') &&
+            !userAgent.includes('Chrome') &&
+            !userAgent.includes('CriOS') &&
+            !userAgent.includes('FxiOS') && // Firefox iOS
+            !userAgent.includes('Edg'); // Edge (por si acaso)
+
+         const lightVideos = document.querySelectorAll('.lightBg');
+
+         // Aplica el estilo a cada elemento según el resultado
+         lightVideos.forEach((div) => {
+            if (esIOS) {
+               div.classList.add('ios');
+            } else if (esSafari) {
+               div.classList.add('safari');
+            }
+         });
+      </script>
+
+      <script>
+         // Configuración de las secuencias
+         const sequences = [
+            {
+               id: 'fusion-loop-massage',
+               baseName: 'fusion-loop-massage',
+               totalFrames: 3,
+               frameRate: 30,
+            },
+         ];
+
+         function getFrameSrc(baseName, frame) {
+            return `projects/_seq/${baseName}${String(frame).padStart(2, '0')}.png`;
+         }
+
+         sequences.forEach(({ id, baseName, totalFrames, frameRate }) => {
+            const container = document.getElementById(id);
+            const frameElement = container.querySelector('.frame-seq');
+            let currentFrame = 1;
+
+            const images = [];
+            let loadedCount = 0;
+
+            for (let i = 1; i <= totalFrames; i++) {
+               const img = new Image();
+               img.src = getFrameSrc(baseName, i);
+               img.onload = () => {
+                  loadedCount++;
+                  if (loadedCount === totalFrames) {
+                     // Todas las imágenes precargadas
+                     // Establecer el primer frame antes de iniciar el intervalo
+                     frameElement.src = getFrameSrc(baseName, 1);
+                     frameElement.style.display = 'block';
+
+                     setInterval(() => {
+                        currentFrame = currentFrame < totalFrames ? currentFrame + 1 : 1;
+                        frameElement.src = getFrameSrc(baseName, currentFrame);
+                     }, 1000 / frameRate);
+                  }
+               };
+               img.onerror = () => console.error(`Error al cargar: ${img.src}`);
+               images.push(img);
+            }
+         });
+      </script>
+   </body>
+</html>

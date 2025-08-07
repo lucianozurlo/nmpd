@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+      <title>Autoplay en iOS (muted + inline)</title>
+
+      <!-- Hace que el sitio se abra como web-app desde la pantalla de inicio -->
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+
+      <style>
+         html,
+         body {
+            margin: 0;
+            height: 100%;
+            background: #f42;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+         video {
+            width: 100%;
+            height: auto;
+         }
+         #unmute {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            padding: 0.6rem 1rem;
+            border: 0;
+            border-radius: 0.5rem;
+            background: rgba(255, 255, 255, 0.85);
+            font-size: 1rem;
+            cursor: pointer;
+         }
+      </style>
+   </head>
+   <body>
+      <!-- NOTA: webkit-playsinline es fundamental en modelos viejos -->
+      <video
+         id="v"
+         autoplay
+         muted
+         loop
+         playsinline
+         webkit-playsinline
+         preload="auto"
+         poster="poster.jpg"
+      >
+         <!-- opcional -->
+         <source src="sample.mp4" type="video/mp4" />
+         Tu navegador no soporta videos en HTML5.
+      </video>
+
+      <button id="unmute">🔊 Sonido</button>
+
+      <script>
+         const v = document.getElementById('v');
+         const unmute = document.getElementById('unmute');
+
+         /* ——— INTENTO 1: forzar autoplay apenas pueda ——— */
+         function tryPlay() {
+            v.muted = true; // refuerza el atributo
+            const p = v.play();
+            if (p) {
+               p.catch(() => {
+                  /* silencioso */
+               });
+            }
+         }
+         // Apenas carga el DOM lo intentamos
+         document.addEventListener('DOMContentLoaded', tryPlay, { once: true });
+         // Si el video declara “canplay”, volvemos a intentar por si se había bloqueado
+         v.addEventListener('canplay', tryPlay, { once: true });
+
+         /* ——— Plan B: si el usuario toca en cualquier parte, re-lanza el play ——— */
+         document.body.addEventListener('touchstart', tryPlay, { once: true, passive: true });
+
+         /* ——— Botón para sacar el mute una vez que hubo interacción ——— */
+         unmute.addEventListener('click', () => {
+            v.muted = false;
+            v.play();
+            unmute.remove();
+         });
+      </script>
+   </body>
+</html>

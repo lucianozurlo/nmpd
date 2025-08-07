@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Alpha Video Test</title>
+      <style>
+         body {
+            background: #9c1;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+         video {
+            max-width: 60vw;
+            max-height: 60vh;
+         }
+      </style>
+   </head>
+   <body>
+      <video
+         id="alphaVideo"
+         muted
+         playsinline
+         webkit-playsinline
+         autoplay
+         loop
+         preload="auto"
+         disableRemotePlayback
+      >
+         <!-- Safari / iOS -->
+         <source src="clip-alpha.mov" type='video/quicktime; codecs="hvc1"' />
+         <!-- Chrome / Firefox / Android -->
+         <source src="clip-alpha.webm" type='video/webm; codecs="vp9"' />
+      </video>
+
+      <script>
+         (function () {
+            const vid = document.getElementById('alphaVideo');
+
+            // Refuerza los atributos por script
+            Object.assign(vid, {
+               muted: true,
+               defaultMuted: true,
+               playsInline: true,
+            });
+            vid.setAttribute('playsinline', '');
+            vid.setAttribute('webkit-playsinline', '');
+
+            const attemptPlay = () => {
+               const p = vid.play();
+               if (p) {
+                  p.catch(() => {
+                     // Si aún así lo bloquea, la 1.ª interacción libera el autoplay
+                     const unlock = () => {
+                        vid.play();
+                        window.removeEventListener('touchstart', unlock, true);
+                     };
+                     window.addEventListener('touchstart', unlock, {
+                        once: true,
+                        passive: true,
+                        capture: true,
+                     });
+                  });
+               }
+            };
+
+            if (document.readyState !== 'loading') attemptPlay();
+            else document.addEventListener('DOMContentLoaded', attemptPlay);
+         })();
+      </script>
+   </body>
+</html>
