@@ -138,11 +138,10 @@
    }
 
    .fullscreen-menu .flexnav li ul li a {
-      text-align: left;
-      font-size: calc(2.5vw) !important;
-      line-height: calc(3.15vw) !important;
+      text-align: center;
+      font-size: calc(6vw) !important;
+      line-height: calc(12vw) !important;
    }
-
    .fullscreen-menu .flexnav li ul {
       list-style-type: none;
    }
@@ -287,7 +286,7 @@
 
    .fullscreen-menu .flexnav li ul.submenu {
       margin-left: unset;
-      margin-top: unset;
+      margin-top: 1rem;
    }
 
    .flexnav.opacity {
