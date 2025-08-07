@@ -259,6 +259,7 @@
       font-size: calc(2rem + 2vw);
       line-height: calc(2rem + 2.5vw);
       margin-left: 10px;
+      margin-top: -200px;
    }
 
    .percentage-wrapper {
