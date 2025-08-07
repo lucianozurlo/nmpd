@@ -505,7 +505,7 @@
       }
    }
 
-   #hero-caption .inner {
+   body.projects #hero-caption .inner {
       display: none !important;
    }
    #hero-description {
