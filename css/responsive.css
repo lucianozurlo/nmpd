@@ -271,6 +271,10 @@
       line-height: calc(2rem + 2.5vw);
    }
 
+   #main.home #hero-caption .hero-title {
+      height: calc(100vh - 74px);
+   }
+
    /* #lang {
         justify-content: flex-start;
     } */
