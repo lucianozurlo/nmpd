@@ -167,7 +167,8 @@
    bottom: calc(-100vh - 1px);
    display: flex;
    justify-content: center;
-   height: 100vh !important;
+   /* height: 100vh !important; */
+   height: calc(100vh - 120px) !important;
    position: relative;
    bottom: unset !important;
 }
