@@ -772,18 +772,28 @@
                   entries.forEach((entry) => {
                      const video = entry.target;
 
-                     if (entry.intersectionRatio === 0) {
-                        /* Completamente fuera de pantalla → pausa + reinicio */
-                        video.pause();
-                        video.currentTime = 0;
-                     } else if (entry.isIntersecting) {
-                        /* Al menos un píxel visible → reproduce desde donde esté (normalmente 0) */
+                     if (entry.isIntersecting) {
+                        /* Hay al menos un píxel visible → asegura play */
                         video.play().catch(() => {});
+                     } else {
+                        /* Podría ser “casi fuera” o 100 % fuera.
+           Confirmamos que realmente esté COMPLETAMENTE fuera
+           usando la posición del rect. */
+                        const rect = entry.boundingClientRect;
+                        const outOfView =
+                           rect.bottom <= 0 || // salió por arriba
+                           rect.top >= window.innerHeight; // salió por abajo
+
+                        if (outOfView) {
+                           video.pause();
+                           video.currentTime = 0; // reinicia SOLO acá
+                        }
                      }
                   });
                },
                {
-                  threshold: [0, 1], // 0 para detectar "fuera", 0.6 para “bien visible” (opcional)
+                  threshold: 0, // notifica al cruzar dentro/fuera
+                  rootMargin: '0px', // sin márgenes extra
                }
             );
 
