@@ -9,7 +9,7 @@
    "wide": "wide",
    "height": "height",
    "Buy me - Title": "Buy me!",
-   "Buy me - Text 1": "We don't make any revenue for this.",
+   "Buy me - Text 1": "We don't make any revenue from this.",
    "Buy me - Text 2": "We just like to be kind with our clients!",
    "Buy me - Button": "Buy now!",
    "Discover more - Title": "Discover more!",
@@ -113,5 +113,6 @@
    "Wellted - Details 1": "Brushing direction arrow",
    "Wellted - Details 2": "Debossed logo",
    "Wellted - Details 3": "Cap",
-   "Wellted - Details 4": "Hanging hole"
+   "Wellted - Details 4": "Hanging hole",
+   "Other Projects": "Other Projects"
 }

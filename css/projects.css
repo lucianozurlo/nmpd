@@ -30,6 +30,7 @@
    justify-content: center;
    cursor: -webkit-grab;
    cursor: grab;
+   min-height: 440px;
 }
 
 .slide-content {
@@ -98,7 +99,7 @@
    font-weight: 500;
    font-size: calc(1.2rem + 0.8vw);
    letter-spacing: -0.1rem;
-   margin-top: 11px;
+   margin-top: 16px;
    text-align: center;
    line-height: 1;
    height: 70px;
@@ -219,12 +220,13 @@
    padding: 0;
 }
 
-.next-project-wrap p.left {
+.next-project-wrap p {
    left: 0;
-   text-align: left;
+   text-align: center;
+   width: 100%;
    opacity: 1;
    font-weight: 700;
-   font-size: calc(1rem + 1.1vw);
+   font-size: calc(1rem + 1.5vw);
    letter-spacing: -0.1rem;
    margin-top: 11px;
    line-height: 1;

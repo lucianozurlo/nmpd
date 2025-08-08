@@ -9,7 +9,7 @@
    "wide": "ancho",
    "height": "altura",
    "Buy me - Title": "¡Comprame!",
-   "Buy me - Text 1": "No obtenemos ningún ingreso por esto.",
+   "Buy me - Text 1": "No obtenemos ningún ingreso de esto.",
    "Buy me - Text 2": "¡Simplemente nos gusta ser amables con nuestros clientes!",
    "Buy me - Button": "¡Compralo ahora!",
    "Discover more - Title": "¡Descubre más!",
@@ -113,5 +113,6 @@
    "Wellted - Details 1": "Flecha de dirección del cepillado",
    "Wellted - Details 2": "Logotipo grabado en relieve",
    "Wellted - Details 3": "Tapa",
-   "Wellted - Details 4": "Agujero para colgar"
+   "Wellted - Details 4": "Agujero para colgar",
+   "Other Projects": "Otros proyectos"
 }
