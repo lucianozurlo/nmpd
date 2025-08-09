@@ -499,6 +499,16 @@ i.arrow-icon-down.white {
    font-size: 22px;
 }
 
+#aboutus.main-page .hero-subtitle > span:first-child {
+   font-size: 42px;
+   line-height: 1;
+   margin-bottom: 58px;
+}
+
+#aboutus.main-page .hero-subtitle > span {
+   margin-bottom: 12px;
+}
+
 #aboutus .caption-timeline.text {
    margin: 0;
 }
