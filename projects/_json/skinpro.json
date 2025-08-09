@@ -1,4 +1,12 @@
 {
-  "intro": ["pilltrack-intro.png", "pilltrack-intro-alpha.png", "skinpro-intro.png", "skinpro-intro-alpha.png"],
-  "vid": ["skinpro-loop-accesories.mp4"]
+   "intro": [
+      "skinpro-intro-alpha.png",
+      "skinpro-colors.png",
+      "skinpro-views1a.png",
+      "skinpro-views1b.png",
+      "skinpro-views2a.png",
+      "skinpro-views2b.png"
+   ],
+
+   "vid": ["skinpro-loop-accesories.mov", "skinpro-loop-accesories.webm"]
 }

@@ -1,6 +1,15 @@
 {
-    "intro": ["iqperfetto-intro.png","iqperfetto-intro-alpha.png","fusion-intro.png", "fusion-intro-alpha.png"],
-    "seq": [
-        { "prefix": "fusion-loop-massage", "start": 1, "end": 3 }
-      ]
+   "intro": [
+      "fusion-intro-alpha.png",
+      "fusion-screen1.png",
+      "fusion-screen2.png",
+      "fusion-screen3.png",
+      "fusion-screen4.png",
+      "fusion-screen.png",
+      "fusion-views_top.png",
+      "fusion-views_side.png",
+      "fusion-views_angle.png"
+   ],
+
+   "seq": [{ "prefix": "fusion-loop-massage", "start": 1, "end": 3 }]
 }

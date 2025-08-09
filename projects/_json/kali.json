@@ -1,6 +1,10 @@
 {
-  "intro": ["wellted-intro.png", "wellted-intro-alpha.png", "kali-intro.png", "kali-intro-alpha.png"],
-  "seq": [
-    { "prefix": "kali-scroll-open", "start": 0, "end": 34 }
-  ]
+   "intro": [
+      "kali-intro-alpha.png",
+      "kali-views1.png",
+      "kali-views2.png",
+      "kali-views3.png",
+      "kali-views4.png"
+   ],
+   "seq": [{ "prefix": "kali-scroll-open", "start": 0, "end": 34 }]
 }

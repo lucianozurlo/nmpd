@@ -1,3 +1,10 @@
 {
-  "intro": ["skinpro-intro.png", "skinpro-intro-alpha.png", "iqperfetto-intro.png", "iqperfetto-intro-alpha.png"]
+   "intro": [
+      "iqperfetto-intro-alpha.png",
+      "iqperfetto-views.png",
+      "iqperfetto-spots.png",
+      "iqperfetto-details1.png",
+      "iqperfetto-details2.png",
+      "iqperfetto-details3.png"
+   ]
 }

@@ -1,3 +1,8 @@
 {
-  "intro": ["ccexquisite-intro.png", "ccexquisite-intro-alpha.png", "pilltrack-intro.png", "pilltrack-intro-alpha.png"]
+   "intro": [
+      "pilltrack-intro-alpha.png",
+      "pilltrack-led-indicator.png",
+      "pilltrack-uses.png",
+      "pilltrack-views.png"
+   ]
 }
