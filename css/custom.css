@@ -1293,10 +1293,12 @@ video {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  padding-left: 40px;
-  width: -webkit-fit-content;
+  /* padding-left: 40px; */
+  padding-left: 0;
+  /* width: -webkit-fit-content;
   width: -moz-fit-content;
-  width: fit-content;
+  width: fit-content; */
+  width: 100%;
   row-gap: 30px;
   -moz-column-gap: 70px;
   column-gap: 70px;
