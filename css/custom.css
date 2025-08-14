@@ -893,8 +893,10 @@ a:hover.project img {
   position: sticky;
   top: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  /* align-items: flex-end; */
+  align-items: center;
   height: calc(80vh - 100px);
   max-height: calc(80vh - 100px);
   padding-top: calc(20vh - 25px);
@@ -2384,7 +2386,7 @@ transform: translate(10%, -25%)
 }
 
 .ccexquisite-exploded-t {
-  margin-top: 110px;
+  margin-top: -100px;
 }
 
 /* ccexquisite end */
