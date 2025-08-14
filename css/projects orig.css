@@ -16,6 +16,7 @@
 /* Track: recorte lateral grande solo en desktop */
 .splide__track {
   width: calc(100% - 160px);
+  height: 100vh;
   margin: 3vh auto 0;
 }
 
@@ -161,10 +162,6 @@
   display: none;
 }
 
-.project {
-  position: relative !important;
-}
-
 /* Bloques auxiliares que ya tenías */
 #project-nav {
   height: calc(100vh + 1px);
@@ -172,15 +169,9 @@
   display: flex;
   justify-content: center;
   /* height: 100vh !important; */
-  height: calc(100vh - 120px) !important;
-  min-height: calc(100vh - 120px) !important;
-  min-height: -webkit-fit-content !important;
-  min-height: -moz-fit-content !important;
-  min-height: fit-content !important;
-  position: relative !important;
+  max-height: calc(100vh - 120px) !important;
+  position: relative;
   bottom: unset !important;
-  /* background-color: red !important; */
-  overflow: auto;
 }
 
 .next-project-image {
@@ -188,8 +179,7 @@
 }
 
 .next-project-image-wrapper {
-  position: relative;
-  height: 100% !important;
+  height: 100vh;
 }
 
 .next-project-header {
@@ -199,28 +189,6 @@
   justify-content: space-between;
   position: relative !important;
   padding-top: 18vh;
-  /* background-color: green !important; */
-}
-
-.next-project-image-bg {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: unset;
-  min-height: -webkit-fit-content;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
-}
-
-#page-content.black .next-project-image-wrapper {
-  /* background-color: blue !important; */
-  /* max-height: -webkit-fit-content !important;
-  max-height: -moz-fit-content !important;
-  max-height: fit-content !important; */
-  min-height: -webkit-fit-content !important;
-  min-height: -moz-fit-content !important;
-  min-height: fit-content !important;
-  max-height: calc(100vh - 18vh - 44px - 120px);
 }
 
 .pin-spacer {
@@ -229,19 +197,10 @@
 
 .next-project-wrap {
   display: flex;
+  justify-content: center;
   position: relative !important;
   height: 100% !important;
   max-height: unset !important;
-  /* background-color: yellow !important; */
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  /* max-height: -webkit-fit-content !important;
-  max-height: -moz-fit-content !important;
-  max-height: fit-content !important; */
-  min-height: -webkit-fit-content !important;
-  min-height: -moz-fit-content !important;
-  min-height: fit-content !important;
 }
 
 .all-works {
@@ -255,11 +214,13 @@
 
 .next-project-wrap p {
   width: unset;
-  height: 44px !important;
-  /* left: unset; */
+  height: 32px !important;
+  left: unset;
   right: unset;
   padding: 0;
+}
 
+.next-project-wrap p {
   left: 0;
   text-align: center;
   width: 100%;
@@ -267,10 +228,8 @@
   font-weight: 700;
   font-size: calc(1rem + 1.5vw);
   letter-spacing: -0.1rem;
-  /* margin-top: 11px; */
+  margin-top: 11px;
   line-height: 1;
-
-  /* background-color: orange; */
 }
 
 .next-project-wrap p.right {

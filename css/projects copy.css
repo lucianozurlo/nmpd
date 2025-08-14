@@ -16,6 +16,7 @@
 /* Track: recorte lateral grande solo en desktop */
 .splide__track {
   width: calc(100% - 160px);
+  height: 100vh;
   margin: 3vh auto 0;
 }
 
@@ -172,14 +173,10 @@
   display: flex;
   justify-content: center;
   /* height: 100vh !important; */
-  height: calc(100vh - 120px) !important;
-  min-height: calc(100vh - 120px) !important;
-  min-height: -webkit-fit-content !important;
-  min-height: -moz-fit-content !important;
-  min-height: fit-content !important;
+  max-height: calc(100vh - 120px) !important;
   position: relative !important;
   bottom: unset !important;
-  /* background-color: red !important; */
+  background-color: red !important;
   overflow: auto;
 }
 
@@ -188,8 +185,8 @@
 }
 
 .next-project-image-wrapper {
+  min-height: 100vh;
   position: relative;
-  height: 100% !important;
 }
 
 .next-project-header {
@@ -199,28 +196,19 @@
   justify-content: space-between;
   position: relative !important;
   padding-top: 18vh;
-  /* background-color: green !important; */
+  background-color: green !important;
 }
 
 .next-project-image-bg {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: unset;
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
+  background-color: aqua !important;
+  position: relative !important;
 }
 
 #page-content.black .next-project-image-wrapper {
-  /* background-color: blue !important; */
-  /* max-height: -webkit-fit-content !important;
-  max-height: -moz-fit-content !important;
-  max-height: fit-content !important; */
-  min-height: -webkit-fit-content !important;
-  min-height: -moz-fit-content !important;
-  min-height: fit-content !important;
-  max-height: calc(100vh - 18vh - 44px - 120px);
+  background-color: blue !important;
 }
 
 .pin-spacer {
@@ -232,16 +220,10 @@
   position: relative !important;
   height: 100% !important;
   max-height: unset !important;
-  /* background-color: yellow !important; */
+  background-color: yellow !important;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  /* max-height: -webkit-fit-content !important;
-  max-height: -moz-fit-content !important;
-  max-height: fit-content !important; */
-  min-height: -webkit-fit-content !important;
-  min-height: -moz-fit-content !important;
-  min-height: fit-content !important;
 }
 
 .all-works {
@@ -255,7 +237,7 @@
 
 .next-project-wrap p {
   width: unset;
-  height: 44px !important;
+  /* height: 32px !important; */
   /* left: unset; */
   right: unset;
   padding: 0;
@@ -270,7 +252,7 @@
   /* margin-top: 11px; */
   line-height: 1;
 
-  /* background-color: orange; */
+  background-color: orange;
 }
 
 .next-project-wrap p.right {
