@@ -1,0 +1,4 @@
+{
+   "intro": ["fusion-intro-alpha.png"],
+   "seq": [{ "prefix": "fusion-loop-massage", "start": 1, "end": 3 }]
+}
