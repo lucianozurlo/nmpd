@@ -460,6 +460,12 @@ header.over-sidebar #lang span {
    transition: opacity 0.3s ease;
 }
 
+#main.home #hero #hero-caption .inner {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
 #main.home #hero .content-max-width {
    padding-left: 3.5vw !important;
    padding-right: 3.5vw !important;
@@ -475,6 +481,9 @@ header.over-sidebar #lang span {
    display: flex !important;
    justify-content: center;
    align-items: center;
+   /* width: 22% !important;
+   min-width: 22% !important;
+   max-width: 22% !important; */
 }
 
 .nmp {
@@ -485,15 +494,45 @@ header.over-sidebar #lang span {
 }
 
 .nmp span {
-   width: 22% !important;
+   /* width: 22% !important;
    min-width: 22% !important;
-   margin: 14px 0;
+   max-width: 22% !important; */
+   height: 16%;
+   max-height: 16%;
+   min-height: 16%;
+
+   margin: 3.5% 0;
    display: flex;
    justify-content: center;
 }
 
 .nmp span:nth-child(n + 3) {
    margin-bottom: 0 !important;
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+   height: 1.15%;
+   max-height: 1.15%;
+   min-height: 1.15%;
+}
+.nmp span:nth-child(3) {
+   height: 1.11%;
+   max-height: 1.11%;
+   min-height: 1.11%;
+}
+.nmp span:nth-child(4) {
+   height: 0.85%;
+   max-height: 0.85%;
+   min-height: 0.85%;
+   margin-top: 5%;
+}
+.nmp span:last-child {
+   height: 100%;
+   max-height: unset;
+   min-height: unset;
+   width: 22% !important;
+   min-width: 22% !important;
+   max-width: 22% !important;
 }
 
 .hero-subtitle {
@@ -504,6 +543,7 @@ header.over-sidebar #lang span {
 .nmp .hero-arrow span {
    width: 100% !important;
    min-width: unset !important;
+   max-width: unset !important;
    border: 2px solid #222;
    transition: 0.2s;
 }
