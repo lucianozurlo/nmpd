@@ -979,6 +979,10 @@ a:hover.project img {
    height: 200vh;
 }
 
+#page-content.ccexquisite .ccexquisite-place .scroll-bound {
+   height: 160vh;
+}
+
 .scroll-bound .image-sequence {
    position: -webkit-sticky;
    position: sticky;

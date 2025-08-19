@@ -288,6 +288,13 @@
       top: 60%;
       left: 81.5%;
    }
+
+   body.contactus .socials li:first-child {
+      margin-left: 0;
+   }
+   body.contactus .socials li:last-child {
+      margin-left: 30px;
+   }
 }
 
 @media (max-width: 767px) {
