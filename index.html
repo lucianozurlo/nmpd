@@ -78,7 +78,7 @@
                                           <li><a href="projects/wellted">Wellted</a></li>
                                        </ul>
                                     </li>
-                                    <!-- <li class="link menu-timeline">
+                                    <li class="link menu-timeline">
                                        <a href="contact">
                                           <div class="before-span">
                                              <span
@@ -89,7 +89,7 @@
                                              </span>
                                           </div>
                                        </a>
-                                    </li> -->
+                                    </li>
                                  </ul>
                               </div>
                            </div>
@@ -369,14 +369,6 @@
                                           Get in touch
                                        </h2>
                                     </div>
-                                    <!-- <div class="next-hero-subtitle caption-timeline text">
-                                       <span
-                                          data-hover="Home - Contact - Desc"
-                                          data-original="Home - Contact - Desc"
-                                          >If you like what we do, write us and share your ideas
-                                          that we will make them posible.</span
-                                       >
-                                    </div> -->
                                     <div class="button-box has-animation" data-delay="100">
                                        <div class="nmp-button-wrap parallax-wrap hide-ball">
                                           <div class="nmp-button parallax-element">
@@ -397,13 +389,18 @@
                                        class="next-hero-subtitle caption-timeline text mail-txt mt-10 mb-50 has-animation"
                                        data-delay="100"
                                     >
-                                       <a
-                                          href="mailto:hello@nmpd.ar"
-                                          class="link-underline"
-                                          target="_blank"
+                                       <a href="#" id="copyButton" class="link">
+                                          <span class="has-mask-fill" id="textToCopy"
+                                             >hello@nmp.com.ar</span
+                                          >
+                                       </a>
+                                       <p
+                                          data-hover="Contact - Info - Copied"
+                                          data-original="Contact - Info - Copied"
+                                          id="confirmationMessage"
                                        >
-                                          hello@nmpd.ar</a
-                                       >
+                                          Email copied
+                                       </p>
                                     </div>
                                     <div
                                        class="next-hero-subtitle caption-timeline text mt-50 mb-0"
@@ -432,7 +429,7 @@
 
                         <div class="footer-middle">
                            <div data-hover="Copyright" data-original="Copyright" class="copyright">
-                              2025 © N.Moreno - Pedraza · All rights reserved.
+                              2025 © Nieto Moreno - Pedraza · All rights reserved.
                            </div>
                         </div>
 
@@ -485,13 +482,6 @@
       </main>
 
       <div class="cd-cover-layer"></div>
-      <!-- <div id="magic-cursor">
-        <div id="ball">
-            <div id="ball-drag-x"></div>
-            <div id="ball-drag-y"></div>
-            <div id="ball-loader"></div>
-        </div>
-    </div> -->
       <div id="clone-image">
          <div class="hero-translate"></div>
       </div>
@@ -511,5 +501,6 @@
       <script src="js/common.js"></script>
       <script src="js/contact.js"></script>
       <script src="js/scripts.js"></script>
+      <script src="js/copy.js"></script>
    </body>
 </html>

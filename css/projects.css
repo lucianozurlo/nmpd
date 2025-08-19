@@ -87,13 +87,13 @@
 
 .splide__slide.is-active .slide-label {
    opacity: 1;
-   font-weight: 500;
-   font-size: calc(1.2rem + 0.8vw);
+   font-weight: 400;
+   font-size: calc(1.2rem + 0.6vw);
    letter-spacing: -0.1rem;
    margin-top: 16px;
    text-align: center;
    line-height: 1;
-   height: 70px;
+   height: 90px;
 }
 
 .splide__arrows {
