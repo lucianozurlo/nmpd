@@ -501,7 +501,7 @@ header.over-sidebar #lang span {
    max-height: 16%;
    min-height: 16%;
 
-   margin: 3.5% 0;
+   margin: 4% 0;
    display: flex;
    justify-content: center;
 }
@@ -1863,7 +1863,7 @@ body.contactus .socials li a {
    font-size: 7vw;
 }
 
-.carousel {
+/* .carousel {
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -1913,7 +1913,7 @@ body.contactus .socials li a {
    opacity: 1;
    transform: scale(1.25);
    padding: 0;
-}
+} */
 
 #page-content.iqperfetto .one_half.vertical-parallax.mb-100 {
    margin-bottom: 100px !important;
