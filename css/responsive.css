@@ -311,7 +311,8 @@
       max-width: 85%;
    }
 
-   #page-content.iqperfetto #main-page-content {
+   #page-content.iqperfetto #main-page-content,
+   #page-content.skinpro #main-page-content {
       overflow: hidden;
    }
 
