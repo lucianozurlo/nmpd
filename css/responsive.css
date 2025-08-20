@@ -333,7 +333,7 @@
       transform: translateY(-0.6vw);
    }
 
-   #page-content.kali .kali-exploded .content-full img {
+   #page-content.kali #main.project-detail .kali-exploded .content-full > img {
       max-height: 50vh !important;
    }
 
