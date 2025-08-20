@@ -509,8 +509,8 @@
          const btn = document.getElementById('scrollBtn');
 
          btn.addEventListener('click', () => {
-            window.scrollBy({
-               top: window.innerHeight - 70, // 80vh
+            window.scrollTo({
+               top: window.innerHeight + 70,
                left: 0,
                behavior: 'smooth',
             });
