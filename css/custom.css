@@ -922,7 +922,8 @@ i.arrow-icon-down.white {
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
-   overflow-x: clip;
+   overflow: hidden;
+   padding-bottom: 5vh;
 }
 
 .project {
@@ -1765,16 +1766,16 @@ body.contactus .scroll-content {
    flex-direction: column;
    justify-content: space-between;
 }
-body.contactus .socials {
+body.contactus .socials.contact-center {
    transform: unset;
 }
-body.contactus .socials li {
+body.contactus .socials.contact-center li {
    margin-left: 30px;
 }
-body.contactus .socials li:last-child {
+body.contactus .socials.contact-center li:last-child {
    margin-left: 0;
 }
-body.contactus .socials li a {
+body.contactus .socials.contact-center li a {
    font-size: 22px;
 }
 
