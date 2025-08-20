@@ -1158,7 +1158,8 @@
    }
 
    #page-content.iqperfetto #main-page-content,
-   #page-content.skinpro #main-page-content {
+   #page-content.skinpro #main-page-content,
+   #page-content.pilltrack #main-page-content {
       overflow: hidden;
    }
 
@@ -1438,6 +1439,7 @@
    .pilltrack-buy-me {
       padding-bottom: 0;
       margin-top: 10%;
+      margin-bottom: 100px;
    }
 
    .pilltrack-buy-me img {
