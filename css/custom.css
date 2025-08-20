@@ -2351,6 +2351,7 @@ body.contactus .socials.contact-center li a {
 
 .kali-colors {
    margin-bottom: 200px;
+   overflow: hidden;
 }
 .kali-colors .one_full {
    padding: 0px !important;
