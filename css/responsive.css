@@ -336,6 +336,10 @@
    #page-content.kali #main.project-detail .kali-exploded .content-full > img {
       max-height: 50vh !important;
    }
+   #page-content.kali .kali-views3 .one_half .content-half {
+      width: 100% !important;
+      max-width: unset !important;
+   }
 
    body.contactus #contact {
       height: calc(100vh - 160px);
