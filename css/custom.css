@@ -2527,7 +2527,9 @@ body.contactus .socials.contact-center li a {
    display: flex;
    flex-direction: row;
 }
-
+#page-content.skinpro .title-accessories {
+   transform: translateY(25%);
+}
 .wellted-details {
    margin-top: 150px !important;
 }
