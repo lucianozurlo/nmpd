@@ -376,6 +376,11 @@ header.over-sidebar #lang span {
    flex-direction: row;
 }
 
+#header-container .flexnav .touch-button {
+   height: 7vw;
+   padding: 10px 0;
+}
+
 #header-container.open .burger-lines #menu-burger span,
 #header-container.open #logo img {
    transition: all 0.3s ease-in-out !important;
@@ -407,6 +412,10 @@ header.over-sidebar #lang span {
 
 #logo a {
    margin-left: 5px;
+}
+
+.fullscreen-menu .flexnav li a {
+   font-size: calc(3rem + 4.5vw);
 }
 
 .fullscreen-menu .flexnav li ul.submenu {
