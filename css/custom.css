@@ -1582,10 +1582,10 @@ video {
 }
 
 .project-info-plus {
-   font-size: 16px;
+   font-size: 18px;
    font-style: italic;
    text-transform: uppercase;
-   font-weight: 400;
+   font-weight: 300;
 }
 
 #main.project-detail .content-full.full-right .project-info-plus,
@@ -2045,8 +2045,13 @@ body.contactus .socials.contact-center li a {
 
 .iqperfetto-det2 .content-full {
    flex-direction: column;
-   transform: scale(1.15) translate(25%, -30%);
    position: absolute;
+   transform: translate(29%, -30%);
+}
+
+.iqperfetto-det2 .content-full img {
+   height: 80vh !important;
+   max-height: 80vh !important;
 }
 
 .iqperfetto-det2 .content-full .project-info-plus {
