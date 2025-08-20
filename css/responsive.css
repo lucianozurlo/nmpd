@@ -336,9 +336,13 @@
    #page-content.kali #main.project-detail .kali-exploded .content-full > img {
       max-height: 50vh !important;
    }
-   #page-content.kali .kali-views3 .one_half .content-half {
-      width: 100% !important;
-      max-width: unset !important;
+   #page-content.kali .kali-views3 .one_half .content-half .project-info-plus {
+      width: -webkit-fit-content !important;
+      width: -moz-fit-content !important;
+      width: fit-content !important;
+      max-width: -webkit-fit-content !important;
+      max-width: -moz-fit-content !important;
+      max-width: fit-content !important;
    }
 
    body.contactus #contact {
