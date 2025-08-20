@@ -542,7 +542,7 @@ header.over-sidebar #lang span {
 }
 
 .hero-subtitle {
-   margin-top: 100px;
+   margin-top: 0;
    letter-spacing: -1px;
 }
 
@@ -584,7 +584,7 @@ i.arrow-icon-down.white {
 }
 
 #aboutus {
-   margin-top: 10rem;
+   margin-top: 5rem;
 }
 
 #aboutus .hero-subtitle span {
