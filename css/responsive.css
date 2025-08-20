@@ -320,6 +320,36 @@
    }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
+   header {
+      height: 74px !important;
+   }
+   .icon-wrap {
+      width: 74px;
+      height: 74px;
+   }
+   #main.home #hero-caption .hero-title {
+      height: calc(100vh - 74px);
+      max-height: calc(100vh - 74px);
+   }
+
+   #page-content.iqperfetto .iqperfetto-spots .spots-container {
+      width: 100%;
+      margin-top: -15%;
+   }
+   #page-content.iqperfetto .iqperfetto-details-t {
+      margin-top: -100px !important;
+      margin-left: 0px !important;
+   }
+   #page-content.iqperfetto .iqperfetto-det1 {
+      margin-top: -50px;
+   }
+
+   body.contactus #contact {
+      height: calc(100vh - 174px);
+   }
+}
+
 @media (max-width: 767px) {
    .trackbar {
       margin-top: -70px;
