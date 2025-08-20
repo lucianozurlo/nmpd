@@ -328,8 +328,8 @@
    }
 
    #page-content.pilltrack .pilltrack-led .last .content-half h2 img,
-   #page-content.pilltrack .pilltrack-uses .content-half img {
-      max-height: 30px !important;
+   #page-content.pilltrack .pilltrack-uses .content-half h2 img {
+      max-height: 33px !important;
       transform: translateY(-0.6vw);
    }
 
