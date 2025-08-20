@@ -1150,6 +1150,11 @@
       left: 85.4%;
    }
 
+   #page-content.iqperfetto #main-page-content,
+   #page-content.skinpro #main-page-content {
+      overflow: hidden;
+   }
+
    #page-content.iqperfetto .iqperfetto-spots .content-full .spots-container .spot:nth-child(3) {
       top: 18%;
       left: 75%;
