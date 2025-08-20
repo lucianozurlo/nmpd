@@ -458,6 +458,22 @@
       margin-bottom: -150px;
    }
 
+   #page-content.wellted .self-cleaning .wrapper-videos video {
+      margin-bottom: -300px;
+      margin-top: -200px;
+   }
+   #page-content.wellted .cmf .wrapper-videos video {
+      padding-top: 0 !important;
+      margin-top: -100px;
+      margin-bottom: -300px;
+   }
+
+   #page-content.wellted .loop-360 .wrapper-videos video {
+      padding-top: 0 !important;
+      margin-top: -100px;
+      margin-bottom: -200px;
+   }
+
    body.contactus #contact {
       height: calc(100vh - 174px);
    }
