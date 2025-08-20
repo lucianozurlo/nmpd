@@ -451,6 +451,10 @@
       margin-bottom: -150px;
    }
 
+   #page-content.wellted .self-cleaning .wrapper-videos video {
+      padding-top: 0 !important;
+   }
+
    body.contactus #contact {
       height: calc(100vh - 174px);
    }
