@@ -347,6 +347,21 @@
    #page-content.iqperfetto .iqperfetto-det2 {
       margin-top: 150px;
    }
+
+   #page-content.iqperfetto .iqperfetto-spots .spots-container img {
+      max-width: 75%;
+   }
+   #page-content.iqperfetto .iqperfetto-spots .content-full .spots-container .spot:nth-child(2) {
+      left: 80%;
+   }
+   #page-content.iqperfetto .iqperfetto-spots .content-full .spots-container .spot:nth-child(6) {
+      left: 60%;
+   }
+   #page-content.iqperfetto .iqperfetto-spots .content-full .spots-container .spot:nth-child(8) {
+      top: 43%;
+      left: 62%;
+   }
+
    body.contactus #contact {
       height: calc(100vh - 174px);
    }
