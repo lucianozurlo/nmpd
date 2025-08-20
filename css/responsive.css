@@ -319,6 +319,9 @@
    #page-content.skinpro .title-accessories {
       transform: translateY(-65%);
    }
+   #page-content.skinpro .skinpro-buy-me {
+      transform: translateX(7%);
+   }
 
    body.contactus #contact {
       height: calc(100vh - 160px);
