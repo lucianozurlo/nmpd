@@ -148,61 +148,111 @@ Function CustomFunction
       loadImagesForPage(pageName);
 
       // TRANSLATE
-      document.querySelectorAll('a[data-lang]').forEach((link) => {
-         link.addEventListener('click', function (event) {
-            event.preventDefault(); // Prevenir el comportamiento por defecto del enlace
-            const language = this.getAttribute('data-lang');
+      (() => {
+         const LS_KEY = 'site_lang';
+         const DEFAULT_LANG = 'en';
+         const SUPPORTED = new Set(['en', 'es']);
 
-            // Llamar a la función de traducción
-            loadTranslations(language);
+         // memoria en caso de que localStorage falle (Safari privado, etc.)
+         let memLang = DEFAULT_LANG;
 
-            // Actualizar las clases de opacidad
-            updateLanguageLinks(language);
-         });
-      });
-
-      function loadTranslations(language) {
-         fetch(`../../langs/${language}.json`)
-            .then((response) => {
-               if (!response.ok) {
-                  throw new Error('Network response was not ok');
-               }
-               return response.json();
-            })
-            .then((translations) => {
-               document.querySelectorAll('[data-original]').forEach((element) => {
-                  const originalText = element.getAttribute('data-original');
-                  if (translations[originalText]) {
-                     element.textContent = translations[originalText];
-                     element.setAttribute('data-hover', translations[originalText]);
-                  }
-               });
-            })
-            .catch((error) => {
-               console.error('There was a problem with the fetch operation:', error);
-            });
-      }
-
-      // Función para actualizar la opacidad de los enlaces
-      function updateLanguageLinks(activeLang) {
-         document.querySelectorAll('a[data-lang]').forEach((link) => {
-            const language = link.getAttribute('data-lang');
-            if (language === activeLang) {
-               link.classList.add('active'); // Añadir la clase al idioma activo
-            } else {
-               link.classList.remove('active'); // Quitar la clase de los inactivos
+         const safeGet = (k) => {
+            try {
+               return localStorage.getItem(k) || null;
+            } catch (e) {
+               return null;
             }
+         };
+         const safeSet = (k, v) => {
+            try {
+               localStorage.setItem(k, v);
+            } catch (e) {
+               memLang = v;
+            }
+         };
+
+         const getLangFromURL = () => {
+            const q = new URLSearchParams(location.search).get('lang');
+            return SUPPORTED.has(q) ? q : null;
+         };
+
+         const getSavedLang = () => safeGet(LS_KEY) || memLang || null;
+
+         // Ruta a JSON: toma de <html data-lang-base>
+         const getJsonBase = () => {
+            const base = document.documentElement.getAttribute('data-lang-base') || '/langs/';
+            // Normaliza barra final
+            return base.endsWith('/') ? base : base + '/';
+         };
+
+         async function loadTranslations(language) {
+            const url = `${getJsonBase()}${language}.json`;
+            const res = await fetch(url, { cache: 'no-store' });
+            if (!res.ok) throw new Error(`No se pudo cargar ${url} (${res.status})`);
+            const translations = await res.json();
+
+            // Accesibilidad/SEO
+            document.documentElement.setAttribute('lang', language);
+
+            // Aplica a cada elemento que tenga la clave en data-original
+            document.querySelectorAll('[data-original]').forEach((el) => {
+               const key = el.getAttribute('data-original');
+               if (key && key in translations) {
+                  el.textContent = translations[key];
+                  el.setAttribute('data-hover', translations[key]);
+               }
+            });
+         }
+
+         function updateLanguageLinks(activeLang) {
+            document.querySelectorAll('a[data-lang]').forEach((link) => {
+               const lang = link.getAttribute('data-lang');
+               link.classList.toggle('active', lang === activeLang);
+               // opcional: aria-pressed para accesibilidad
+               link.setAttribute('aria-pressed', String(lang === activeLang));
+            });
+         }
+
+         async function setLanguage(lang) {
+            const language = SUPPORTED.has(lang) ? lang : DEFAULT_LANG;
+            await loadTranslations(language);
+            updateLanguageLinks(language);
+            safeSet(LS_KEY, language);
+
+            // Refleja en la URL (útil para compartir el idioma)
+            const url = new URL(location.href);
+            url.searchParams.set('lang', language);
+            history.replaceState(null, '', url);
+         }
+
+         // Delegación para los botones de idioma
+         document.addEventListener('click', (e) => {
+            const link = e.target.closest('a[data-lang]');
+            if (!link) return;
+            e.preventDefault();
+            const language = link.getAttribute('data-lang');
+            setLanguage(language).catch(console.error);
          });
-      }
 
-      // Establecer idioma por defecto al cargar la página
-      document.addEventListener('DOMContentLoaded', () => {
-         const defaultLanguage = 'en'; // Idioma por defecto
-         loadTranslations(defaultLanguage); // Cargar las traducciones por defecto
-         updateLanguageLinks(defaultLanguage); // Actualizar la opacidad de los enlaces
-      });
+         // Inicializar idioma al entrar en CADA página
+         function boot() {
+            const urlLang = getLangFromURL();
+            const savedLang = getSavedLang();
+            const startLang = urlLang || savedLang || DEFAULT_LANG;
+            setLanguage(startLang).catch(console.error);
+         }
 
-      // Restart video
+         if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', boot, { once: true });
+         } else {
+            boot();
+         }
+
+         // Reaplicar al volver con Back/Forward Cache (iOS/Safari)
+         window.addEventListener('pageshow', (ev) => {
+            if (ev.persisted) boot();
+         });
+      })(); // Restart video
    } // End CustomFunction
 
    /*--------------------------------------------------
