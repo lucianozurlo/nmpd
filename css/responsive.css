@@ -305,17 +305,15 @@
       left: 81.5%;
    }
 
-   body.contactus #contact {
-      height: calc(100vh - 160px);
-   }
-}
-
-@media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
-   .content-videos {
+   #page-content.fusion .content-videos {
       max-width: 100%;
    }
-   .frame-seq {
+   #page-content.fusion .frame-seq {
       max-width: 85%;
+   }
+
+   body.contactus #contact {
+      height: calc(100vh - 160px);
    }
 }
 
