@@ -137,7 +137,7 @@
                                     <span><img src="img/NMP2.svg" alt="" /></span>
                                     <span><img src="img/NMP3.svg" alt="" /></span>
                                     <span><img src="img/NMP4.svg" alt="" /></span>
-                                    <div class="hero-arrow link caption-timeline">
+                                    <div id="scrollBtn" class="hero-arrow">
                                        <span><i class="arrow-icon"></i></span>
                                     </div>
                                  </div>
@@ -504,5 +504,17 @@
       <script src="js/contact.js"></script>
       <script src="js/scripts.js"></script>
       <script src="js/copy.js"></script>
+
+      <script>
+         const btn = document.getElementById('scrollBtn');
+
+         btn.addEventListener('click', () => {
+            window.scrollBy({
+               top: window.innerHeight - 60, // 80vh
+               left: 0,
+               behavior: 'smooth',
+            });
+         });
+      </script>
    </body>
 </html>
