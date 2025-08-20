@@ -909,6 +909,13 @@ i.arrow-icon-down.white {
    background-position: center !important;
    background-size: contain !important;
 }
+
+#hero-background-layer {
+   top: 0 !important;
+   transform: unset !important;
+   position: relative !important;
+}
+
 #hero-caption .inner.text {
    margin-top: 3rem !important;
    max-width: 40vw !important;
