@@ -965,7 +965,7 @@
    #main.project-detail.detail-project #hero.has-image #caption-img .inner h1 {
       margin-top: 10vh !important;
       font-size: 17.5vw !important;
-      letter-spacing: -1.3vw;
+      letter-spacing: -1.3vw !important;
    }
 
    #main.project-detail.detail-project #hero.has-image #caption-img .inner .desc {
@@ -1231,9 +1231,9 @@
       left: unset;
    }
 
-   #page-content.iqperfetto .iqperfetto-det1 .content-full .project-info-plus {
+   /* #page-content.iqperfetto .iqperfetto-det1 .content-full .project-info-plus {
       margin-top: 30px !important;
-   }
+   } */
 
    #page-content.iqperfetto .iqperfetto-det1 .content-full > img,
    #page-content.iqperfetto .iqperfetto-det2 .content-full > img {
@@ -1253,7 +1253,7 @@
    }
 
    #page-content.iqperfetto .iqperfetto-det2 .content-full .project-info-plus {
-      margin-top: -100px !important;
+      margin-top: -160px !important;
    }
 
    #page-content.iqperfetto .iqperfetto-det2 {
@@ -1279,7 +1279,8 @@
 
    .iqperfetto-det3 {
       transform: unset;
-      margin-bottom: 0;
+      margin-bottom: 50px;
+      margin-top: 20px;
    }
 
    .iqperfetto-det3 .one_full .content-half img {
