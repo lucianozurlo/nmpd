@@ -345,7 +345,7 @@
       max-width: fit-content !important;
    }
    #page-content.kali .kali-views4 {
-      margin-bottom: -200px;
+      margin-bottom: 0;
    }
    body.contactus #contact {
       height: calc(100vh - 160px);
@@ -440,6 +440,9 @@
    #page-content.kali .kali-views3 {
       margin-top: -30px;
       margin-bottom: -70px;
+   }
+   #page-content.kali .kali-views4 {
+      margin-bottom: -200px;
    }
 
    body.contactus #contact {
