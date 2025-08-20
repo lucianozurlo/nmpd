@@ -255,6 +255,12 @@
       font-size: calc(3vw) !important;
       line-height: calc(5vw) !important;
    }
+   #main.home #main-content.projects h1 {
+      letter-spacing: -3px;
+   }
+   .project .project-info h2 {
+      letter-spacing: -2px !important;
+   }
 
    .spot {
       width: 14px;
