@@ -298,6 +298,10 @@
       top: 60%;
       left: 81.5%;
    }
+
+   body.contactus #contact {
+      height: calc(100vh - 160px);
+   }
 }
 
 @media (max-width: 767px) {
@@ -1406,9 +1410,6 @@
 
    body.contactus .socials.contact-center {
       gap: 5%;
-   }
-   body.contactus #contact {
-      height: calc(100vh - 160px);
    }
 }
 
