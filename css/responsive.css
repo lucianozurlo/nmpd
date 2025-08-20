@@ -522,9 +522,10 @@
       line-height: calc(2rem + 2.5vw);
    }
 
-   /* #main.home #hero-caption .hero-title {
-      height: calc(100vh - 74px);
-   } */
+   #main.home #hero-caption .hero-title {
+      height: calc(100vh - 120px);
+   }
+
    #main.project-detail.detail-project #hero.has-image #hero-caption {
       max-height: calc(100vh - 74px);
    }
@@ -736,7 +737,7 @@
    }
 
    #aboutus {
-      margin-top: 0;
+      /* margin-top: 0; */
       padding: 0 2rem !important;
    }
 
