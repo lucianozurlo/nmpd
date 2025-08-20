@@ -344,7 +344,9 @@
    #page-content.iqperfetto .iqperfetto-det1 {
       margin-top: -50px;
    }
-
+   #page-content.iqperfetto .iqperfetto-det2 {
+      margin-top: 150px;
+   }
    body.contactus #contact {
       height: calc(100vh - 174px);
    }
