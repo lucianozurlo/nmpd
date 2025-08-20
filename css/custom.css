@@ -421,7 +421,7 @@ header.over-sidebar #lang span {
 .fullscreen-menu .flexnav li ul.submenu {
    margin-left: 111px;
    margin-top: -11px;
-   z-index: 11;
+   z-index: 1111;
    list-style: none;
 }
 
