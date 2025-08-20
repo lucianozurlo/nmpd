@@ -304,12 +304,15 @@
       top: 60%;
       left: 81.5%;
    }
-
    #page-content.fusion .content-videos {
       max-width: 100%;
    }
    #page-content.fusion .frame-seq {
       max-width: 85%;
+   }
+
+   #page-content.iqperfetto #main-page-content {
+      overflow: hidden;
    }
 
    body.contactus #contact {
