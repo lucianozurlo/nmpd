@@ -239,7 +239,7 @@
    }
 
    .fullscreen-menu .flexnav li ul.submenu {
-      margin-left: 0 !important;
+      margin-left: 20px !important;
       margin-top: 10px;
    }
 
@@ -255,6 +255,7 @@
       font-size: calc(3vw) !important;
       line-height: calc(5vw) !important;
    }
+
    .spot {
       width: 14px;
       height: 14px;
