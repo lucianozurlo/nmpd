@@ -1772,13 +1772,14 @@ body.contactus .socials.contact-center {
    flex-direction: row-reverse;
    align-items: center;
    justify-content: center;
+   gap: 2%;
 }
 body.contactus .socials.contact-center li {
-   margin-left: 30px;
+   margin: 0 !important;
 }
-body.contactus .socials.contact-center li:last-child {
+/* body.contactus .socials.contact-center li:last-child {
    margin-left: 0;
-}
+} */
 body.contactus .socials.contact-center li a {
    font-size: 22px;
 }
