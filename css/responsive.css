@@ -238,13 +238,11 @@
       border: 1.5px solid #222;
    }
 
-   .fullscreen-menu .flexnav li ul.submenu {
-      margin-left: 20px !important;
-      margin-top: 10px;
-   }
-
    .flexnav {
       margin-left: 180px;
+   }
+   .flexnav li {
+      margin: 5% 0;
    }
    .flexnav li,
    .flexnav li ul li:marker {
@@ -255,6 +253,14 @@
       font-size: calc(3vw) !important;
       line-height: calc(5vw) !important;
    }
+   .fullscreen-menu .flexnav li ul.submenu {
+      margin-left: 20px !important;
+      margin-top: 10px;
+   }
+   .fullscreen-menu .flexnav li ul.submenu li {
+      margin: 0;
+   }
+
    #main.home #main-content.projects h1 {
       letter-spacing: -3px;
    }
