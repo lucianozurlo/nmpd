@@ -2544,7 +2544,7 @@ body.contactus .socials.contact-center li a {
    width: -webkit-fit-content;
    width: -moz-fit-content;
    width: fit-content;
-   border-radius: 20px;
+   /* border-radius: 20px; */
    display: flex;
    align-items: center;
    justify-content: center;

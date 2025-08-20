@@ -310,6 +310,15 @@
    }
 }
 
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait) {
+   .content-videos {
+      max-width: 100%;
+   }
+   .frame-seq {
+      max-width: 85%;
+   }
+}
+
 @media (max-width: 767px) {
    .trackbar {
       margin-top: -70px;
