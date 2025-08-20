@@ -218,10 +218,7 @@
    }
 }
 
-/* @media (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2),
-   (-webkit-min-device-pixel-ratio: 2),
-   (min-resolution: 2dppx) { */
-@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1366px) {
    header {
       height: 60px !important;
    }
