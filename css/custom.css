@@ -506,9 +506,12 @@ header.over-sidebar #lang span {
    /* width: 22% !important;
    min-width: 22% !important;
    max-width: 22% !important; */
-   height: 16%;
+   /* height: 16%;
    max-height: 16%;
-   min-height: 16%;
+   min-height: 16%; */
+   height: 20%;
+   max-height: 20%;
+   min-height: 20%;
    margin: 4% 0;
    display: flex;
    justify-content: center;
@@ -519,6 +522,9 @@ header.over-sidebar #lang span {
    width: 100%;
    display: flex;
    justify-content: flex-end;
+   /* height: 1.15%;
+   max-height: 1.15%;
+   min-height: 1.15%; */
    height: 1.15%;
    max-height: 1.15%;
    min-height: 1.15%;
@@ -529,15 +535,21 @@ header.over-sidebar #lang span {
    aspect-ratio: 118/91;
 }
 .nmp span:nth-child(3) {
-   height: 1.11%;
+   /* height: 1.11%;
    max-height: 1.11%;
-   min-height: 1.11%;
+   min-height: 1.11%; */
+   height: 1.42%;
+   max-height: 1.42%;
+   min-height: 1.42%;
    aspect-ratio: 1007/71;
 }
 .nmp span:nth-child(4) {
-   height: 0.85%;
+   /* height: 0.85%;
    max-height: 0.85%;
-   min-height: 0.85%;
+   min-height: 0.85%; */
+   height: 1.11%;
+   max-height: 1.11%;
+   min-height: 1.11%;
    margin-top: 5%;
    aspect-ratio: 786/56;
 }
