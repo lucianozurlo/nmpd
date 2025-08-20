@@ -333,6 +333,10 @@
       transform: translateY(-0.6vw);
    }
 
+   #page-content.pilltrack .kali-cap .content-full > img {
+      max-height: 50vh !important;
+   }
+
    body.contactus #contact {
       height: calc(100vh - 160px);
    }
