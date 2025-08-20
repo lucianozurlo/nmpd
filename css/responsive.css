@@ -1333,6 +1333,7 @@
       overflow: hidden;
       width: 100%;
       transform: translateX(7%);
+      background-position: center;
    }
 
    #page-content.skinpro .wrapper-videos video {
