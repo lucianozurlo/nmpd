@@ -391,13 +391,15 @@
       margin-bottom: -120;
    }
 
-   #page-content.skinpro .title-accessories {
+   #page-content.skinpro .title-accessories .content-full {
       width: 100%;
       max-width: 100%;
       justify-content: center !important;
-      transform: translateY(-45%);
+      transform: translateY(-45%) !important;
    }
-
+   #page-content.skinpro .skinpro-acc {
+      margin-top: -230px !important;
+   }
    body.contactus #contact {
       height: calc(100vh - 174px);
    }

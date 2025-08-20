@@ -2529,6 +2529,7 @@ body.contactus .socials.contact-center li a {
 }
 #page-content.skinpro .title-accessories {
    transform: translateY(25%);
+   margin-top: 100px;
 }
 #page-content.skinpro #main-page-content {
    margin-top: 150px;
