@@ -479,7 +479,7 @@
       width: 100%;
    } */
    #page-content.wellted .wellted-exploded.full.xlarge .one_full {
-      padding: 10px !important;
+      padding: 10px 24px !important;
    }
 
    #page-content.wellted .wellted-exploded .scroll-bound .image-sequence img {
