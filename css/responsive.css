@@ -432,6 +432,14 @@
       margin-top: -20px !important;
    }
 
+   #page-content.kali .kali-views-x {
+      margin-top: 0;
+   }
+   #page-content.kali .kali-views3 {
+      margin-top: -30px;
+      margin-bottom: -70px;
+   }
+
    body.contactus #contact {
       height: calc(100vh - 174px);
    }
