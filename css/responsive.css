@@ -459,19 +459,32 @@
    }
 
    #page-content.wellted .self-cleaning .wrapper-videos video {
-      margin-bottom: -300px;
-      margin-top: -200px;
+      margin-bottom: -220px;
+      margin-top: -160px;
    }
    #page-content.wellted .cmf .wrapper-videos video {
       padding-top: 0 !important;
-      margin-top: -100px;
-      margin-bottom: -300px;
+      margin-top: -80px;
+      margin-bottom: -250px;
    }
 
    #page-content.wellted .loop-360 .wrapper-videos video {
       padding-top: 0 !important;
-      margin-top: -100px;
-      margin-bottom: -200px;
+      margin-top: -30px;
+      margin-bottom: -120px;
+   }
+
+   #page-content.wellted .wellted-exploded .full.xlarge .one_full .content-full {
+      max-width: 100%;
+      width: 100%;
+   }
+   #page-content.wellted .wellted-exploded .full.xlarge .one_full {
+      padding: 10px 40px 10px 8vw;
+   }
+
+   #page-content.wellted .wellted-exploded .scroll-bound .image-sequence {
+      max-width: 95%;
+      width: 95%;
    }
 
    body.contactus #contact {
