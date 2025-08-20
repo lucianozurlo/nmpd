@@ -1519,7 +1519,7 @@
    }
 
    #page-content.ccexquisite .buy-me {
-      margin-bottom: 0 !important;
+      margin-bottom: 100px !important;
    }
    .kali-colors {
       margin-bottom: 0;
@@ -1613,8 +1613,12 @@
       position: absolute;
    }
 
+   #page-content.ccexquisite .wrapper-videos video {
+      margin: -50px 0 !important;
+   }
+
    .next-project-wrap p {
-      font-size: calc(1rem + 3.5vw);
+      font-size: calc(1rem + 3.5vw) !important;
    }
 
    body.contactus .socials.contact-center {
