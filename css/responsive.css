@@ -437,6 +437,9 @@
    #page-content.skinpro .skinpro-acc {
       margin-top: -230px !important;
    }
+   #page-content.skinpro .image-hover {
+      background-position: center;
+   }
 
    #page-content.pilltrack .pilltrack-uses {
       padding-bottom: 0 !important;
