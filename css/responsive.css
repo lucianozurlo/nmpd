@@ -474,12 +474,12 @@
       margin-bottom: -120px;
    }
 
-   #page-content.wellted .wellted-exploded.full.xlarge .one_full .content-full {
+   /* #page-content.wellted .wellted-exploded.full.xlarge .one_full .content-full {
       max-width: 100%;
       width: 100%;
-   }
+   } */
    #page-content.wellted .wellted-exploded.full.xlarge .one_full {
-      padding: 10px 40px 10px 8vw;
+      padding: 10px !important;
    }
 
    #page-content.wellted .wellted-exploded .scroll-bound .image-sequence img {
