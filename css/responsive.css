@@ -363,9 +363,19 @@
    }
    .project-info-plus {
       font-size: 16px;
-      font-style: italic;
-      text-transform: uppercase;
-      font-weight: 300;
+   }
+   #page-content.iqperfetto .iqperfetto-det1 .content-full .project-info-plus {
+      height: 57%;
+   }
+   #page-content.iqperfetto .iqperfetto-det2 .content-full {
+      transform: translate(16%, -30%);
+   }
+   #page-content.iqperfetto .iqperfetto-det2 .content-full .project-info-plus {
+      transform: translate(40%, 470%);
+   }
+   #page-content.iqperfetto .iqperfetto-det3 {
+      transform: translate(-30%, 170%);
+      margin-bottom: 25%;
    }
 
    body.contactus #contact {
