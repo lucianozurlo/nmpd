@@ -1407,6 +1407,9 @@
    body.contactus .socials.contact-center {
       gap: 5%;
    }
+   body.contactus #contact {
+      height: calc(100vh - 160px);
+   }
 }
 
 @media (max-height: 500px) and (orientation: landscape) {
