@@ -312,7 +312,8 @@
    }
 
    #page-content.iqperfetto #main-page-content,
-   #page-content.skinpro #main-page-content {
+   #page-content.skinpro #main-page-content,
+   #page-content.pilltrack #main-page-content {
       overflow: hidden;
    }
 
@@ -810,6 +811,12 @@
    #page-content.iqperfetto #main.project-detail.detail-project #hero.has-image #hero-bg-image,
    #page-content.ccexquisite #main.project-detail.detail-project #hero.has-image #hero-bg-image {
       transform: translate(50%, -20%) scale(2) !important;
+   }
+
+   #page-content.skinpro .title-accessories {
+      transform: unset !important;
+      margin-top: -10px;
+      margin-bottom: 20px;
    }
 
    #project-nav .next-project-header {
@@ -1347,6 +1354,7 @@
       width: 100% !important;
       padding: 0 !important;
       margin: 0 !important;
+      margin-bottom: 100px !important;
    }
 
    .pilltrack-led .content-half {
@@ -1601,6 +1609,10 @@
       top: 100px;
       margin-left: -12vw;
       position: absolute;
+   }
+
+   .next-project-wrap p {
+      font-size: calc(1rem + 3.5vw);
    }
 
    body.contactus .socials.contact-center {
