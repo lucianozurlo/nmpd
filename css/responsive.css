@@ -350,6 +350,11 @@
    #page-content.kali .kali-views4 {
       margin-bottom: 0;
    }
+
+   #page-content.wellted .self-cleaning .wrapper-videos video {
+      padding-top: 0 !important;
+   }
+
    body.contactus #contact {
       height: calc(100vh - 160px);
    }
@@ -449,10 +454,6 @@
    }
    #page-content.kali .kali-views4 {
       margin-bottom: -150px;
-   }
-
-   #page-content.wellted .self-cleaning .wrapper-videos video {
-      padding-top: 0 !important;
    }
 
    body.contactus #contact {
