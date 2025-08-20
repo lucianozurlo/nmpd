@@ -1613,6 +1613,10 @@
       position: absolute;
    }
 
+   #page-content.ccexquisite .ccexquisite-place .scroll-bound .image-sequence {
+      margin: -50px 0 !important;
+   }
+
    #page-content.ccexquisite .wrapper-videos video {
       margin: -50px 0 !important;
    }
