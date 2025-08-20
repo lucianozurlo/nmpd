@@ -327,6 +327,12 @@
       margin-top: -170px !important;
    }
 
+   #page-content.pilltrack .pilltrack-led .last .content-half h2 img,
+   #page-content.pilltrack .pilltrack-uses .content-half img {
+      max-height: 30px !important;
+      transform: translateY(-0.6vw);
+   }
+
    body.contactus #contact {
       height: calc(100vh - 160px);
    }
