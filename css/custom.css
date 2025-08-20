@@ -1768,6 +1768,10 @@ body.contactus .scroll-content {
 }
 body.contactus .socials.contact-center {
    transform: unset;
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: center;
+   justify-content: center;
 }
 body.contactus .socials.contact-center li {
    margin-left: 30px;
