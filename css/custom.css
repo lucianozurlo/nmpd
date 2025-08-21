@@ -683,7 +683,7 @@ i.arrow-icon-down.white {
 
 #main.project-detail.detail-project #hero.has-image #hero-caption .inner h1 {
    align-items: flex-end;
-   margin-top: calc(6vh + 74px) !important;
+   margin-top: calc(4vh + 74px) !important;
 }
 
 #main.project-detail.detail-project #hero.has-image #caption .inner,
