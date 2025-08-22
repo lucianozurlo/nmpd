@@ -404,6 +404,85 @@
       h1.less {
       flex-direction: column !important;
    }
+   #page-content.iqperfetto
+      #main.project-detail.detail-project
+      #hero.has-image
+      #caption-img
+      .inner
+      .detail
+      div:first-child,
+   #page-content.iqperfetto
+      #main.project-detail.detail-project
+      #hero.has-image
+      #hero-caption
+      .inner
+      .detail
+      div:first-child,
+   #page-content.ccexquisite
+      #main.project-detail.detail-project
+      #hero.has-image
+      #caption-img
+      .inner
+      .detail
+      div:first-child,
+   #page-content.ccexquisite
+      #main.project-detail.detail-project
+      #hero.has-image
+      #hero-caption
+      .inner
+      .detail
+      div:first-child {
+      transform: translateY(0);
+      display: flex;
+      flex-direction: row;
+   }
+
+   #page-content.skinpro
+      #main.project-detail.detail-project
+      #hero.has-image
+      #caption-img
+      .inner
+      .detail
+      div:nth-child(2),
+   #page-content.skinpro
+      #main.project-detail.detail-project
+      #hero.has-image
+      #hero-caption
+      .inner
+      .detail
+      div:nth-child(2),
+   #page-content.iqperfetto
+      #main.project-detail.detail-project
+      #hero.has-image
+      #caption-img
+      .inner
+      .detail
+      div:nth-child(2),
+   #page-content.iqperfetto
+      #main.project-detail.detail-project
+      #hero.has-image
+      #hero-caption
+      .inner
+      .detail
+      div:nth-child(2),
+   #page-content.ccexquisite
+      #main.project-detail.detail-project
+      #hero.has-image
+      #caption-img
+      .inner
+      .detail
+      div:nth-child(2),
+   #page-content.ccexquisite
+      #main.project-detail.detail-project
+      #hero.has-image
+      #hero-caption
+      .inner
+      .detail
+      div:nth-child(2) {
+      transform: translateY(0);
+      display: flex;
+      flex-direction: row;
+   }
    #page-content.skinpro #main.project-detail.detail-project #hero.has-image #hero-bg-image,
    #page-content.iqperfetto #main.project-detail.detail-project #hero.has-image #hero-bg-image,
    #page-content.ccexquisite #main.project-detail.detail-project #hero.has-image #hero-bg-image {
