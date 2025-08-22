@@ -383,6 +383,19 @@
    #page-content .next-project-image-bg.alpha {
       background-position: 50% 70% !important;
    }
+
+   #hero-bg-image,
+   #page-content .next-project-image-bg.alpha {
+      background-position: 50% 70% !important;
+   }
+   #hero-bg-image {
+      -webkit-animation: backgroundResize 1s ease-in-out forwards !important;
+      animation: backgroundResize 1s ease-in-out forwards !important;
+      -webkit-animation-delay: 1.2s !important;
+      animation-delay: 1.2s !important;
+      transform: translate(50%, -25%) scale(2) !important;
+   }
+
    #main.project-detail.detail-project #hero.has-image #caption-img .inner .desc,
    #main.project-detail.detail-project #hero.has-image #hero-caption .inner .desc {
       font-size: 1.8vw;
