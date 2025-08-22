@@ -395,7 +395,23 @@
       animation-delay: 1.2s !important;
       transform: translate(50%, -25%) scale(2) !important;
    }
-
+   #main.project-detail.detail-project #hero.has-image #caption-img .inner.title,
+   #main.project-detail.detail-project #hero.has-image #hero-description .inner,
+   .full.xlarge .one_half .content-half,
+   .full.xlarge .one_half.last .content-half {
+      margin-left: 0;
+      margin-bottom: 0;
+      padding: 10px 12vw 10px 12vw;
+      max-width: 100%;
+      width: 100%;
+   }
+   #hero-background-layer {
+      position: relative !important;
+      transform: unset !important;
+      inset: unset !important;
+      max-height: unset !important;
+      min-height: 100% !important;
+   }
    #main.project-detail.detail-project #hero.has-image #caption-img .inner .desc,
    #main.project-detail.detail-project #hero.has-image #hero-caption .inner .desc {
       font-size: 1.8vw;
