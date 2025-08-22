@@ -383,6 +383,26 @@
    #page-content .next-project-image-bg.alpha {
       background-position: 50% 70% !important;
    }
+   #main.project-detail.detail-project #hero.has-image #caption-img .inner .desc,
+   #main.project-detail.detail-project #hero.has-image #hero-caption .inner .desc {
+      font-size: 1.8vw;
+   }
+   #main.project-detail.detail-project #hero.has-image #caption-img .inner .desc {
+      margin-top: 5px;
+      margin-bottom: 6px;
+   }
+   #main.project-detail.detail-project #hero.has-image #caption-img .inner .desc,
+   #main.project-detail.detail-project #hero.has-image #caption-img .inner .anio {
+      font-size: 3.5vw;
+   }
+
+   #main.project-detail.detail-project #hero.has-image #caption-img .inner .from {
+      font-size: 5vw;
+   }
+   #main.project-detail.detail-project #hero.has-image #caption-img .inner .from,
+   #main.project-detail.detail-project #hero.has-image #hero-caption .inner .from {
+      margin-top: 0;
+   }
    #main.project-detail.detail-project #hero.has-image #caption-img .inner.title {
       margin-left: 20%;
    }
