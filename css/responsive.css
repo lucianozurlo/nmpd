@@ -375,6 +375,11 @@
    body.projects #hero-caption .inner {
       display: none !important;
    }
+   #hero-description,
+   #caption-img {
+      display: flex !important
+;
+   }
    /**/
    #main.home #hero-caption .hero-title {
       height: calc(100vh - 74px);
