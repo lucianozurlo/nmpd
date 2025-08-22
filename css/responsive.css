@@ -384,9 +384,58 @@
       background-position: 50% 70% !important;
    }
 
-   #hero-bg-image,
-   #page-content .next-project-image-bg.alpha {
-      background-position: 50% 70% !important;
+   #page-content.skinpro
+      #main.project-detail.detail-project
+      #hero.has-image
+      #caption-img
+      .inner
+      h1.less,
+   #page-content.iqperfetto
+      #main.project-detail.detail-project
+      #hero.has-image
+      #caption-img
+      .inner
+      h1.less,
+   #page-content.ccexquisite
+      #main.project-detail.detail-project
+      #hero.has-image
+      #caption-img
+      .inner
+      h1.less {
+      flex-direction: column !important;
+   }
+   #page-content.skinpro #main.project-detail.detail-project #hero.has-image #hero-bg-image,
+   #page-content.iqperfetto #main.project-detail.detail-project #hero.has-image #hero-bg-image,
+   #page-content.ccexquisite #main.project-detail.detail-project #hero.has-image #hero-bg-image {
+      transform: translate(50%, -20%) scale(2) !important;
+   }
+   #main.project-detail.detail-project #hero.has-image #caption-img .inner h1 {
+      margin-top: 11vh !important;
+      font-size: 17.5vw !important;
+      letter-spacing: -1.3vw !important;
+   }
+
+   #hero-background-layer {
+      position: relative !important;
+      transform: unset !important;
+      inset: unset !important;
+      max-height: unset !important;
+      min-height: 100% !important;
+   }
+   #main.project-detail.detail-project #hero.has-image #caption-img .inner .desc {
+      margin-top: 5px;
+      margin-bottom: 6px;
+   }
+   #main.project-detail.detail-project #hero.has-image #caption-img .inner .from,
+   #main.project-detail.detail-project #hero.has-image #hero-caption .inner .from {
+      margin-top: 0;
+   }
+   #main.project-detail.detail-project #hero.has-image #caption-img .inner .from {
+      font-size: 5vw;
+   }
+   #main.project-detail.detail-project #hero.has-image #caption-img .inner .desc,
+   #main.project-detail.detail-project #hero.has-image #caption-img .inner .anio {
+      font-size: 3.5vw;
    }
    #hero-bg-image {
       -webkit-animation: backgroundResize 1s ease-in-out forwards !important;
