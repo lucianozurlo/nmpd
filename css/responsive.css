@@ -554,7 +554,6 @@
   } */
 
   #page-content.iqperfetto #main-page-content,
-  #page-content.skinpro #main-page-content,
   #page-content.pilltrack #main-page-content {
     padding-bottom: 100px !important;
   }
@@ -667,6 +666,9 @@
   }
   #page-content.skinpro .image-hover {
     background-position: center;
+  }
+  #page-content.skinpro #main-page-content {
+    padding-bottom: 0 !important;
   }
 
   #page-content.pilltrack .pilltrack-uses {
