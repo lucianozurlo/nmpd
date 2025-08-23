@@ -393,7 +393,8 @@
     padding: 0;
     padding-left: 12vw;
   }
-  #page-content.fusion .dark-section.views {
+  #page-content.fusion #main.project-detail .grid-item > div:nth-child(2) {
+    font-size: 13px;
   }
   #page-content.fusion #page-content.fusion .buy-me-content {
     padding-left: 0;
