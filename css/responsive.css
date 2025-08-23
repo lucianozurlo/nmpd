@@ -721,7 +721,7 @@
     margin-bottom: -150px;
   }
 
-  .force-full {
+  .full.xlarge .one_half.force-full {
     width: 100% !important;
     max-width: unset !important;
   }
@@ -1565,7 +1565,10 @@
     width: 100% !important;
   }
   #page-content.skinpro #main-page-content {
-    margin-top: 50px;
+    margin-top: -30px;
+  }
+  #main.project-detail .skinpro-colors {
+    margin-bottom: 40px;
   }
   #main.project-detail .skinpro-colors .content-full > img {
     width: 140vw !important;
