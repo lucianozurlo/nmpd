@@ -690,6 +690,10 @@
     margin: 60px 0 150px;
   }
 
+  #page-content.ccexquisite .buy-me {
+    margin-bottom: 30px !important;
+  }
+
   #page-content.kali .kali-colors {
     margin-bottom: 120px;
   }
