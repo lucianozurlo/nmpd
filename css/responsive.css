@@ -474,7 +474,7 @@
     transform: translate(50%, -20%) scale(2) !important;
   }
   #main.project-detail.detail-project #hero.has-image #caption-img .inner h1 {
-    margin-top: 11vh !important;
+    margin-top: 9vh !important;
     font-size: 17.5vw !important;
     letter-spacing: -1.3vw !important;
   }
@@ -506,8 +506,10 @@
     animation: backgroundResize 1s ease-in-out forwards !important;
     -webkit-animation-delay: 1.2s !important;
     animation-delay: 1.2s !important;
-    transform: translate(50%, -25%) scale(2) !important;
+    transform: translate(50%, -15%) scale(2) !important;
+    background-size: 30vw !important;
   }
+
   #main.project-detail.detail-project #hero.has-image #caption-img .inner.title,
   #main.project-detail.detail-project #hero.has-image #hero-description .inner,
   .full.xlarge .one_half .content-half,
@@ -519,13 +521,13 @@
     width: 100%;
   }
 
-  #main.project-detail.detail-project #hero.has-image #caption-img .inner .desc,
+  /* #main.project-detail.detail-project #hero.has-image #caption-img .inner .desc,
   #main.project-detail.detail-project #hero.has-image #hero-caption .inner .desc {
     font-size: 1.8vw;
-  }
+  } */
 
   #main.project-detail.detail-project #hero.has-image #caption-img .inner.title {
-    margin-left: 20%;
+    margin-left: 0;
   }
 
   /**/
