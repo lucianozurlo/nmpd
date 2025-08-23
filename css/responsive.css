@@ -678,6 +678,12 @@
     margin-top: -20px !important;
   }
 
+  #page-content.ccexquisite .ccexquisite-color .wrapper-videos video {
+    padding-top: 0;
+    margin-bottom: -180px;
+    margin-top: -80px;
+  }
+
   #page-content.kali .kali-colors {
     margin-bottom: 120px;
   }
