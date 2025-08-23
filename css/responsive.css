@@ -364,6 +364,11 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
+  .content-max-width,
+  .content-full-width {
+    padding-left: 12vw;
+    padding-right: 12vw;
+  }
   header {
     height: 74px !important;
   }
