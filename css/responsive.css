@@ -394,6 +394,10 @@
     padding-left: 12vw;
   }
 
+  #page-content.fusion .buy-me-content {
+    padding-left: 0;
+  }
+
   #page-content.skinpro #main.project-detail.detail-project #hero.has-image #caption-img .inner h1.less,
   #page-content.iqperfetto #main.project-detail.detail-project #hero.has-image #caption-img .inner h1.less,
   #page-content.ccexquisite #main.project-detail.detail-project #hero.has-image #caption-img .inner h1.less {
