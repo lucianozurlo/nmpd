@@ -570,5 +570,47 @@
 
       <script src="../../js/splide.min.js"></script>
       <script src="../../js/projects.js"></script>
+      <!-- Cargalo al final, después de tus scripts -->
+      <script>
+         (() => {
+            const BASE = 1920;
+            const body = document.body;
+            const root = document.documentElement;
+
+            const supportsZoom = CSS.supports('zoom', '2');
+            const apply = () => {
+               const s = Math.max(1, innerWidth / BASE); // 3840 -> 2, 2560 -> ~1.333, <=1920 -> 1
+               if (s === 1) {
+                  body.style.zoom = '';
+                  root.style.setProperty('--scale', '');
+                  root.style.setProperty('--scaled-margin', '');
+                  return;
+               }
+               if (supportsZoom) {
+                  body.style.zoom = 1 / s; // “simula” 1920 en pantallas grandes
+               } else {
+                  // Fallback Firefox: escalamos todo y centramos
+                  root.style.setProperty('--scale', String(1 / s));
+                  root.style.setProperty('--scaled-margin', `${(innerWidth - BASE) / 2}px`);
+               }
+            };
+
+            // estilos fallback Firefox
+            const style = document.createElement('style');
+            style.textContent = `
+    html:has(:root[style*="--scale"]) body > *:not(style) {
+      transform-origin: top left;
+      transform: scale(var(--scale));
+      width: ${BASE}px;
+      margin-left: var(--scaled-margin);
+    }
+  `;
+            document.head.appendChild(style);
+
+            addEventListener('resize', apply, { passive: true });
+            addEventListener('orientationchange', apply);
+            document.addEventListener('DOMContentLoaded', apply);
+         })();
+      </script>
    </body>
 </html>
