@@ -315,6 +315,7 @@
   #page-content.skinpro #main-page-content,
   #page-content.pilltrack #main-page-content {
     overflow: hidden;
+    padding-bottom: 100px !important;
   }
 
   #page-content.skinpro .title-accessories {
