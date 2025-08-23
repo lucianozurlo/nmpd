@@ -364,10 +364,10 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
-  .mob-ok {
+  .ipad-port-ok {
     display: inherit !important;
   }
-  .mob-no {
+  .ipad-port-no {
     display: none !important;
   }
   .content-max-width,
@@ -375,9 +375,7 @@
     padding-left: 12vw;
     padding-right: 12vw;
   }
-  .full {
-    max-width: 100%;
-  }
+
   header {
     height: 74px !important;
   }
