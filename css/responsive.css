@@ -643,10 +643,16 @@
     margin-top: 60px;
   }
 
-  #page-content.skinpro .skinpro-views-2 {
+  #page-content.skinpro .skinpro-views-2 .full.xlarge .one_half .content-half {
+    padding: 10px 6vw 10px 12vw;
     margin-top: -120px;
     margin-bottom: -120px;
   }
+
+  #page-content.skinpro .skinpro-views-2 .full.xlarge .one_half.last .content-half {
+    padding: 10px 12vw 10px 6vw;
+  }
+
   #page-content.skinpro .title-accessories {
     margin-top: 150px;
   }
