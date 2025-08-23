@@ -498,12 +498,12 @@
   #page-content.skinpro #main.project-detail.detail-project #hero.has-image #hero-bg-image,
   #page-content.iqperfetto #main.project-detail.detail-project #hero.has-image #hero-bg-image,
   #page-content.ccexquisite #main.project-detail.detail-project #hero.has-image #hero-bg-image {
-    transform: translate(60%, -10%) scale(2) !important;
+    transform: translate(55%, -12%) scale(2) !important;
   }
   #main.project-detail.detail-project #hero.has-image #caption-img .inner h1 {
     margin-top: 9vh !important;
-    font-size: 17.5vw !important;
-    letter-spacing: -1.3vw !important;
+    font-size: 15vw !important;
+    letter-spacing: -1vw !important;
   }
 
   #hero-background-layer {
@@ -533,8 +533,8 @@
     animation: backgroundResize 1s ease-in-out forwards !important;
     -webkit-animation-delay: 1.2s !important;
     animation-delay: 1.2s !important;
-    transform: translate(50%, -15%) scale(2) !important;
-    background-size: 30vw !important;
+    transform: translate(55%, -15%) scale(2) !important;
+    background-size: 28vw !important;
   }
 
   #main.project-detail.detail-project #hero.has-image #caption-img .inner.title,
