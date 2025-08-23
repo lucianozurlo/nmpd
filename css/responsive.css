@@ -396,6 +396,9 @@
   #page-content.fusion #main.project-detail .grid-item > div:nth-child(2) {
     font-size: 13px;
   }
+  #page-content.fusion .fusion-spots .spots-container img {
+    max-width: 100%;
+  }
   #page-content.fusion #page-content.fusion .buy-me-content {
     padding-left: 0;
   }
