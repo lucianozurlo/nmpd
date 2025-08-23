@@ -1,0 +1,26 @@
+/* Activa el "modo 1080" cuando el <html> tenga la clase .force1080 */
+html.force1080 {
+   /* Chrome/Edge/Safari: aplica como si fuera 200% de zoom */
+   zoom: 2;
+}
+
+/* Firefox (o si zoom no está soportado) => usar transform */
+@supports not (zoom: 2) {
+   html.force1080,
+   html.force1080 body {
+      height: 100%;
+      overflow: auto;
+   }
+   /* Escalamos TODO el sitio dentro de #app */
+   html.force1080 #quadk {
+      transform: scale(2);
+      transform-origin: top left;
+      /* Base lógica de 1920: el layout piensa en 1920, pero “se ve” doble */
+      width: 1920px;
+      min-height: calc(100vh / 2);
+   }
+}
+
+/* Opcional: si tenés position: fixed en tooltips o menús,
+   suele funcionar bien; si alguno se desacomoda en Firefox,
+   move ese fixed dentro de #app para que escale junto. */

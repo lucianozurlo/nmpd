@@ -1,0 +1,4 @@
+{
+   "intro": ["kali-intro-alpha.png"],
+   "seq": [{ "prefix": "kali-scroll-open", "start": 0, "end": 34 }]
+}
