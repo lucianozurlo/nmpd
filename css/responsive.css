@@ -666,6 +666,16 @@
   #page-content.skinpro .image-hover {
     background-position: center;
   }
+
+  #page-content.skinpro .skinpro-acc .wrapper-videos video {
+    width: calc(60vw - 100px);
+    max-width: calc(60vw - 100px);
+  }
+
+  #page-content.skinpro .skinpro-buy-me {
+    transform: translateY(4%);
+  }
+
   #page-content.skinpro #main-page-content,
   #page-content.pilltrack #main-page-content {
     padding-bottom: 0 !important;
