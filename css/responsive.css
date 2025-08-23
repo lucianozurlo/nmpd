@@ -315,7 +315,6 @@
   #page-content.skinpro #main-page-content,
   #page-content.pilltrack #main-page-content {
     overflow: hidden;
-    padding-bottom: 100px !important;
   }
 
   #page-content.skinpro .title-accessories {
@@ -532,6 +531,16 @@
   #main.project-detail.detail-project #hero.has-image #hero-caption .inner .desc {
     font-size: 1.8vw;
   } */
+
+  #page-content.iqperfetto #main-page-content,
+  #page-content.skinpro #main-page-content,
+  #page-content.pilltrack #main-page-content {
+    padding-bottom: 100px !important;
+  }
+
+  #page-content.iqperfetto #main.project-detail.detail-project #hero.has-image #hero-description {
+    margin-bottom: -5vw;
+  }
 
   #main.project-detail.detail-project #hero.has-image #caption-img .inner.title {
     margin-left: 0;
