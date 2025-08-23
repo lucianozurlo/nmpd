@@ -586,6 +586,10 @@
     transform: translate(-30%, 170%);
     margin-bottom: 45%;
   }
+  #page-content.iqperfetto .buy-me {
+    transform: translateX(12vw);
+    justify-content: flex-start;
+  }
 
   #page-content.skinpro .skinpro-views-2 {
     margin-top: -120px;
