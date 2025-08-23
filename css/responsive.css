@@ -364,6 +364,12 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
+  .mob-ok {
+    display: inherit !important;
+  }
+  .mob-no {
+    display: none !important;
+  }
   .content-max-width,
   .content-full-width {
     padding-left: 12vw;
