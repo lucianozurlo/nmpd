@@ -13,7 +13,7 @@
 
 .splide__track {
    width: calc(100% - 160px);
-   margin: 3vh auto 0;
+   margin: 3cqh auto 0;
 }
 
 .splide__list {
@@ -88,7 +88,7 @@
 .splide__slide.is-active .slide-label {
    opacity: 1;
    font-weight: 400;
-   font-size: calc(1.2rem + 0.6vw);
+   font-size: calc(1.2rem + 0.6cqw);
    letter-spacing: -0.1rem;
    margin-top: 16px;
    text-align: center;
@@ -104,8 +104,8 @@
    pointer-events: auto;
    position: absolute;
    top: 50%;
-   width: 6vh;
-   height: 6vh;
+   width: 6cqh;
+   height: 6cqh;
    border: none;
    background: none;
    cursor: pointer;
@@ -157,12 +157,12 @@
 }
 
 #project-nav {
-   height: calc(100vh + 1px);
-   bottom: calc(-100vh - 1px);
+   height: calc(100cqh + 1px);
+   bottom: calc(-100cqh - 1px);
    display: flex;
    justify-content: center;
-   height: calc(100vh - 120px) !important;
-   min-height: calc(100vh - 120px) !important;
+   height: calc(100cqh - 120px) !important;
+   min-height: calc(100cqh - 120px) !important;
    min-height: -webkit-fit-content !important;
    min-height: -moz-fit-content !important;
    min-height: fit-content !important;
@@ -185,7 +185,7 @@
    display: flex;
    justify-content: space-between;
    position: relative !important;
-   padding-top: 18vh;
+   padding-top: 18cqh;
 }
 
 .next-project-image-bg {
@@ -202,7 +202,7 @@
    min-height: -webkit-fit-content !important;
    min-height: -moz-fit-content !important;
    min-height: fit-content !important;
-   max-height: calc(100vh - 18vh - 44px - 120px);
+   max-height: calc(100cqh - 18cqh - 44px - 120px);
 }
 
 .pin-spacer {
@@ -242,7 +242,7 @@
    width: 100%;
    opacity: 1 !important;
    font-weight: 700;
-   font-size: calc(1rem + 1.5vw);
+   font-size: calc(1rem + 1.5cqw);
    letter-spacing: -0.1rem;
    line-height: 1;
 }
@@ -252,7 +252,7 @@
    text-align: right;
    opacity: 1;
    font-weight: 300;
-   font-size: calc(1rem + 0.8vw);
+   font-size: calc(1rem + 0.8cqw);
    letter-spacing: -0.1rem;
    margin-top: 11px;
    line-height: 1;
@@ -267,7 +267,7 @@
    border-bottom: 1px solid #fff;
 }
 
-@media (max-width: 767px) {
+@container (max-width: 767px) {
    .splide,
    .splide__track {
       width: 100%;
@@ -285,6 +285,6 @@
       right: 20px;
    }
    .splide__slide.is-active .slide-label {
-      font-size: calc(1.4rem + 0.8vw);
+      font-size: calc(1.4rem + 0.8cqw);
    }
 }

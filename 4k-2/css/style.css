@@ -491,7 +491,7 @@ figure.has-parallax {
 
 .full figure.has-parallax {
    overflow: hidden;
-   height: 100vh;
+   height: 100cqh;
 }
 
 figure img {
@@ -752,33 +752,33 @@ em {
 }
 
 .big-title {
-   font-size: calc(1rem + 4.15vw);
-   line-height: calc(1rem + 4.5vw);
+   font-size: calc(1rem + 4.15cqw);
+   line-height: calc(1rem + 4.5cqw);
 }
 
 h1 {
-   font-size: calc(1rem + 4.15vw);
-   line-height: calc(1rem + 4.5vw);
+   font-size: calc(1rem + 4.15cqw);
+   line-height: calc(1rem + 4.5cqw);
 }
 
 h2 {
-   font-size: calc(1rem + 3vw);
-   line-height: calc(1rem + 3.5vw);
+   font-size: calc(1rem + 3cqw);
+   line-height: calc(1rem + 3.5cqw);
 }
 
 h3 {
-   font-size: calc(1rem + 2vw);
-   line-height: calc(1rem + 2.5vw);
+   font-size: calc(1rem + 2cqw);
+   line-height: calc(1rem + 2.5cqw);
 }
 
 h4 {
-   font-size: calc(1rem + 1vw);
-   line-height: calc(1rem + 1.6vw);
+   font-size: calc(1rem + 1cqw);
+   line-height: calc(1rem + 1.6cqw);
 }
 
 h5 {
-   font-size: calc(1rem + 0.6vw);
-   line-height: calc(1rem + 1.5vw);
+   font-size: calc(1rem + 0.6cqw);
+   line-height: calc(1rem + 1.5cqw);
 }
 
 h6 {
@@ -995,10 +995,10 @@ a:hover {
 
 .light-section-wrapper,
 .dark-section-wrapper {
-   margin-left: calc(50% - 50vw) !important;
-   margin-right: calc(50% - 50vw) !important;
+   margin-left: calc(50% - 50cqw) !important;
+   margin-right: calc(50% - 50cqw) !important;
    max-width: 1000% !important;
-   width: 100vw !important;
+   width: 100cqw !important;
 }
 
 .light-section-container,
@@ -1043,18 +1043,18 @@ a:hover {
 }
 
 .full {
-   margin-left: calc(50% - 50vw) !important;
-   margin-right: calc(50% - 50vw) !important;
+   margin-left: calc(50% - 50cqw) !important;
+   margin-right: calc(50% - 50cqw) !important;
    max-width: 1000% !important;
-   width: 100vw !important;
+   width: 100cqw !important;
 }
 
 .row_padding_top {
-   padding-top: 9vw;
+   padding-top: 9cqw;
 }
 
 .row_padding_bottom {
-   padding-bottom: 9vw;
+   padding-bottom: 9cqw;
 }
 
 .row_padding_left {
@@ -1066,8 +1066,8 @@ a:hover {
 }
 
 .row_padding_all {
-   padding-top: 4vw;
-   padding-bottom: 4vw;
+   padding-top: 4cqw;
+   padding-bottom: 4cqw;
    padding-left: 80px;
    padding-right: 80px;
 }
@@ -1243,15 +1243,15 @@ i.arrow-icon-up::after {
    text-align: center;
    background: rgb(34, 34, 34);
    float: left;
-   width: 9vw;
+   width: 9cqw;
    overflow: hidden;
    z-index: 10;
 }
 
 .percentage {
    opacity: 1;
-   font-size: calc(1rem + 2vw);
-   line-height: calc(1rem + 2.5vw);
+   font-size: calc(1rem + 2cqw);
+   line-height: calc(1rem + 2.5cqw);
    font-weight: 500;
    color: #fff;
    display: table;
@@ -1313,7 +1313,7 @@ i.arrow-icon-up::after {
    display: block;
    color: #fff;
    overflow: hidden;
-   padding-left: 0vw;
+   padding-left: 0cqw;
    float: right;
    z-index: 0;
 }
@@ -1327,8 +1327,8 @@ i.arrow-icon-up::after {
    display: block;
    font-weight: 500;
    position: relative;
-   font-size: calc(1rem + 2vw);
-   line-height: calc(1rem + 2.5vw);
+   font-size: calc(1rem + 2cqw);
+   line-height: calc(1rem + 2.5cqw);
 }
 
 header {
@@ -1464,7 +1464,7 @@ nav.open {
    opacity: 1 !important;
 }
 
-@media all and (min-width: 1025px) {
+@container all and (min-width: 1025px) {
    .classic-menu nav {
       position: relative;
       width: auto;
@@ -1744,7 +1744,7 @@ nav.open {
    }
 
    .fullscreen-menu nav {
-      height: 100vh;
+      height: 100cqh;
       position: fixed;
       top: 0;
       left: 0;
@@ -1796,7 +1796,7 @@ nav.open {
    .fullscreen-menu .flexnav .touch-button {
       width: 100%;
       display: block;
-      height: 6vw;
+      height: 6cqw;
    }
 
    .fullscreen-menu .flexnav li ul li .touch-button {
@@ -1818,7 +1818,7 @@ nav.open {
 
    .fullscreen-menu .flexnav li a {
       font-weight: 700;
-      font-size: calc(3rem + 5.15vw);
+      font-size: calc(3rem + 5.15cqw);
       line-height: 180px;
       letter-spacing: -5px !important;
       padding: 0 50px;
@@ -2833,7 +2833,7 @@ nav.open {
    background: transparent;
 }
 
-@media only screen and (max-width: 1466px) {
+@container only screen and (max-width: 1466px) {
    .row_padding_all {
       padding-left: 60px;
       padding-right: 60px;
@@ -2848,7 +2848,7 @@ nav.open {
    }
 
    .percentage-wrapper {
-      width: 10vw;
+      width: 10cqw;
    }
 
    .percentage-intro {
@@ -2878,7 +2878,7 @@ nav.open {
    }
 }
 
-@media only screen and (max-width: 1024px) {
+@container only screen and (max-width: 1024px) {
    .parallax-wrap {
       transform: none !important;
    }
@@ -2912,15 +2912,15 @@ nav.open {
    }
 
    .row_padding_all {
-      padding-top: 4vw;
-      padding-bottom: 4vw;
+      padding-top: 4cqw;
+      padding-bottom: 4cqw;
       padding-left: 0px;
       padding-right: 0px;
    }
 
    .full.row_padding_all {
-      padding-top: 4vw;
-      padding-bottom: 4vw;
+      padding-top: 4cqw;
+      padding-bottom: 4cqw;
       padding-left: 40px;
       padding-right: 40px;
    }
@@ -2930,7 +2930,7 @@ nav.open {
    }
 
    .percentage-wrapper {
-      width: 12vw;
+      width: 12cqw;
    }
 
    .percentage-intro {
@@ -2942,7 +2942,7 @@ nav.open {
    }
 
    nav {
-      height: 100vh;
+      height: 100cqh;
       width: 100%;
       position: fixed;
       left: 0;
@@ -3008,8 +3008,8 @@ nav.open {
 
    .flexnav li a {
       font-weight: 500;
-      font-size: calc(1rem + 4.15vw);
-      line-height: calc(1rem + 4.5vw);
+      font-size: calc(1rem + 4.15cqw);
+      line-height: calc(1rem + 4.5cqw);
       padding: 0;
       transition: all 0.1s ease-in-out 0s;
    }
@@ -3038,7 +3038,7 @@ nav.open {
    .flexnav .touch-button {
       width: 100%;
       display: block;
-      height: calc(1rem + 5.5vw);
+      height: calc(1rem + 5.5cqw);
    }
 
    .menu-timeline .before-span {
@@ -3234,7 +3234,7 @@ nav.open {
    }
 }
 
-@media only screen and (max-width: 767px) {
+@container only screen and (max-width: 767px) {
    figcaption {
       background-color: rgba(34, 34, 34, 0.3);
       bottom: 0px;
@@ -3321,11 +3321,11 @@ nav.open {
    }
 
    .row_padding_top {
-      padding-top: 10vw;
+      padding-top: 10cqw;
    }
 
    .row_padding_bottom {
-      padding-bottom: 10vw;
+      padding-bottom: 10cqw;
    }
 
    .row_padding_left {
@@ -3345,15 +3345,15 @@ nav.open {
    }
 
    .row_padding_all {
-      padding-top: 4vw;
-      padding-bottom: 4vw;
+      padding-top: 4cqw;
+      padding-bottom: 4cqw;
       padding-left: 0px;
       padding-right: 0px;
    }
 
    .full.row_padding_all {
-      padding-top: 4vw;
-      padding-bottom: 4vw;
+      padding-top: 4cqw;
+      padding-bottom: 4cqw;
       padding-left: 30px;
       padding-right: 30px;
    }
@@ -3363,7 +3363,7 @@ nav.open {
    }
 
    .percentage-wrapper {
-      width: 16vw;
+      width: 16cqw;
    }
 
    .percentage-intro {
@@ -3396,8 +3396,8 @@ nav.open {
    }
 
    .flexnav li a {
-      font-size: calc(1rem + 7vw);
-      line-height: calc(1rem + 9.5vw);
+      font-size: calc(1rem + 7cqw);
+      line-height: calc(1rem + 9.5cqw);
    }
 
    footer {
@@ -3502,7 +3502,7 @@ nav.open {
    }
 }
 
-@media only screen and (max-width: 479px) {
+@container only screen and (max-width: 479px) {
    .one_half,
    .one_third,
    .two_third,
@@ -3520,11 +3520,11 @@ nav.open {
    }
 
    .row_padding_top {
-      padding-top: 12vw;
+      padding-top: 12cqw;
    }
 
    .row_padding_bottom {
-      padding-bottom: 12vw;
+      padding-bottom: 12cqw;
    }
 
    .row_padding_left {
@@ -3544,15 +3544,15 @@ nav.open {
    }
 
    .row_padding_all {
-      padding-top: 4vw;
-      padding-bottom: 4vw;
+      padding-top: 4cqw;
+      padding-bottom: 4cqw;
       padding-left: 0px;
       padding-right: 0px;
    }
 
    .full.row_padding_all {
-      padding-top: 4vw;
-      padding-bottom: 4vw;
+      padding-top: 4cqw;
+      padding-bottom: 4cqw;
       padding-left: 20px;
       padding-right: 20px;
    }
@@ -3562,7 +3562,7 @@ nav.open {
    }
 
    .percentage-wrapper {
-      width: 20vw;
+      width: 20cqw;
    }
 
    #logo {
@@ -3634,7 +3634,7 @@ nav.open {
    }
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+@container only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
    #rotate-device {
       display: block;
    }

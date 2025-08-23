@@ -55,7 +55,7 @@
 }
 
 #hero.has-image #hero-caption {
-   height: 100vh;
+   height: 100cqh;
    padding-top: 120px;
    padding-bottom: 160px;
    text-align: left;
@@ -71,8 +71,8 @@
 
 #hero-image-wrapper {
    position: absolute;
-   width: 100vw;
-   height: 100vh;
+   width: 100cqw;
+   height: 100cqh;
    z-index: 0;
    margin: 0 auto;
    left: 0;
@@ -100,8 +100,8 @@
    opacity: 0;
    overflow: visible;
    -ms-interpolation-mode: nearest-neighbor;
-       image-rendering: -moz-crisp-edges;
-       image-rendering: pixelated;
+   image-rendering: -moz-crisp-edges;
+   image-rendering: pixelated;
 }
 
 .load-project-page #hero-bg-image,
@@ -112,8 +112,8 @@
 }
 
 .hero-title {
-   font-size: calc(1rem + 5.15vw);
-   line-height: calc(1rem + 5.5vw);
+   font-size: calc(1rem + 5.15cqw);
+   line-height: calc(1rem + 5.5cqw);
    font-weight: 500;
    position: relative;
    display: block;
@@ -127,11 +127,11 @@
 }
 
 .hero-title-wrapper {
-   margin-left: -0.3vw;
+   margin-left: -0.3cqw;
 }
 
 #hero.has-image .hero-title-wrapper {
-   margin-left: -0.3vw;
+   margin-left: -0.3cqw;
 }
 
 #hero.has-image .text-align-center .hero-title-wrapper {
@@ -166,11 +166,11 @@
 
 .marquee-title .hero-title-wrapper {
    white-space: nowrap;
-   margin-left: calc(50% - 50vw) !important;
-   margin-right: calc(50% - 50vw) !important;
+   margin-left: calc(50% - 50cqw) !important;
+   margin-right: calc(50% - 50cqw) !important;
    max-width: 1000% !important;
-   width: 100vw !important;
-   height: 13vw;
+   width: 100cqw !important;
+   height: 13cqw;
 }
 
 .marquee-title .hero-title {
@@ -179,7 +179,7 @@
 
 .marquee-title .hero-title span {
    display: inline-block;
-   padding-right: 1vw;
+   padding-right: 1cqw;
 }
 
 .light-content .hero-title {
@@ -508,11 +508,11 @@
 }
 
 #main-page-content.project-page {
-   margin-bottom: calc(200vh - 120px);
+   margin-bottom: calc(200cqh - 120px);
 }
 
 .hero-below-caption #main-page-content.project-page {
-   margin-bottom: calc(200vh - 120px);
+   margin-bottom: calc(200cqh - 120px);
 }
 
 #main-content.portfolio-page {
@@ -606,7 +606,7 @@
 }
 
 .next-hero-title-wrapper {
-   margin-left: -0.3vw;
+   margin-left: -0.3cqw;
 }
 
 .text-align-center .next-hero-title-wrapper {
@@ -614,7 +614,7 @@
 }
 
 #page-nav .next-hero-title-wrapper {
-   margin-left: -0.7vw;
+   margin-left: -0.7cqw;
 }
 
 .marquee-title .next-hero-title-wrapper {
@@ -623,8 +623,8 @@
 }
 
 .next-hero-title {
-   font-size: calc(1rem + 5.15vw);
-   line-height: calc(1rem + 5.5vw);
+   font-size: calc(1rem + 5.15cqw);
+   line-height: calc(1rem + 5.5cqw);
    position: relative;
    display: block;
    margin-top: 0px;
@@ -641,8 +641,8 @@
 }
 
 #project-nav .next-hero-title {
-   font-size: calc(1rem + 2vw);
-   line-height: calc(1rem + 2.5vw);
+   font-size: calc(1rem + 2cqw);
+   line-height: calc(1rem + 2.5cqw);
 }
 
 .text-align-center .next-hero-title,
@@ -713,18 +713,18 @@
 ---------------------------------------------------*/
 
 #project-nav {
-   height: 200vh;
+   height: 200cqh;
    width: 100%;
    color: #fff;
    position: absolute;
    margin-bottom: 0;
-   bottom: -200vh;
+   bottom: -200cqh;
    overflow: hidden;
 }
 
 .hero-below-caption #project-nav {
-   height: 100vh;
-   bottom: -100vh;
+   height: 100cqh;
+   bottom: -100cqh;
 }
 
 #project-nav.change-header {
@@ -755,7 +755,7 @@
 
 .next-project-image-wrapper {
    position: absolute;
-   width: 100vw;
+   width: 100cqw;
    height: 100%;
    top: 0;
    left: 0;
@@ -782,7 +782,7 @@
    overflow: hidden;
    /* clip-path: inset(0 31%); */
    -webkit-clip-path: inset(0 0);
-           clip-path: inset(0 0);
+   clip-path: inset(0 0);
    /* -webkit-transform: scale(0.48, 0.48) translateX(14%);
 	transform: scale(0.48, 0.48) translateX(14%) */
    transform: scale(0.48);
@@ -799,7 +799,7 @@
 .next-project-image.visible {
    opacity: 1 !important;
    -webkit-clip-path: inset(0 0%) !important;
-           clip-path: inset(0 0%) !important;
+   clip-path: inset(0 0%) !important;
    transform: scale(1.02) !important;
 }
 
@@ -840,7 +840,7 @@
    right: 0;
    margin: 0 auto;
    width: 100%;
-   height: calc(74% + 60px + 1.5vw);
+   height: calc(74% + 60px + 1.5cqw);
    box-sizing: border-box;
    padding-top: 20px;
    padding-bottom: 20px;
@@ -1151,7 +1151,7 @@
 /*--------------------------------------------------
 	Responsive
 ---------------------------------------------------*/
-@media only screen and (max-width: 1537px) {
+@container only screen and (max-width: 1537px) {
    .hero-arrow {
       bottom: 40px;
    }
@@ -1162,7 +1162,7 @@
    }
 }
 
-@media only screen and (max-width: 1466px) {
+@container only screen and (max-width: 1466px) {
    #hero-caption {
       padding-top: 160px;
       padding-bottom: 160px;
@@ -1203,7 +1203,7 @@
    }
 }
 
-@media only screen and (max-width: 1024px) {
+@container only screen and (max-width: 1024px) {
    #hero-caption {
       padding-top: 140px;
       padding-bottom: 140px;
@@ -1228,11 +1228,11 @@
 
    .next-project-image {
       -webkit-clip-path: inset(0 5%);
-              clip-path: inset(0 5%);
+      clip-path: inset(0 5%);
    }
 
    .next-project-caption {
-      height: calc(74% + 60px + 2.5vw);
+      height: calc(74% + 60px + 2.5cqw);
    }
 
    .page-nav-caption {
@@ -1241,8 +1241,8 @@
    }
 
    #project-nav .next-hero-title {
-      font-size: calc(1rem + 3vw);
-      line-height: calc(1rem + 3.5vw);
+      font-size: calc(1rem + 3cqw);
+      line-height: calc(1rem + 3.5cqw);
    }
 
    #page-nav .next-hero-subtitle {
@@ -1264,7 +1264,7 @@
    }
 }
 
-@media only screen and (max-width: 767px) {
+@container only screen and (max-width: 767px) {
    #hero-caption {
       padding-top: 120px;
       padding-bottom: 120px;
@@ -1282,8 +1282,8 @@
 
    .hero-title,
    .next-hero-title {
-      font-size: calc(1rem + 4.15vw);
-      line-height: calc(1rem + 4.5vw);
+      font-size: calc(1rem + 4.15cqw);
+      line-height: calc(1rem + 4.5cqw);
    }
 
    .hero-subtitle {
@@ -1341,7 +1341,7 @@
 
    .next-project-image {
       -webkit-clip-path: inset(0 0%);
-              clip-path: inset(0 0%);
+      clip-path: inset(0 0%);
    }
 
    .next-hero-counter {
@@ -1355,7 +1355,7 @@
    }
 }
 
-@media only screen and (max-width: 479px) {
+@container only screen and (max-width: 479px) {
    #hero-caption {
       padding-top: 100px;
       padding-bottom: 100px;

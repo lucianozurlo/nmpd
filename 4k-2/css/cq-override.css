@@ -1,0 +1,6 @@
+/* cargá esto en un css nuevo que vaya AL FINAL (p.ej. cq-override.css) */
+#page-content.cq-root {
+   container-type: size; /* habilita @container + cqw/cqh dentro */
+   width: min(100vw, 1920px); /* “techo” 1920 */
+   margin-inline: auto;
+}

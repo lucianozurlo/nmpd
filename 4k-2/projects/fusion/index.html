@@ -1,607 +1,877 @@
 <!doctype html>
 <html lang="en" data-lang-base="../../langs/">
+   <head>
+      <title>NMP.D :: Fusion</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Industrial Design Studio" />
+      <meta name="author" content="NMP.D" />
+      <meta charset="UTF-8" />
+      <link rel="icon" type="image/ico" href="../../img/favicon.png" />
+      <link rel="stylesheet" href="../../css/style.css" />
+      <link rel="stylesheet" href="../../css/all.min.css" />
+      <link rel="stylesheet" href="../../css/custom.css" />
+      <link rel="stylesheet" href="../../css/responsive.css" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      />
+      <link rel="preload" href="../_seq/fusion-loop-massage01.png" as="image" />
+      <link rel="preload" href="../_seq/fusion-loop-massage02.png" as="image" />
+      <link rel="preload" href="../_seq/fusion-loop-massage03.png" as="image" />
+      <link rel="stylesheet" href="../../css/splide.min.css" />
+      <link rel="stylesheet" href="../../css/projects.css" />
+      <link rel="stylesheet" href="../../css/cq-override.css" />
+   </head>
 
-<head>
-   <title>NMP.D :: Fusion</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <meta name="description" content="Industrial Design Studio" />
-   <meta name="author" content="NMP.D" />
-   <meta charset="UTF-8" />
-   <link rel="icon" type="image/ico" href="../../img/favicon.png" />
-   <link rel="stylesheet" href="../../css/style.css" />
-   <link rel="stylesheet" href="../../css/all.min.css" />
-   <link rel="stylesheet" href="../../css/custom.css" />
-   <link rel="stylesheet" href="../../css/responsive.css" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-   <link rel="preload" href="../_seq/fusion-loop-massage01.png" as="image" />
-   <link rel="preload" href="../_seq/fusion-loop-massage02.png" as="image" />
-   <link rel="preload" href="../_seq/fusion-loop-massage03.png" as="image" />
-   <link rel="stylesheet" href="../../css/splide.min.css" />
-   <link rel="stylesheet" href="../../css/projects.css" />
-</head>
-
-<body class="hidden hidden-ball uppercase-titles dark projects" data-primary-color="#333">
-   <main>
-      <div class="preloader-wrap" data-centerLine="NMP.D">
-         <div class="outer">
-            <div class="inner">
-               <div class="trackbar">
-                  <div class="preloader-intro">
-                     <span data-hover="Loading" data-original="Loading">Loading</span>
+   <body class="hidden hidden-ball uppercase-titles dark projects" data-primary-color="#333">
+      <main>
+         <div class="preloader-wrap" data-centerLine="NMP.D">
+            <div class="outer">
+               <div class="inner">
+                  <div class="trackbar">
+                     <div class="preloader-intro">
+                        <span data-hover="Loading" data-original="Loading">Loading</span>
+                     </div>
+                     <div class="loadbar"></div>
+                     <div class="percentage-wrapper">
+                        <div class="percentage" id="precent"></div>
+                     </div>
                   </div>
-                  <div class="loadbar"></div>
-                  <div class="percentage-wrapper">
-                     <div class="percentage" id="precent"></div>
-                  </div>
+                  <div class="percentage-intro">NMP.D</div>
                </div>
-               <div class="percentage-intro">NMP.D</div>
             </div>
          </div>
-      </div>
 
-      <div class="cd-index cd-main-content">
-         <div id="page-content" class="light-content nmp-project fusion black" data-bgcolor="#131316">
-            <header class="fullscreen-menu invert-header" data-menucolor="#0c0c0c">
-               <div id="header-container">
-                  <nav>
-                     <div class="nav-height">
-                        <div class="outer">
-                           <div class="inner">
-                              <ul class="flexnav">
-                                 <li class="link menu-timeline">
-                                    <a href="../../aboutus">
-                                       <div class="before-span">
-                                          <span data-hover="About us" data-original="About us"
-                                             class="menu-item link">About us</span>
-                                       </div>
-                                    </a>
-                                 </li>
-                                 <li class="link menu-timeline">
-                                    <a>
-                                       <div class="before-span">
-                                          <span data-hover="Projects" data-original="Projects"
-                                             class="menu-item">Projects
-                                          </span>
-                                       </div>
-                                    </a>
-                                    <ul class="submenu">
-                                       <li><a class="disabled">Fusion</a></li>
-                                       <li><a href="../iqperfetto/">IQ Perfetto</a></li>
-                                       <li><a href="../skinpro/">SkinPro Softshine</a></li>
-                                       <li><a href="../pilltrack/">Pilltrack</a></li>
-                                       <li><a href="../ccexquisite/">CC Exquisite</a></li>
-                                       <li><a href="../kali/">Kali</a></li>
-                                       <li><a href="../wellted/">Wellted</a></li>
-                                    </ul>
-                                 </li>
-                                 <li class="link menu-timeline">
-                                    <a href="../../contact">
-                                       <div class="before-span">
-                                          <span data-hover="Contact" data-original="Contact" class="menu-item">Contact
-                                          </span>
-                                       </div>
-                                    </a>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
-                  </nav>
-                  <div class="button-wrap menu burger-lines">
-                     <div class="icon-wrap">
-                        <div class="button-icon">
-                           <div id="burger-wrapper">
-                              <div id="menu-burger">
-                                 <span></span>
-                                 <span></span>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div id="logo" class="hide-ball">
-                     <a href="../../">
-                        <img class="black-logo" src="../../img/logo-min.svg" alt="NMP.D" />
-                        <img class="white-logo" src="../../img/logo-min_w.svg" alt="NMP.D" />
-                     </a>
-                  </div>
-                  <div id="lang">
-                     <a class="link active" href="#" data-lang="en">ENG</a>
-                     <span>/</span>
-                     <a class="link" href="#" data-lang="es">ESP</a>
-                  </div>
-               </div>
-            </header>
-
-            <div id="content-scroll">
-               <div id="main" class="project-detail detail-project">
-                  <div id="hero" class="has-image autoscroll">
-                     <div id="hero-styles">
-                        <div id="hero-caption">
-                           <div class="inner title">
-                              <h1 class="caption-timeline detail">
-                                 <span>Fusion</span>
-                                 <span class="registered">®</span>
-                              </h1>
-                              <h5 class="caption-timeline detail from">
-                                 <span data-hover="Fusion - Desc" data-original="Fusion - Desc">
-                                    Massage Gun</span>
-                              </h5>
-                              <h5 class="caption-timeline detail desc">
-                                 <span>Fusion Black Pro</span>
-                                 <span class="registered">®</span>
-                              </h5>
-                              <p class="caption-timeline detail anio">
-                                 <span>2020</span>
-                              </p>
-                           </div>
-
-                           <div class="inner text">
-                              <p data-hover="Fusion - About Text 1" data-original="Fusion - About Text 1"
-                                 class="has-opacity">
-                                 Designed in 2020 for an American company, this percussion
-                                 massage gun redefines the aesthetics of its category. Our goal
-                                 was to move away from the rough, &quot;muscle-car&quot; design
-                                 guns prevalent in the market, drawing inspiration from the
-                                 sophistication of luxury automobiles. We achieved this through
-                                 subtle edges, smooth surface transitions, and a careful
-                                 combination of colors and textures that evoke a premium feel.
-                              </p>
-                              <p data-hover="Fusion - About Text 2" data-original="Fusion - About Text 2"
-                                 class="has-opacity">
-                                 Every surface was meticulously shaped, with the significant
-                                 challenge of seamlessly integrating the top boss covering the
-                                 engine which also has the heat output grid. It was fluidly
-                                 integrated, ensuring efficient air ventilation without
-                                 compromising the device's overall aesthetics.
-                              </p>
-                              <p data-hover="Fusion - About Text 3" data-original="Fusion - About Text 3"
-                                 class="has-opacity">
-                                 Furthermore, the heat output was fluidly integrated, ensuring
-                                 efficient air ventilation without compromising the device's
-                                 overall aesthetics.
-                              </p>
-                           </div>
-                        </div>
-
-                        <div id="hero-description" class="has-image autoscroll">
-                           <div class="inner text">
-                              <p data-hover="Fusion - About Text 1" data-original="Fusion - About Text 1"
-                                 class="has-opacity">
-                                 Designed in 2020 for an American company, this percussion
-                                 massage gun redefines the aesthetics of its category. Our goal
-                                 was to move away from the rough, &quot;muscle-design&quot; guns
-                                 prevalent in the market, drawing inspiration from the
-                                 sophistication of luxury automobiles. We achieved this through
-                                 subtle edges, smooth surface transitions, and a careful
-                                 combination of colors and textures that evoke a premium feel.
-                              </p>
-                              <p data-hover="Fusion - About Text 2" data-original="Fusion - About Text 2"
-                                 class="has-opacity">
-                                 Every surface was meticulously shaped, with the significant
-                                 challenge of seamlessly integrating the top boss covering the
-                                 engine. A distinctive element is its innovative display design,
-                                 which breaks from the typical cheap segment displays and simple
-                                 battery life LEDs. We ingeniously crafted a solution that
-                                 simulates the look of a high-end LED display while keeping costs
-                                 controlled.
-                              </p>
-                              <p data-hover="Fusion - About Text 3" data-original="Fusion - About Text 3"
-                                 class="has-opacity">
-                                 Furthermore, the heat output was fluidly integrated, ensuring
-                                 efficient air ventilation without compromising the device's
-                                 overall aesthetics.
-                              </p>
-                           </div>
-                        </div>
-
-                        <div id="hero-image-wrapper">
-                           <div id="hero-background-layer" class="parallax-scroll-image">
-                              <div id="caption-img">
-                                 <div class="inner title">
-                                    <h1 class="caption-timeline detail">
-                                       <span>Fusion</span>
-                                       <span class="registered">®</span>
-                                    </h1>
-                                    <h5 class="caption-timeline detail from">
-                                       <span data-hover="Fusion - Desc" data-original="Fusion - Desc">
-                                          Massage Gun</span>
-                                    </h5>
-                                    <h5 class="caption-timeline detail desc">
-                                       <span>Fusion Black Pro</span>
-                                       <span class="registered">®</span>
-                                    </h5>
-                                    <p class="caption-timeline detail anio">
-                                       <span>2020</span>
-                                    </p>
-                                 </div>
-                              </div>
-                              <div id="hero-bg-image" style="background-image: url(../_intro/fusion-intro-alpha.png)">
-                              </div>
-                              <div class="bg-base"></div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div id="main-content">
-                     <div id="main-page-content">
-                        <div
-                           class="content-row content-column-resp full xlarge row_padding_bottom dark-section mt-100 ui-design"
-                           data-bgcolor="#131316">
-                           <div class="one_half vertical-parallax" data-startparallax="0" data-endparallax="-0.1">
-                              <div class="content-half content-text">
-                                 <h2>
-                                    <span data-hover="Fusion - UI design Title"
-                                       data-original="Fusion - UI design Title">UI design</span>
-                                    <img src="../../img/icons/ui-design.gif" alt="" />
-                                 </h2>
-                                 <p data-hover="Fusion - UI design Desc" data-original="Fusion - UI design Desc"
-                                    class="text italic">
-                                    We completely reimagined the UI for this product, starting
-                                    from scratch with a focus on optimizing information delivery
-                                    to the user. While the data itself is fundamental, we noticed
-                                    that most products on the market presented it in a confusing
-                                    way. Our goal was to create something easy to read and
-                                    intuitively aligned with other popular sports products, like
-                                    sports tracking apps and smartwatches, ensuring a seamless
-                                    and familiar user experience.
-                                 </p>
-                                 <div class="grid-container2x2">
-                                    <div class="grid-item">
-                                       <div>
-                                          <img src="../_img/fusion-screen1.png" alt="" class="border-circle" />
-                                       </div>
-                                       <div data-hover="Fusion - UI design Detail 1"
-                                          data-original="Fusion - UI design Detail 1">
-                                          Off
-                                       </div>
-                                    </div>
-                                    <div class="grid-item">
-                                       <div>
-                                          <img src="../_img/fusion-screen2.png" alt="" class="border-circle" />
-                                       </div>
-                                       <div>
-                                          <span data-hover="Fusion - UI design Detail 2a"
-                                             data-original="Fusion - UI design Detail 2a">
-                                             08 Speed level</span>
-                                          <span data-hover="Fusion - UI design Detail 2b"
-                                             data-original="Fusion - UI design Detail 2b">
-                                             100% Battery</span>
-                                       </div>
-                                    </div>
-                                    <div class="grid-item">
-                                       <div>
-                                          <img src="../_img/fusion-screen3.png" alt="" class="border-circle" />
-                                       </div>
-                                       <div>
-                                          <span data-hover="Fusion - UI design Detail 3a"
-                                             data-original="Fusion - UI design Detail 3a">
-                                             16 Speed Level</span>
-                                          <span data-hover="Fusion - UI design Detail 3b"
-                                             data-original="Fusion - UI design Detail 3b">
-                                             40% Battery</span>
-                                       </div>
-                                    </div>
-                                    <div class="grid-item">
-                                       <div>
-                                          <img src="../_img/fusion-screen4.png" alt="" class="border-circle" />
-                                       </div>
-                                       <div>
-                                          <span data-hover="Fusion - UI design Detail 4a"
-                                             data-original="Fusion - UI design Detail 4a">
-                                             20 Speed Level</span>
-                                          <span data-hover="Fusion - UI design Detail 4b"
-                                             data-original="Fusion - UI design Detail 4b">
-                                             20% Battery</span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="one_half last vertical-parallax no-padding fusion-spots" data-startparallax="0"
-                              data-endparallax="-0.1">
-                              <div class="content-half">
-                                 <div class="spots-container">
-                                    <img src="../_img/fusion-screen.png" alt="" />
-                                    <div class="spot line-ok" tabindex="0" aria-label="battery level ring"
-                                       data-hover="battery level ring" data-original="battery level ring"
-                                       data-position="top" data-line-length="16"></div>
-                                    <div class="spot" tabindex="0" aria-label="speed level" data-hover="speed level"
-                                       data-original="speed level" data-position="right" data-line-length="18"></div>
-                                    <div class="spot" tabindex="0" aria-label="speed level ring"
-                                       data-hover="speed level ring" data-original="speed level ring"
-                                       aria-label="speed level" data-hover="speed level" data-original="speed level"
-                                       data-position="left" data-line-length="15"></div>
-                                    <div class="spot" tabindex="0" aria-label="decrease speed"
-                                       data-hover="decrease speed" data-original="decrease speed" data-position="left"
-                                       data-line-length="16"></div>
-                                    <div class="spot" tabindex="0" aria-label="increase speed"
-                                       data-hover="increase speed" data-original="increase speed" data-position="right"
-                                       data-line-length="18"></div>
-                                    <div class="message-box-spot"></div>
-                                    <div class="line-spot"></div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-
-                        <div class="content-row full xlarge dark-section mt-100" data-bgcolor="#131316">
-                           <div class="one_full vertical-parallax" data-startparallax="0" data-endparallax="-0.1">
-                              <div class="content-full right less uppercase">
-                                 <h2>
-                                    <img src="../../img/icons/views.gif" alt="" />
-                                    <span data-hover="Projects - Views" data-original="Projects - Views">Views</span>
-                                 </h2>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="content-row full xlarge dark-section mt-100 mb-100 views" data-bgcolor="#131316">
-                           <div class="one_full vertical-parallax" data-startparallax="0" data-endparallax="-0.1">
-                              <div class="content-full">
-                                 <div class="spots-container">
-                                    <img src="../_img/fusion-views_top.png" alt="" class="wide" />
-                                    <div class="spot" tabindex="0" aria-label="branding" data-hover="branding"
-                                       data-original="branding" data-position="top" data-line-length="10"></div>
-                                    <div class="spot" tabindex="0" aria-label="motor heat output"
-                                       data-hover="motor heat output" data-original="motor heat output"
-                                       data-position="bottom" data-line-length="23"></div>
-                                    <div class="spot" tabindex="0" aria-label="on/off button" data-hover="on/off button"
-                                       data-original="on/off button" data-position="bottom" data-line-length="28"></div>
-                                    <div class="message-box-spot"></div>
-                                    <div class="line-spot"></div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-
-                        <div class="content-row full xlarge dark-section mt-150" data-bgcolor="#131316">
-                           <div class="one_full">
-                              <div class="content-full">
-                                 <div class="content-videos">
-                                    <div class="wrapper-videos">
-                                       <div class="wrapper-videos" id="fusion-loop-massage">
-                                          <img class="frame-seq" src="" alt="fusion-loop-massage" />
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-
-                        <div class="content-row full xlarge row_padding_bottom dark-section pt-100"
-                           data-bgcolor="#131316">
-                           <div class="one_full vertical-parallax" data-startparallax="0" data-endparallax="-0.1">
-                              <div class="content-full d-flex-center">
-                                 <img src="../_img/fusion-views_side.png" alt="" />
-                              </div>
-                           </div>
-                        </div>
-                        <div class="content-row full xlarge dark-section pb-60 fusion-views" data-bgcolor="#131316">
-                           <div class="one_half vertical-parallax flex-full-left no-padding" data-startparallax="0"
-                              data-endparallax="-0.1">
-                              <div class="content-half max-width-unset">
-                                 <img src="../_img/fusion-views_angle.png" class="max-height-110" alt="" />
-                              </div>
-                           </div>
-                           <div class="one_half vertical-parallax flex-center no-padding" data-startparallax="0"
-                              data-endparallax="-0.1">
-                              <div class="content-half buy-me-content">
-                                 <img src="../_img/fusion-views_bottom.jpg" class="border-circle mb-120" alt="" />
-                                 <div class="buy-me">
-                                    <a href="https://www.amazon.com/dp/B09CWKGF6N" target="_blank">
-                                       <h2>
-                                          <span data-hover="Buy me - Title" data-original="Buy me - Title">
-                                             Buy me!</span>
-                                       </h2>
-                                       <p>
-                                          <span data-hover="Buy me - Text 1" data-original="Buy me - Text 1">
-                                             We don't make any revenue from this.</span><br />
-                                          <span data-hover="Buy me - Text 2" data-original="Buy me - Text 2">
-                                             We just like to be kind with our clients!</span>
-                                       </p>
-                                    </a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div id="project-nav">
-                  <div class="next-project-wrap">
-                     <div class="next-project-header">
-                        <p class="all-works" data-hover="Other Projects" data-original="Other Projects">
-                           Other Projects
-                        </p>
-                     </div>
-                     <div class="next-project-image-wrapper">
-                        <div class="next-project-image project">
-                           <div class="next-project-image-bg">
-                              <div id="slider">
-                                 <section class="splide" aria-label="NMP.D - Other Projects" data-start="0">
-                                    <div class="splide__track">
-                                       <ul class="splide__list">
-                                          <li class="splide__slide">
-                                             <a href="../../projects/iqperfetto/" class="slide-content">
-                                                <img src="../_intro/iqperfetto-intro-alpha.png" alt="" />
-                                                <div class="slide-label">IQ Perfetto</div>
-                                             </a>
-                                          </li>
-                                          <li class="splide__slide">
-                                             <a href="../../projects/skinpro/" class="slide-content">
-                                                <img src="../_intro/skinpro-intro-alpha.png" alt="" />
-                                                <span class="slide-label">SkinPro<br />Softshine</span>
-                                             </a>
-                                          </li>
-                                          <li class="splide__slide">
-                                             <a href="../../projects/pilltrack/" class="slide-content">
-                                                <img src="../_intro/pilltrack-intro-alpha-ns.png" alt="" />
-                                                <div class="slide-label">Pilltrack</div>
-                                             </a>
-                                          </li>
-                                          <li class="splide__slide">
-                                             <a href="../../projects/ccexquisite/" class="slide-content">
-                                                <img src="../_intro/ccexquisite-intro-alpha.png" alt="" />
-                                                <div class="slide-label">CC Exquisite</div>
-                                             </a>
-                                          </li>
-                                          <li class="splide__slide">
-                                             <a href="../../projects/kali/" class="slide-content">
-                                                <img src="../_intro/kali-intro-alpha.png" alt="" />
-                                                <div class="slide-label">Kali</div>
-                                             </a>
-                                          </li>
-                                          <li class="splide__slide">
-                                             <a href="../../projects/wellted/" class="slide-content">
-                                                <img src="../_intro/wellted-intro-alpha.png" alt="" />
-                                                <div class="slide-label">Wellted</div>
-                                             </a>
-                                          </li>
+         <div class="cd-index cd-main-content">
+            <div
+               id="page-content"
+               class="light-content nmp-project fusion black cq-root cq-root"
+               data-bgcolor="#131316"
+            >
+               <header class="fullscreen-menu invert-header" data-menucolor="#0c0c0c">
+                  <div id="header-container">
+                     <nav>
+                        <div class="nav-height">
+                           <div class="outer">
+                              <div class="inner">
+                                 <ul class="flexnav">
+                                    <li class="link menu-timeline">
+                                       <a href="../../aboutus">
+                                          <div class="before-span">
+                                             <span
+                                                data-hover="About us"
+                                                data-original="About us"
+                                                class="menu-item link"
+                                                >About us</span
+                                             >
+                                          </div>
+                                       </a>
+                                    </li>
+                                    <li class="link menu-timeline">
+                                       <a>
+                                          <div class="before-span">
+                                             <span
+                                                data-hover="Projects"
+                                                data-original="Projects"
+                                                class="menu-item"
+                                                >Projects
+                                             </span>
+                                          </div>
+                                       </a>
+                                       <ul class="submenu">
+                                          <li><a class="disabled">Fusion</a></li>
+                                          <li><a href="../iqperfetto/">IQ Perfetto</a></li>
+                                          <li><a href="../skinpro/">SkinPro Softshine</a></li>
+                                          <li><a href="../pilltrack/">Pilltrack</a></li>
+                                          <li><a href="../ccexquisite/">CC Exquisite</a></li>
+                                          <li><a href="../kali/">Kali</a></li>
+                                          <li><a href="../wellted/">Wellted</a></li>
                                        </ul>
-                                    </div>
+                                    </li>
+                                    <li class="link menu-timeline">
+                                       <a href="../../contact">
+                                          <div class="before-span">
+                                             <span
+                                                data-hover="Contact"
+                                                data-original="Contact"
+                                                class="menu-item"
+                                                >Contact
+                                             </span>
+                                          </div>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </nav>
+                     <div class="button-wrap menu burger-lines">
+                        <div class="icon-wrap">
+                           <div class="button-icon">
+                              <div id="burger-wrapper">
+                                 <div id="menu-burger">
+                                    <span></span>
+                                    <span></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="logo" class="hide-ball">
+                        <a href="../../">
+                           <img class="black-logo" src="../../img/logo-min.svg" alt="NMP.D" />
+                           <img class="white-logo" src="../../img/logo-min_w.svg" alt="NMP.D" />
+                        </a>
+                     </div>
+                     <div id="lang">
+                        <a class="link active" href="#" data-lang="en">ENG</a>
+                        <span>/</span>
+                        <a class="link" href="#" data-lang="es">ESP</a>
+                     </div>
+                  </div>
+               </header>
 
-                                    <div class="splide__arrows">
-                                       <button class="splide__arrow splide__arrow--prev" aria-label="Anterior">
-                                          <svg viewBox="0 0 24 24" preserveAspectRatio="none">
-                                             <polyline points="15 3 6 12 15 21"></polyline>
-                                          </svg>
-                                       </button>
-                                       <button class="splide__arrow splide__arrow--next" aria-label="Siguiente">
-                                          <svg viewBox="0 0 24 24" preserveAspectRatio="none">
-                                             <polyline points="9 3 18 12 9 21"></polyline>
-                                          </svg>
-                                       </button>
+               <div id="content-scroll">
+                  <div id="main" class="project-detail detail-project">
+                     <div id="hero" class="has-image autoscroll">
+                        <div id="hero-styles">
+                           <div id="hero-caption">
+                              <div class="inner title">
+                                 <h1 class="caption-timeline detail">
+                                    <span>Fusion</span>
+                                    <span class="registered">®</span>
+                                 </h1>
+                                 <h5 class="caption-timeline detail from">
+                                    <span data-hover="Fusion - Desc" data-original="Fusion - Desc">
+                                       Massage Gun</span
+                                    >
+                                 </h5>
+                                 <h5 class="caption-timeline detail desc">
+                                    <span>Fusion Black Pro</span>
+                                    <span class="registered">®</span>
+                                 </h5>
+                                 <p class="caption-timeline detail anio">
+                                    <span>2020</span>
+                                 </p>
+                              </div>
+
+                              <div class="inner text">
+                                 <p
+                                    data-hover="Fusion - About Text 1"
+                                    data-original="Fusion - About Text 1"
+                                    class="has-opacity"
+                                 >
+                                    Designed in 2020 for an American company, this percussion
+                                    massage gun redefines the aesthetics of its category. Our goal
+                                    was to move away from the rough, &quot;muscle-car&quot; design
+                                    guns prevalent in the market, drawing inspiration from the
+                                    sophistication of luxury automobiles. We achieved this through
+                                    subtle edges, smooth surface transitions, and a careful
+                                    combination of colors and textures that evoke a premium feel.
+                                 </p>
+                                 <p
+                                    data-hover="Fusion - About Text 2"
+                                    data-original="Fusion - About Text 2"
+                                    class="has-opacity"
+                                 >
+                                    Every surface was meticulously shaped, with the significant
+                                    challenge of seamlessly integrating the top boss covering the
+                                    engine which also has the heat output grid. It was fluidly
+                                    integrated, ensuring efficient air ventilation without
+                                    compromising the device's overall aesthetics.
+                                 </p>
+                                 <p
+                                    data-hover="Fusion - About Text 3"
+                                    data-original="Fusion - About Text 3"
+                                    class="has-opacity"
+                                 >
+                                    Furthermore, the heat output was fluidly integrated, ensuring
+                                    efficient air ventilation without compromising the device's
+                                    overall aesthetics.
+                                 </p>
+                              </div>
+                           </div>
+
+                           <div id="hero-description" class="has-image autoscroll">
+                              <div class="inner text">
+                                 <p
+                                    data-hover="Fusion - About Text 1"
+                                    data-original="Fusion - About Text 1"
+                                    class="has-opacity"
+                                 >
+                                    Designed in 2020 for an American company, this percussion
+                                    massage gun redefines the aesthetics of its category. Our goal
+                                    was to move away from the rough, &quot;muscle-design&quot; guns
+                                    prevalent in the market, drawing inspiration from the
+                                    sophistication of luxury automobiles. We achieved this through
+                                    subtle edges, smooth surface transitions, and a careful
+                                    combination of colors and textures that evoke a premium feel.
+                                 </p>
+                                 <p
+                                    data-hover="Fusion - About Text 2"
+                                    data-original="Fusion - About Text 2"
+                                    class="has-opacity"
+                                 >
+                                    Every surface was meticulously shaped, with the significant
+                                    challenge of seamlessly integrating the top boss covering the
+                                    engine. A distinctive element is its innovative display design,
+                                    which breaks from the typical cheap segment displays and simple
+                                    battery life LEDs. We ingeniously crafted a solution that
+                                    simulates the look of a high-end LED display while keeping costs
+                                    controlled.
+                                 </p>
+                                 <p
+                                    data-hover="Fusion - About Text 3"
+                                    data-original="Fusion - About Text 3"
+                                    class="has-opacity"
+                                 >
+                                    Furthermore, the heat output was fluidly integrated, ensuring
+                                    efficient air ventilation without compromising the device's
+                                    overall aesthetics.
+                                 </p>
+                              </div>
+                           </div>
+
+                           <div id="hero-image-wrapper">
+                              <div id="hero-background-layer" class="parallax-scroll-image">
+                                 <div id="caption-img">
+                                    <div class="inner title">
+                                       <h1 class="caption-timeline detail">
+                                          <span>Fusion</span>
+                                          <span class="registered">®</span>
+                                       </h1>
+                                       <h5 class="caption-timeline detail from">
+                                          <span
+                                             data-hover="Fusion - Desc"
+                                             data-original="Fusion - Desc"
+                                          >
+                                             Massage Gun</span
+                                          >
+                                       </h5>
+                                       <h5 class="caption-timeline detail desc">
+                                          <span>Fusion Black Pro</span>
+                                          <span class="registered">®</span>
+                                       </h5>
+                                       <p class="caption-timeline detail anio">
+                                          <span>2020</span>
+                                       </p>
                                     </div>
-                                 </section>
+                                 </div>
+                                 <div
+                                    id="hero-bg-image"
+                                    style="background-image: url(../_intro/fusion-intro-alpha.png)"
+                                 ></div>
+                                 <div class="bg-base"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div id="main-content">
+                        <div id="main-page-content">
+                           <div
+                              class="content-row content-column-resp full xlarge row_padding_bottom dark-section mt-100 ui-design"
+                              data-bgcolor="#131316"
+                           >
+                              <div
+                                 class="one_half vertical-parallax"
+                                 data-startparallax="0"
+                                 data-endparallax="-0.1"
+                              >
+                                 <div class="content-half content-text">
+                                    <h2>
+                                       <span
+                                          data-hover="Fusion - UI design Title"
+                                          data-original="Fusion - UI design Title"
+                                          >UI design</span
+                                       >
+                                       <img src="../../img/icons/ui-design.gif" alt="" />
+                                    </h2>
+                                    <p
+                                       data-hover="Fusion - UI design Desc"
+                                       data-original="Fusion - UI design Desc"
+                                       class="text italic"
+                                    >
+                                       We completely reimagined the UI for this product, starting
+                                       from scratch with a focus on optimizing information delivery
+                                       to the user. While the data itself is fundamental, we noticed
+                                       that most products on the market presented it in a confusing
+                                       way. Our goal was to create something easy to read and
+                                       intuitively aligned with other popular sports products, like
+                                       sports tracking apps and smartwatches, ensuring a seamless
+                                       and familiar user experience.
+                                    </p>
+                                    <div class="grid-container2x2">
+                                       <div class="grid-item">
+                                          <div>
+                                             <img
+                                                src="../_img/fusion-screen1.png"
+                                                alt=""
+                                                class="border-circle"
+                                             />
+                                          </div>
+                                          <div
+                                             data-hover="Fusion - UI design Detail 1"
+                                             data-original="Fusion - UI design Detail 1"
+                                          >
+                                             Off
+                                          </div>
+                                       </div>
+                                       <div class="grid-item">
+                                          <div>
+                                             <img
+                                                src="../_img/fusion-screen2.png"
+                                                alt=""
+                                                class="border-circle"
+                                             />
+                                          </div>
+                                          <div>
+                                             <span
+                                                data-hover="Fusion - UI design Detail 2a"
+                                                data-original="Fusion - UI design Detail 2a"
+                                             >
+                                                08 Speed level</span
+                                             >
+                                             <span
+                                                data-hover="Fusion - UI design Detail 2b"
+                                                data-original="Fusion - UI design Detail 2b"
+                                             >
+                                                100% Battery</span
+                                             >
+                                          </div>
+                                       </div>
+                                       <div class="grid-item">
+                                          <div>
+                                             <img
+                                                src="../_img/fusion-screen3.png"
+                                                alt=""
+                                                class="border-circle"
+                                             />
+                                          </div>
+                                          <div>
+                                             <span
+                                                data-hover="Fusion - UI design Detail 3a"
+                                                data-original="Fusion - UI design Detail 3a"
+                                             >
+                                                16 Speed Level</span
+                                             >
+                                             <span
+                                                data-hover="Fusion - UI design Detail 3b"
+                                                data-original="Fusion - UI design Detail 3b"
+                                             >
+                                                40% Battery</span
+                                             >
+                                          </div>
+                                       </div>
+                                       <div class="grid-item">
+                                          <div>
+                                             <img
+                                                src="../_img/fusion-screen4.png"
+                                                alt=""
+                                                class="border-circle"
+                                             />
+                                          </div>
+                                          <div>
+                                             <span
+                                                data-hover="Fusion - UI design Detail 4a"
+                                                data-original="Fusion - UI design Detail 4a"
+                                             >
+                                                20 Speed Level</span
+                                             >
+                                             <span
+                                                data-hover="Fusion - UI design Detail 4b"
+                                                data-original="Fusion - UI design Detail 4b"
+                                             >
+                                                20% Battery</span
+                                             >
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div
+                                 class="one_half last vertical-parallax no-padding fusion-spots"
+                                 data-startparallax="0"
+                                 data-endparallax="-0.1"
+                              >
+                                 <div class="content-half">
+                                    <div class="spots-container">
+                                       <img src="../_img/fusion-screen.png" alt="" />
+                                       <div
+                                          class="spot line-ok"
+                                          tabindex="0"
+                                          aria-label="battery level ring"
+                                          data-hover="battery level ring"
+                                          data-original="battery level ring"
+                                          data-position="top"
+                                          data-line-length="16"
+                                       ></div>
+                                       <div
+                                          class="spot"
+                                          tabindex="0"
+                                          aria-label="speed level"
+                                          data-hover="speed level"
+                                          data-original="speed level"
+                                          data-position="right"
+                                          data-line-length="18"
+                                       ></div>
+                                       <div
+                                          class="spot"
+                                          tabindex="0"
+                                          aria-label="speed level ring"
+                                          data-hover="speed level ring"
+                                          data-original="speed level ring"
+                                          aria-label="speed level"
+                                          data-hover="speed level"
+                                          data-original="speed level"
+                                          data-position="left"
+                                          data-line-length="15"
+                                       ></div>
+                                       <div
+                                          class="spot"
+                                          tabindex="0"
+                                          aria-label="decrease speed"
+                                          data-hover="decrease speed"
+                                          data-original="decrease speed"
+                                          data-position="left"
+                                          data-line-length="16"
+                                       ></div>
+                                       <div
+                                          class="spot"
+                                          tabindex="0"
+                                          aria-label="increase speed"
+                                          data-hover="increase speed"
+                                          data-original="increase speed"
+                                          data-position="right"
+                                          data-line-length="18"
+                                       ></div>
+                                       <div class="message-box-spot"></div>
+                                       <div class="line-spot"></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div
+                              class="content-row full xlarge dark-section mt-100"
+                              data-bgcolor="#131316"
+                           >
+                              <div
+                                 class="one_full vertical-parallax"
+                                 data-startparallax="0"
+                                 data-endparallax="-0.1"
+                              >
+                                 <div class="content-full right less uppercase">
+                                    <h2>
+                                       <img src="../../img/icons/views.gif" alt="" />
+                                       <span
+                                          data-hover="Projects - Views"
+                                          data-original="Projects - Views"
+                                          >Views</span
+                                       >
+                                    </h2>
+                                 </div>
+                              </div>
+                           </div>
+                           <div
+                              class="content-row full xlarge dark-section mt-100 mb-100 views"
+                              data-bgcolor="#131316"
+                           >
+                              <div
+                                 class="one_full vertical-parallax"
+                                 data-startparallax="0"
+                                 data-endparallax="-0.1"
+                              >
+                                 <div class="content-full">
+                                    <div class="spots-container">
+                                       <img
+                                          src="../_img/fusion-views_top.png"
+                                          alt=""
+                                          class="wide"
+                                       />
+                                       <div
+                                          class="spot"
+                                          tabindex="0"
+                                          aria-label="branding"
+                                          data-hover="branding"
+                                          data-original="branding"
+                                          data-position="top"
+                                          data-line-length="10"
+                                       ></div>
+                                       <div
+                                          class="spot"
+                                          tabindex="0"
+                                          aria-label="motor heat output"
+                                          data-hover="motor heat output"
+                                          data-original="motor heat output"
+                                          data-position="bottom"
+                                          data-line-length="23"
+                                       ></div>
+                                       <div
+                                          class="spot"
+                                          tabindex="0"
+                                          aria-label="on/off button"
+                                          data-hover="on/off button"
+                                          data-original="on/off button"
+                                          data-position="bottom"
+                                          data-line-length="28"
+                                       ></div>
+                                       <div class="message-box-spot"></div>
+                                       <div class="line-spot"></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div
+                              class="content-row full xlarge dark-section mt-150"
+                              data-bgcolor="#131316"
+                           >
+                              <div class="one_full">
+                                 <div class="content-full">
+                                    <div class="content-videos">
+                                       <div class="wrapper-videos">
+                                          <div class="wrapper-videos" id="fusion-loop-massage">
+                                             <img
+                                                class="frame-seq"
+                                                src=""
+                                                alt="fusion-loop-massage"
+                                             />
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div
+                              class="content-row full xlarge row_padding_bottom dark-section pt-100"
+                              data-bgcolor="#131316"
+                           >
+                              <div
+                                 class="one_full vertical-parallax"
+                                 data-startparallax="0"
+                                 data-endparallax="-0.1"
+                              >
+                                 <div class="content-full d-flex-center">
+                                    <img src="../_img/fusion-views_side.png" alt="" />
+                                 </div>
+                              </div>
+                           </div>
+                           <div
+                              class="content-row full xlarge dark-section pb-60 fusion-views"
+                              data-bgcolor="#131316"
+                           >
+                              <div
+                                 class="one_half vertical-parallax flex-full-left no-padding"
+                                 data-startparallax="0"
+                                 data-endparallax="-0.1"
+                              >
+                                 <div class="content-half max-width-unset">
+                                    <img
+                                       src="../_img/fusion-views_angle.png"
+                                       class="max-height-110"
+                                       alt=""
+                                    />
+                                 </div>
+                              </div>
+                              <div
+                                 class="one_half vertical-parallax flex-center no-padding"
+                                 data-startparallax="0"
+                                 data-endparallax="-0.1"
+                              >
+                                 <div class="content-half buy-me-content">
+                                    <img
+                                       src="../_img/fusion-views_bottom.jpg"
+                                       class="border-circle mb-120"
+                                       alt=""
+                                    />
+                                    <div class="buy-me">
+                                       <a
+                                          href="https://www.amazon.com/dp/B09CWKGF6N"
+                                          target="_blank"
+                                       >
+                                          <h2>
+                                             <span
+                                                data-hover="Buy me - Title"
+                                                data-original="Buy me - Title"
+                                             >
+                                                Buy me!</span
+                                             >
+                                          </h2>
+                                          <p>
+                                             <span
+                                                data-hover="Buy me - Text 1"
+                                                data-original="Buy me - Text 1"
+                                             >
+                                                We don't make any revenue from this.</span
+                                             ><br />
+                                             <span
+                                                data-hover="Buy me - Text 2"
+                                                data-original="Buy me - Text 2"
+                                             >
+                                                We just like to be kind with our clients!</span
+                                             >
+                                          </p>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div id="project-nav">
+                     <div class="next-project-wrap">
+                        <div class="next-project-header">
+                           <p
+                              class="all-works"
+                              data-hover="Other Projects"
+                              data-original="Other Projects"
+                           >
+                              Other Projects
+                           </p>
+                        </div>
+                        <div class="next-project-image-wrapper">
+                           <div class="next-project-image project">
+                              <div class="next-project-image-bg">
+                                 <div id="slider">
+                                    <section
+                                       class="splide"
+                                       aria-label="NMP.D - Other Projects"
+                                       data-start="0"
+                                    >
+                                       <div class="splide__track">
+                                          <ul class="splide__list">
+                                             <li class="splide__slide">
+                                                <a
+                                                   href="../../projects/iqperfetto/"
+                                                   class="slide-content"
+                                                >
+                                                   <img
+                                                      src="../_intro/iqperfetto-intro-alpha.png"
+                                                      alt=""
+                                                   />
+                                                   <div class="slide-label">IQ Perfetto</div>
+                                                </a>
+                                             </li>
+                                             <li class="splide__slide">
+                                                <a
+                                                   href="../../projects/skinpro/"
+                                                   class="slide-content"
+                                                >
+                                                   <img
+                                                      src="../_intro/skinpro-intro-alpha.png"
+                                                      alt=""
+                                                   />
+                                                   <span class="slide-label"
+                                                      >SkinPro<br />Softshine</span
+                                                   >
+                                                </a>
+                                             </li>
+                                             <li class="splide__slide">
+                                                <a
+                                                   href="../../projects/pilltrack/"
+                                                   class="slide-content"
+                                                >
+                                                   <img
+                                                      src="../_intro/pilltrack-intro-alpha-ns.png"
+                                                      alt=""
+                                                   />
+                                                   <div class="slide-label">Pilltrack</div>
+                                                </a>
+                                             </li>
+                                             <li class="splide__slide">
+                                                <a
+                                                   href="../../projects/ccexquisite/"
+                                                   class="slide-content"
+                                                >
+                                                   <img
+                                                      src="../_intro/ccexquisite-intro-alpha.png"
+                                                      alt=""
+                                                   />
+                                                   <div class="slide-label">CC Exquisite</div>
+                                                </a>
+                                             </li>
+                                             <li class="splide__slide">
+                                                <a
+                                                   href="../../projects/kali/"
+                                                   class="slide-content"
+                                                >
+                                                   <img
+                                                      src="../_intro/kali-intro-alpha.png"
+                                                      alt=""
+                                                   />
+                                                   <div class="slide-label">Kali</div>
+                                                </a>
+                                             </li>
+                                             <li class="splide__slide">
+                                                <a
+                                                   href="../../projects/wellted/"
+                                                   class="slide-content"
+                                                >
+                                                   <img
+                                                      src="../_intro/wellted-intro-alpha.png"
+                                                      alt=""
+                                                   />
+                                                   <div class="slide-label">Wellted</div>
+                                                </a>
+                                             </li>
+                                          </ul>
+                                       </div>
+
+                                       <div class="splide__arrows">
+                                          <button
+                                             class="splide__arrow splide__arrow--prev"
+                                             aria-label="Anterior"
+                                          >
+                                             <svg viewBox="0 0 24 24" preserveAspectRatio="none">
+                                                <polyline points="15 3 6 12 15 21"></polyline>
+                                             </svg>
+                                          </button>
+                                          <button
+                                             class="splide__arrow splide__arrow--next"
+                                             aria-label="Siguiente"
+                                          >
+                                             <svg viewBox="0 0 24 24" preserveAspectRatio="none">
+                                                <polyline points="9 3 18 12 9 21"></polyline>
+                                             </svg>
+                                          </button>
+                                       </div>
+                                    </section>
+                                 </div>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
-            </div>
-            <footer class="hidden">
-               <div id="footer-container">
-                  <div id="backtotop" class="button-wrap left">
-                     <div class="icon-wrap">
-                        <div class="button-icon">
-                           <i class="fa-solid fa-angle-up"></i>
+               <footer class="hidden">
+                  <div id="footer-container">
+                     <div id="backtotop" class="button-wrap left">
+                        <div class="icon-wrap">
+                           <div class="button-icon">
+                              <i class="fa-solid fa-angle-up"></i>
+                           </div>
+                        </div>
+                        <div class="button-text sticky left">
+                           <span data-hover="Back Top" data-original="Back Top">Back Top</span>
                         </div>
                      </div>
-                     <div class="button-text sticky left">
-                        <span data-hover="Back Top" data-original="Back Top">Back Top</span>
+
+                     <div class="footer-middle">
+                        <div data-hover="Copyright" data-original="Copyright" class="copyright">
+                           2025 © Nieto Moreno - Pedraza · All rights reserved.
+                        </div>
+                     </div>
+
+                     <div class="socials-wrap">
+                        <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
+                        <div class="socials-text" data-hover="Follow Us" data-original="Follow Us">
+                           Follow Us
+                        </div>
+                        <ul class="socials">
+                           <li>
+                              <span
+                                 ><a href="https://www.linkedin.com/company/nmpd" target="_blank"
+                                    ><i class="fa-brands fa-linkedin-in"></i></a
+                              ></span>
+                           </li>
+
+                           <li>
+                              <span
+                                 ><a href="https://www.behance.net/nmpd" target="_blank"
+                                    ><i class="fa-brands fa-behance"></i></a
+                              ></span>
+                           </li>
+                           <li>
+                              <span
+                                 ><a href="https://www.instagram.com/nmpd.id" target="_blank"
+                                    ><i class="fa-brands fa-instagram"></i></a
+                              ></span>
+                           </li>
+                        </ul>
                      </div>
                   </div>
-
-                  <div class="footer-middle">
-                     <div data-hover="Copyright" data-original="Copyright" class="copyright">
-                        2025 © Nieto Moreno - Pedraza · All rights reserved.
-                     </div>
-                  </div>
-
-                  <div class="socials-wrap">
-                     <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
-                     <div class="socials-text" data-hover="Follow Us" data-original="Follow Us">
-                        Follow Us
-                     </div>
-                     <ul class="socials">
-                        <li>
-                           <span><a href="https://www.linkedin.com/company/nmpd" target="_blank"><i
-                                    class="fa-brands fa-linkedin-in"></i></a></span>
-                        </li>
-
-                        <li>
-                           <span><a href="https://www.behance.net/nmpd" target="_blank"><i
-                                    class="fa-brands fa-behance"></i></a></span>
-                        </li>
-                        <li>
-                           <span><a href="https://www.instagram.com/nmpd.id" target="_blank"><i
-                                    class="fa-brands fa-instagram"></i></a></span>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </footer>
+               </footer>
+            </div>
+            <div id="app"></div>
          </div>
-         <div id="app"></div>
+      </main>
+
+      <div class="cd-cover-layer"></div>
+
+      <div id="clone-image">
+         <div class="hero-translate"></div>
       </div>
-   </main>
+      <div id="rotate-device"></div>
 
-   <div class="cd-cover-layer"></div>
+      <script src="../../js/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.4.0/smooth-scrollbar.js"></script>
 
-   <div id="clone-image">
-      <div class="hero-translate"></div>
-   </div>
-   <div id="rotate-device"></div>
+      <script src="../../js/nmp.js"></script>
+      <script src="../../js/plugins.js"></script>
 
-   <script src="../../js/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.4.0/smooth-scrollbar.js"></script>
+      <script src="../../js/common.js"></script>
+      <script src="../../js/contact.js"></script>
+      <script src="../../js/scripts.js"></script>
+      <script src="../../js/video-scroll.js"></script>
+      <script src="../../js/videos-alpha.js"></script>
+      <script src="../../js/spots.js"></script>
 
-   <script src="../../js/nmp.js"></script>
-   <script src="../../js/plugins.js"></script>
+      <script src="../../js/splide.min.js"></script>
+      <script src="../../js/projects.js"></script>
 
-   <script src="../../js/common.js"></script>
-   <script src="../../js/contact.js"></script>
-   <script src="../../js/scripts.js"></script>
-   <script src="../../js/video-scroll.js"></script>
-   <script src="../../js/videos-alpha.js"></script>
-   <script src="../../js/spots.js"></script>
+      <script>
+         // Configuración de las secuencias
+         const sequences = [
+            {
+               id: 'fusion-loop-massage',
+               baseName: 'fusion-loop-massage',
+               totalFrames: 3,
+               frameRate: 30,
+            },
+         ];
 
-   <script src="../../js/splide.min.js"></script>
-   <script src="../../js/projects.js"></script>
-
-   <script>
-      // Configuración de las secuencias
-      const sequences = [
-         {
-            id: 'fusion-loop-massage',
-            baseName: 'fusion-loop-massage',
-            totalFrames: 3,
-            frameRate: 30,
-         },
-      ];
-
-      function getFrameSrc(baseName, frame) {
-         return `../_seq/${baseName}${String(frame).padStart(2, '0')}.png`;
-      }
-
-      sequences.forEach(({ id, baseName, totalFrames, frameRate }) => {
-         const container = document.getElementById(id);
-         const frameElement = container.querySelector('.frame-seq');
-         let currentFrame = 1;
-
-         const images = [];
-         let loadedCount = 0;
-
-         for (let i = 1; i <= totalFrames; i++) {
-            const img = new Image();
-            img.src = getFrameSrc(baseName, i);
-            img.onload = () => {
-               loadedCount++;
-               if (loadedCount === totalFrames) {
-                  // Todas las imágenes precargadas
-                  // Establecer el primer frame antes de iniciar el intervalo
-                  frameElement.src = getFrameSrc(baseName, 1);
-                  frameElement.style.display = 'block';
-
-                  setInterval(() => {
-                     currentFrame = currentFrame < totalFrames ? currentFrame + 1 : 1;
-                     frameElement.src = getFrameSrc(baseName, currentFrame);
-                  }, 1000 / frameRate);
-               }
-            };
-            img.onerror = () => console.error(`Error al cargar: ${img.src}`);
-            images.push(img);
+         function getFrameSrc(baseName, frame) {
+            return `../_seq/${baseName}${String(frame).padStart(2, '0')}.png`;
          }
-      });
-   </script>
-</body>
 
+         sequences.forEach(({ id, baseName, totalFrames, frameRate }) => {
+            const container = document.getElementById(id);
+            const frameElement = container.querySelector('.frame-seq');
+            let currentFrame = 1;
+
+            const images = [];
+            let loadedCount = 0;
+
+            for (let i = 1; i <= totalFrames; i++) {
+               const img = new Image();
+               img.src = getFrameSrc(baseName, i);
+               img.onload = () => {
+                  loadedCount++;
+                  if (loadedCount === totalFrames) {
+                     // Todas las imágenes precargadas
+                     // Establecer el primer frame antes de iniciar el intervalo
+                     frameElement.src = getFrameSrc(baseName, 1);
+                     frameElement.style.display = 'block';
+
+                     setInterval(() => {
+                        currentFrame = currentFrame < totalFrames ? currentFrame + 1 : 1;
+                        frameElement.src = getFrameSrc(baseName, currentFrame);
+                     }, 1000 / frameRate);
+                  }
+               };
+               img.onerror = () => console.error(`Error al cargar: ${img.src}`);
+               images.push(img);
+            }
+         });
+      </script>
+   </body>
 </html>
