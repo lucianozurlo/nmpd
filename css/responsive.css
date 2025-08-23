@@ -684,6 +684,12 @@
     margin-top: -80px;
   }
 
+  #page-content.ccexquisite .ccexquisite-views .content-full > img {
+    height: unset !important;
+    max-height: unset !important;
+    margin: 60px 0 150px;
+  }
+
   #page-content.kali .kali-colors {
     margin-bottom: 120px;
   }
