@@ -639,6 +639,10 @@
     justify-content: flex-start;
   }
 
+  #page-content.skinpro #main-page-content {
+    margin-top: 60px;
+  }
+
   #page-content.skinpro .skinpro-views-2 {
     margin-top: -120px;
     margin-bottom: -120px;
