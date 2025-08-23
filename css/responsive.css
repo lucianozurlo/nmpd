@@ -389,6 +389,11 @@
     background-position: 50% 70% !important;
   }
 
+  #page-content.fusion .ui-design .content-half.content-text {
+    padding: 0;
+    padding-left: 12vw;
+  }
+
   #page-content.skinpro #main.project-detail.detail-project #hero.has-image #caption-img .inner h1.less,
   #page-content.iqperfetto #main.project-detail.detail-project #hero.has-image #caption-img .inner h1.less,
   #page-content.ccexquisite #main.project-detail.detail-project #hero.has-image #caption-img .inner h1.less {
