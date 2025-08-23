@@ -375,6 +375,9 @@
     padding-left: 12vw;
     padding-right: 12vw;
   }
+  .full {
+    max-width: 100%;
+  }
   header {
     height: 74px !important;
   }
@@ -577,14 +580,22 @@
     margin-top: -15%;
   }
   #page-content.iqperfetto .iqperfetto-details-t {
-    margin-top: -80px !important;
-    margin-left: 30px !important;
+    margin-top: 70px !important;
+    margin-left: 0px !important;
+    margin-bottom: -20px;
+  }
+  #page-content.iqperfetto .iqperfetto-details-t .full.xlarge .one_full {
+    padding-left: 12vw;
+  }
+  #page-content.iqperfetto .iqperfetto-details-t .full.xlarge .one_full .content-full.less {
+    width: 100%;
+    max-width: 100%;
   }
   #page-content.iqperfetto .iqperfetto-det1 {
     margin-top: -50px;
   }
   #page-content.iqperfetto .iqperfetto-det2 {
-    margin-top: 150px;
+    margin-top: 210px;
   }
 
   #page-content.iqperfetto .iqperfetto-spots .spots-container img {
@@ -616,6 +627,15 @@
     transform: translate(-30%, 170%);
     margin-bottom: 45%;
   }
+  #page-content.iqperfetto .iqperfetto-det3 .project-info-plus {
+    text-align: center;
+  }
+  #page-content.iqperfetto .iqperfetto-det3 .one_full {
+    flex-direction: column;
+    transform: translate(-20%, -70%);
+    gap: 60px;
+  }
+
   #page-content.iqperfetto .buy-me {
     transform: translateX(12vw);
     justify-content: flex-start;
