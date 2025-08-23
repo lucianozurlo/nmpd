@@ -711,6 +711,11 @@
     margin-bottom: -150px;
   }
 
+  .force-full {
+    width: 100% !important;
+    max-width: unset !important;
+  }
+
   #page-content.wellted .self-cleaning .wrapper-videos video {
     margin-bottom: -220px;
     margin-top: -160px;
