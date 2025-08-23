@@ -642,8 +642,8 @@
   }
 
   #page-content.skinpro .skinpro-views-2.full.xlarge .one_half .content-half {
-    padding: 10px 6vw 10px 12vw;
-    margin-top: -120px;
+    padding: 10px 6vw 10px 12vw !important;
+    margin-top: -90px;
     margin-bottom: -120px;
   }
 
@@ -1563,6 +1563,9 @@
 
   .iqperfetto-det3 .buy-me-content {
     width: 100% !important;
+  }
+  #page-content.skinpro #main-page-content {
+    margin-top: 50px;
   }
   #main.project-detail .skinpro-colors .content-full > img {
     width: 140vw !important;
