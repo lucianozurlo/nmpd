@@ -393,8 +393,9 @@
     padding: 0;
     padding-left: 12vw;
   }
-
-  #page-content.fusion .buy-me-content {
+  #page-content.fusion .dark-section.views {
+  }
+  #page-content.fusion #page-content.fusion .buy-me-content {
     padding-left: 0;
   }
 
