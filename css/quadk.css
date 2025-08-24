@@ -2466,7 +2466,7 @@
       box-shadow: 0 0 0 calc(var(--vwScale) + 3px) #fff;
    }
    .spot::before {
-      border: calc(var(--vwScale) + 1px) solid #ffffff99;
+      border: 2px solid #ffffff99 solid #ffffff99;
    }
 
    .message-box-spot {
