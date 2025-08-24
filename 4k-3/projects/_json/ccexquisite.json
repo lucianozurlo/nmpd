@@ -1,8 +1,0 @@
-{
-   "intro": ["ccexquisite-intro-alpha.png"],
-   "seq": [
-      { "prefix": "ccexquisite-scroll-place", "start": 0, "end": 34 },
-      { "prefix": "ccexquisite-scroll-exploded", "start": 0, "end": 34 }
-   ],
-   "vid": ["ccexquisite-loop-color.mov", "ccexquisite-loop-color.webm"]
-}
