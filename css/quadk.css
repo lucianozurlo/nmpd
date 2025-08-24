@@ -2714,4 +2714,8 @@
    #main.project-detail.detail-project #hero.has-image #hero-caption .inner h1.lines {
       margin-top: calc(2vh + calc(var(--vwScale) + 74px)) !important;
    }
+
+   .spots-container img.wide {
+      max-width: 95%;
+   }
 }
