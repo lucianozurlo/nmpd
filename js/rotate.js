@@ -1,61 +1,91 @@
 (() => {
-   const debounce = (fn, delay = 250) => {
+   // --- utilidades ---
+   const debounce = (fn, d = 200) => {
       let t;
-      return (...args) => {
+      return (...a) => {
          clearTimeout(t);
-         t = setTimeout(() => fn(...args), delay);
+         t = setTimeout(() => fn(...a), d);
       };
    };
+   const isPortrait = () => window.matchMedia('(orientation: portrait)').matches;
 
-   // 1) Soft refresh: re-evaluar styles sin red
-   const softRefreshCSS = () => {
-      document.querySelectorAll('link[rel="stylesheet"]').forEach((link) => {
-         try {
-            const prevMedia = link.media || 'all';
-            link.media = 'print'; // fuerza re-evaluación
-            void link.offsetWidth; // trigger reflow
-            link.media = prevMedia;
-         } catch (e) {
-            /* noop */
+   // Espera a que innerWidth/innerHeight queden estables N frames seguidos
+   const waitViewportStable = (cb, stableFrames = 6) => {
+      let w = window.innerWidth,
+         h = window.innerHeight,
+         ok = 0;
+      const tick = () => {
+         const nw = window.innerWidth,
+            nh = window.innerHeight;
+         if (nw === w && nh === h) {
+            ok++;
+         } else {
+            w = nw;
+            h = nh;
+            ok = 0;
          }
-      });
+         if (ok >= stableFrames) cb();
+         else requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
    };
 
-   // 2) Hard refresh: cache-bust de cada hoja
-   const hardRefreshCSS = () => {
-      document.querySelectorAll('link[rel="stylesheet"]').forEach((link) => {
+   // Reinyecta <link rel="stylesheet"> con cache-bust + re-eval <style>
+   const reloadStylesheets = () => {
+      // 1) <link rel="stylesheet">
+      document.querySelectorAll('link[rel~="stylesheet"]').forEach((link) => {
+         const clone = link.cloneNode(true);
          const href = link.getAttribute('href');
-         if (!href) return;
-         const base = href.split('#')[0].split('?')[0];
-         const q = href.includes('?') ? '&' : '?';
-         // reemplazo seguro para evitar que quede creciendo el query
-         link.setAttribute('href', `${base}${q}o=${Date.now()}`);
+         if (href) {
+            const base = href.split('#')[0].split('?')[0];
+            const q = href.includes('?') ? '&' : '?';
+            clone.setAttribute('href', `${base}${q}o=${Date.now()}`);
+         }
+         clone.media = 'all';
+         link.replaceWith(clone);
       });
-   };
 
-   // 3) (Opcional) fix para 100vh en iOS
-   const updateVHVar = () => {
+      // 2) <style> inline (Webpack/Vite inyectan muchos)
+      document.querySelectorAll('style').forEach((style) => {
+         style.disabled = true;
+         void style.offsetWidth; // reflow
+         style.disabled = false;
+      });
+
+      // 3) fix 100vh en iOS
       document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
    };
 
-   const onOrientationChanged = debounce(() => {
-      // iOS a veces tarda un tick en ajustar innerWidth/innerHeight
-      requestAnimationFrame(() => {
-         softRefreshCSS();
-         // fallback duro si el soft no alcanza
-         setTimeout(hardRefreshCSS, 400);
-         updateVHVar();
+   // Fallback extremo: recargar página si todo falla
+   const hardReloadIfStubborn = () => {
+      setTimeout(() => {
+         // activalo si realmente lo necesitás:
+         // location.reload();
+      }, 900);
+   };
+
+   let lastPortrait = isPortrait();
+
+   const onMaybeRotate = debounce(() => {
+      const nowPortrait = isPortrait();
+      if (nowPortrait === lastPortrait) return; // no cambió orientación
+      lastPortrait = nowPortrait;
+
+      // Esperar a que el viewport termine de acomodarse y luego recargar CSS
+      waitViewportStable(() => {
+         reloadStylesheets();
+         // descomentar si necesitás ser ultra-agresivo:
+         // hardReloadIfStubborn();
       });
-   }, 200);
+   }, 120);
 
-   // Listeners confiables en iPadOS
-   const mq = window.matchMedia && window.matchMedia('(orientation: portrait)');
-   if (mq && mq.addEventListener) mq.addEventListener('change', onOrientationChanged);
-   else if (mq && mq.addListener) mq.addListener(onOrientationChanged); // iOS viejo
+   // Escuchas "reales" de iPadOS
+   if (window.visualViewport) {
+      visualViewport.addEventListener('resize', onMaybeRotate, { passive: true });
+   }
+   window.addEventListener('orientationchange', onMaybeRotate, { passive: true });
+   window.addEventListener('resize', onMaybeRotate, { passive: true });
 
-   window.addEventListener('orientationchange', onOrientationChanged, { passive: true });
-   window.addEventListener('resize', onOrientationChanged, { passive: true });
-
-   // Inicial (por si entrás ya rotado)
-   updateVHVar();
+   // set inicial de --vh
+   document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
 })();
