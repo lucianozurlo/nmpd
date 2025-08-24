@@ -921,6 +921,7 @@ i.arrow-icon-down.white {
    margin-left: 8%;
    background-position: center !important;
    background-size: contain !important;
+   transform: unset !important;
 }
 
 #hero-background-layer {
