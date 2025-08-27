@@ -348,6 +348,15 @@
     margin-bottom: -90px;
     margin-top: -20px;
   }
+
+  #content-scroll {
+    min-height: 100vh;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
