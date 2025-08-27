@@ -106,8 +106,8 @@
     width: 95%;
   }
   body.contactus #contact {
-    height: calc(100vh - 100px);
-    min-height: calc(100vh - 100px);
+    height: calc(100vh - 40px);
+    min-height: calc(100vh - 40px);
   }
 }
 
