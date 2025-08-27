@@ -106,8 +106,12 @@
     width: 95%;
   }
   body.contactus #contact {
-    height: calc(100vh - 40px);
-    min-height: calc(100vh - 40px);
+    height: unset !important;
+    min-height: unset !important;
+  }
+
+  body.contactus #contact .page-nav-caption {
+    padding-bottom: 20px;
   }
 }
 
