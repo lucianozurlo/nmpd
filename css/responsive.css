@@ -357,7 +357,12 @@
       margin-bottom: -90px;
       margin-top: -20px;
    }
-   .page-nav-caption {
+
+   main .cd-main-content > div {
+      min-height: unset;
+   }
+
+   body.contactus .page-nav-caption {
       padding-top: 60px;
       padding-bottom: 0;
       display: flex;
@@ -366,21 +371,20 @@
       justify-content: center;
       align-items: center;
    }
-   main .cd-main-content > div {
-      min-height: unset;
-   }
-
    body.contactus #contact {
       max-height: calc(100vh - 131px);
       /* height: unset; */
    }
    body.contactus #contact img {
       max-width: 75px;
-      margin-bottom: 45px;
+      margin-bottom: 35px;
    }
    body.contactus #contact .inner h2 {
-      font-size: 70px;
+      font-size: 65px;
       margin-top: 10px;
+   }
+   body.contactus #contact .inner .button-box {
+      margin-top: 22px;
    }
    body.contactus #main.contact .button-border span {
       padding: 1px 20px;
@@ -390,6 +394,10 @@
    }
    body.contactus .next-hero-subtitle {
       margin-bottom: 0;
+   }
+   body.contactus #main #confirmationMessage {
+      margin-top: 6px;
+      margin-bottom: 10px;
    }
 
    footer {
