@@ -362,8 +362,8 @@
    }
 
    body.contactus #contact {
-      height: calc(100vh - 131px);
-      max-height: unset;
+      max-height: calc(100vh - 131px);
+      /* height: unset; */
    }
    body.contactus #contact img {
       max-width: 75px;
@@ -381,6 +381,12 @@
    }
    body.contactus .next-hero-subtitle {
       margin-bottom: 0;
+   }
+
+   footer {
+      background-color: gainsboro;
+      position: fixed;
+      bottom: 0;
    }
 }
 
