@@ -354,19 +354,12 @@
    }
    main .cd-main-content > div {
       min-height: unset;
-      background-color: red;
-   }
-
-   #content-scroll {
-      /* min-height: 100vh; */
-      background-color: green;
    }
 
    body.contactus #contact {
       height: calc(100vh - 30px);
       max-height: calc(100vh - 131px);
    }
-
    body.contactus #contact img {
       max-width: 75px;
       margin-bottom: 45px;
@@ -375,17 +368,11 @@
       font-size: 70px;
       margin-top: 10px;
    }
-
    body.contactus .socials.contact-center {
       margin-top: 0;
    }
-
    body.contactus .next-hero-subtitle {
       margin-bottom: 0;
-   }
-
-   footer {
-      background-color: yellow;
    }
 }
 
