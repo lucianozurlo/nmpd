@@ -349,8 +349,13 @@
       margin-top: -20px;
    }
    .page-nav-caption {
-      padding-top: 110px;
+      padding-top: 80px;
       padding-bottom: 0;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
    }
    main .cd-main-content > div {
       min-height: unset;
@@ -367,6 +372,9 @@
    body.contactus #contact .inner h2 {
       font-size: 70px;
       margin-top: 10px;
+   }
+   body.contactus #main.contact .button-border span {
+      padding: 1px 20px;
    }
    body.contactus .socials.contact-center {
       margin-top: 0;
