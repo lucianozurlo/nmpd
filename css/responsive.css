@@ -3,6 +3,9 @@
       padding-left: 3.5vw !important;
       padding-right: 3.5vw !important;
    }
+   footer {
+      position: relative;
+   }
 }
 
 @media (min-width: 1280px) and (max-width: 1920px) {
@@ -113,6 +116,9 @@
    body.contactus #contact .page-nav-caption {
       padding-bottom: 20px;
    }
+   footer {
+      position: relative;
+   }
 }
 
 @media (max-width: 1279px) {
@@ -206,6 +212,9 @@
 
    #page-content.white #project-nav-responsive .next-project-wrap {
       background-color: #eaeaea;
+   }
+   footer {
+      position: relative;
    }
 }
 
@@ -803,6 +812,9 @@
 
    body.contactus #contact {
       height: calc(100vh - 174px);
+   }
+   footer {
+      position: relative;
    }
 }
 
@@ -1952,6 +1964,10 @@
    body.contactus .socials.contact-center {
       gap: 5%;
    }
+
+   footer {
+      position: relative;
+   }
 }
 
 @media (max-height: 500px) and (orientation: landscape) {
@@ -1979,5 +1995,9 @@
       text-align: center;
       font-size: calc(3vw) !important;
       line-height: calc(5vw) !important;
+   }
+
+   footer {
+      position: relative;
    }
 }
