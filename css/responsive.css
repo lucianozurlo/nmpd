@@ -1100,6 +1100,9 @@
       max-width: 80px;
    }
 
+   body.contactus main .cd-main-content > div {
+      min-height: unset !important;
+   }
    .next-hero-subtitle {
       line-height: 1.5 !important;
       font-size: 17px !important;
