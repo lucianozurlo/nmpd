@@ -1519,8 +1519,8 @@ video {
 .spot {
    color: transparent;
    position: absolute;
-   width: 20px;
-   height: 20px;
+   width: 14px;
+   height: 14px;
    border-radius: 50%;
    background-color: #ffffff99;
    cursor: pointer;
@@ -1883,12 +1883,12 @@ body.contactus .socials.contact-center li a {
    left: 71%;
 }
 #page-content.fusion .views .content-full .spots-container .spot:nth-child(3) {
-   bottom: 36%;
-   left: 72.8%;
+   bottom: 26%;
+   left: 73%;
 }
 #page-content.fusion .views .content-full .spots-container .spot:nth-child(4) {
-   top: 61%;
-   left: 85.4%;
+   top: 60%;
+   left: 84.9%;
 }
 
 #page-content.iqperfetto .iqperfetto-spots .content-full .spots-container .spot:nth-child(2) {
