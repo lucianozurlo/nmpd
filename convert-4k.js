@@ -22,7 +22,6 @@ const BASE_FILES = [
    'css/style.css',
    'css/all.min.css',
    'css/custom.css',
-   'css/responsive.css',
 ];
 
 // Salidas

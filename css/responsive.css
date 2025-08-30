@@ -1512,16 +1512,22 @@
       left: 71%;
    }
    #page-content.fusion .views .content-full .spots-container .spot:nth-child(3) {
-      top: 79%;
-      left: 72.8%;
+      bottom: 35%;
+      left: 73%;
    }
    #page-content.fusion .views .content-full .spots-container .spot:nth-child(4) {
-      top: 61%;
-      left: 85.4%;
+      top: 52%;
+      left: 86%;
    }
+
+   #page-content.fusion .views {
+      margin-bottom: -40px !important;
+   }
+
    #page-content.fusion .views .spots-container img.wide {
       padding: 60px 0;
    }
+
    #page-content.iqperfetto #main-page-content,
    #page-content.skinpro #main-page-content,
    #page-content.pilltrack #main-page-content {
@@ -2010,10 +2016,9 @@
       position: absolute;
       bottom: 0;
    }
-}
 
-@media (max-height: 500px) and (orientation: landscape) {
-   /* .nmp span {
+   @media (max-height: 500px) and (orientation: landscape) {
+      /* .nmp span {
       width: 23% !important;
       min-width: 23% !important;
       margin: 1.2% 0 !important;
@@ -2021,25 +2026,26 @@
    .hero-arrow {
       bottom: 5%;
    } */
-   .hero-arrow {
-      width: 26px;
-      height: 40px;
-   }
-   .hero-arrow i.arrow-icon {
-      height: 18px;
-      width: 18px;
-   }
-   .fullscreen-menu .flexnav li ul.submenu {
-      margin-left: 0 !important;
-      margin-top: 10px;
-   }
-   .fullscreen-menu .flexnav li ul li a {
-      text-align: center;
-      font-size: calc(3vw) !important;
-      line-height: calc(5vw) !important;
-   }
+      .hero-arrow {
+         width: 26px;
+         height: 40px;
+      }
+      .hero-arrow i.arrow-icon {
+         height: 18px;
+         width: 18px;
+      }
+      .fullscreen-menu .flexnav li ul.submenu {
+         margin-left: 0 !important;
+         margin-top: 10px;
+      }
+      .fullscreen-menu .flexnav li ul li a {
+         text-align: center;
+         font-size: calc(3vw) !important;
+         line-height: calc(5vw) !important;
+      }
 
-   footer {
-      position: relative;
+      footer {
+         position: relative;
+      }
    }
 }
