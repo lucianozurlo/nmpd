@@ -951,9 +951,9 @@
       min-width: 130px;
    }
 
-   #main-content {
+   /* #main-content {
       margin-top: 30px;
-   }
+   } */
 
    #main.home #main-content.projects h1 {
       font-size: 12vw;
@@ -971,6 +971,7 @@
    }
    #contact .inner h2 {
       font-size: calc(0.6rem + 7vw);
+      margin-bottom: 25px;
    }
 
    .mail-txt {
@@ -1094,10 +1095,16 @@
       font-size: 17px !important;
    }
 
+   body.contactus #contact img {
+      margin-bottom: 35px;
+      max-width: 80px;
+   }
+
    .next-hero-subtitle {
       line-height: 1.5 !important;
       font-size: 17px !important;
       padding: 0 3.5vw !important;
+      margin-bottom: 0;
    }
 
    #hero-description,
@@ -1989,7 +1996,8 @@
    }
 
    footer {
-      position: relative;
+      position: absolute;
+      bottom: 0;
    }
 }
 
