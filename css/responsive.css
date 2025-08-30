@@ -292,12 +292,12 @@
       top: 50%;
       left: 54.2%;
    }
-   #page-content.fusion .views .content-full .spots-container .spot:nth-child(2) {
+   /* #page-content.fusion .views .content-full .spots-container .spot:nth-child(2) {
       top: 40%;
       left: 69.5%;
-   }
+   } */
    #page-content.fusion .views .content-full .spots-container .spot:nth-child(3) {
-      bottom: 36%;
+      bottom: 24%;
       left: 70%;
    }
    #page-content.fusion .views .content-full .spots-container .spot:nth-child(4) {
@@ -400,7 +400,7 @@
       margin-bottom: 10px;
    }
 
-   footer {
+   body.contactus footer {
       position: fixed;
       bottom: 0;
    }
