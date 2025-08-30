@@ -417,6 +417,12 @@ header.over-sidebar #lang span {
    margin-left: 5px;
    pointer-events: unset !important;
    width: 100px;
+   opacity: 1;
+   transition: all 0.2s ease-in-out;
+}
+
+#logo a:hover {
+   opacity: 0.6;
 }
 
 .fullscreen-menu .flexnav li a {
