@@ -2164,6 +2164,10 @@ nav.open {
    color: #fff !important;
 }
 
+#scrollTopBtn {
+   cursor: pointer !important;
+}
+
 #content-scroll {
    z-index: 1;
    position: relative;

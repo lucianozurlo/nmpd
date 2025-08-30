@@ -114,7 +114,7 @@
                         </div>
                      </div>
                      <div id="logo" class="hide-ball">
-                        <a class="disabled">
+                        <a id="scrollTopBtn">
                            <img class="black-logo" src="img/logo-min.svg" alt="NMP.D" />
                            <img class="white-logo" src="img/logo-min_w.svg" alt="NMP.D" />
                         </a>
@@ -503,10 +503,21 @@
 
       <script>
          const btn = document.getElementById('scrollBtn');
+         const btnTop = document.getElementById('scrollTopBtn');
 
-         btn.addEventListener('click', () => {
+         btn.addEventListener('click', (e) => {
+            e.preventDefault();
             window.scrollTo({
                top: window.innerHeight,
+               left: 0,
+               behavior: 'smooth',
+            });
+         });
+
+         btnTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+               top: 0,
                left: 0,
                behavior: 'smooth',
             });

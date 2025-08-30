@@ -415,6 +415,8 @@ header.over-sidebar #lang span {
 
 #logo a {
    margin-left: 5px;
+   pointer-events: unset !important;
+   width: 100px;
 }
 
 .fullscreen-menu .flexnav li a {

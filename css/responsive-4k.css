@@ -2576,6 +2576,7 @@ a:hover.link-underline {
 
 #logo a {
     margin-left: calc(var(--vwScale) * 5);
+    width: calc(var(--vwScale) * 100);
   }
 
 .fullscreen-menu .flexnav li ul.submenu {
