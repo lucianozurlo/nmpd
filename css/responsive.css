@@ -218,7 +218,7 @@
    }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+@media screen and (orientation: landscape) and (min-width: 1024px) and (max-width: 1366px) and (hover: none) and (pointer: coarse) {
    header {
       height: 60px !important;
    }
@@ -292,18 +292,18 @@
       top: 50%;
       left: 54.2%;
    }
-   /* #page-content.fusion .views .content-full .spots-container .spot:nth-child(2) {
+   #page-content.fusion .views .content-full .spots-container .spot:nth-child(2) {
       top: 40%;
       left: 69.5%;
-   } */
-   /* #page-content.fusion .views .content-full .spots-container .spot:nth-child(3) {
+   }
+   #page-content.fusion .views .content-full .spots-container .spot:nth-child(3) {
       bottom: 24%;
       left: 70%;
-   } */
-   /* #page-content.fusion .views .content-full .spots-container .spot:nth-child(4) {
+   }
+   #page-content.fusion .views .content-full .spots-container .spot:nth-child(4) {
       top: 60%;
       left: 81.5%;
-   } */
+   }
    #page-content.fusion .content-videos {
       max-width: 100%;
    }
@@ -406,7 +406,7 @@
    }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
+@media screen and (orientation: portrait) and (min-width: 744px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
    .ipad-port-ok {
       display: inherit !important;
    }
