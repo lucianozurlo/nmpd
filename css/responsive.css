@@ -870,6 +870,13 @@
       line-height: calc(2rem + 2.5vw);
    }
 
+   nav {
+      height: 100vh !important;
+      min-height: 100vh;
+      position: fixed;
+      overflow: hidden;
+   }
+
    #main.home #hero-caption .hero-title {
       height: calc(100vh - 120px);
    }
