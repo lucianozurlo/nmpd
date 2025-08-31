@@ -9,7 +9,8 @@ header {
 body {
    overflow-x: hidden;
 }
-body.no-scroll {
+body.no-scroll,
+body.no-scroll #content-scroll {
    overflow: hidden !important;
 }
 body.dark {
