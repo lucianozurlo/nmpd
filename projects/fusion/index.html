@@ -822,15 +822,12 @@
       <script src="../../js/contact.js"></script>
       <script src="../../js/scripts.js"></script>
       <script src="../../js/video-scroll.js"></script>
-      <script src="../../js/videos-alpha.js"></script>
       <script src="../../js/spots.js"></script>
 
       <script src="../../js/splide.min.js"></script>
       <script src="../../js/projects.js"></script>
-      <!-- <script src="../../js/rotate.js"></script> -->
 
       <script>
-         // Configuración de las secuencias
          const sequences = [
             {
                id: 'fusion-loop-massage',
@@ -858,8 +855,6 @@
                img.onload = () => {
                   loadedCount++;
                   if (loadedCount === totalFrames) {
-                     // Todas las imágenes precargadas
-                     // Establecer el primer frame antes de iniciar el intervalo
                      frameElement.src = getFrameSrc(baseName, 1);
                      frameElement.style.display = 'block';
 

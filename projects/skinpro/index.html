@@ -657,23 +657,18 @@
 
       <script src="../../js/nmp.js"></script>
       <script src="../../js/plugins.js"></script>
-
       <script src="../../js/common.js"></script>
       <script src="../../js/contact.js"></script>
       <script src="../../js/scripts.js"></script>
       <script src="../../js/video-scroll.js"></script>
-      <script src="../../js/videos-alpha.js"></script>
       <script src="../../js/spots.js"></script>
-
       <script src="../../js/splide.min.js"></script>
       <script src="../../js/projects.js"></script>
-      <!-- <script src="../../js/rotate.js"></script> -->
 
       <script>
          (function () {
             const vid = document.getElementById('alphaVideo');
 
-            // Refuerza los atributos por script
             Object.assign(vid, {
                muted: true,
                defaultMuted: true,
@@ -686,7 +681,6 @@
                const p = vid.play();
                if (p) {
                   p.catch(() => {
-                     // Si aún así lo bloquea, la 1.ª interacción libera el autoplay
                      const unlock = () => {
                         vid.play();
                         window.removeEventListener('touchstart', unlock, true);

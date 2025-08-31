@@ -665,18 +665,15 @@
       <script src="../../js/contact.js"></script>
       <script src="../../js/scripts.js"></script>
       <script src="../../js/video-scroll.js"></script>
-      <script src="../../js/videos-alpha.js"></script>
       <script src="../../js/spots.js"></script>
 
       <script src="../../js/splide.min.js"></script>
       <script src="../../js/projects.js"></script>
-      <!-- <script src="../../js/rotate.js"></script> -->
 
       <script>
          (function () {
             const vid = document.getElementById('alphaVideo');
 
-            // Refuerza los atributos por script
             Object.assign(vid, {
                muted: true,
                defaultMuted: true,
@@ -689,7 +686,6 @@
                const p = vid.play();
                if (p) {
                   p.catch(() => {
-                     // Si aún así lo bloquea, la 1.ª interacción libera el autoplay
                      const unlock = () => {
                         vid.play();
                         window.removeEventListener('touchstart', unlock, true);
@@ -716,27 +712,21 @@
                      const video = entry.target;
 
                      if (entry.isIntersecting) {
-                        /* Hay al menos un píxel visible → asegura play */
                         video.play().catch(() => {});
                      } else {
-                        /* Podría ser “casi fuera” o 100 % fuera.
-                     Confirmamos que realmente esté COMPLETAMENTE fuera
-                     usando la posición del rect. */
                         const rect = entry.boundingClientRect;
-                        const outOfView =
-                           rect.bottom <= 0 || // salió por arriba
-                           rect.top >= window.innerHeight; // salió por abajo
+                        const outOfView = rect.bottom <= 0 || rect.top >= window.innerHeight;
 
                         if (outOfView) {
                            video.pause();
-                           video.currentTime = 0; // reinicia SOLO acá
+                           video.currentTime = 0;
                         }
                      }
                   });
                },
                {
-                  threshold: 0, // notifica al cruzar dentro/fuera
-                  rootMargin: '0px', // sin márgenes extra
+                  threshold: 0,
+                  rootMargin: '0px',
                }
             );
 

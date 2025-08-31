@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Detección dispositivo & orientación</title>
+      <style>
+         /* ====== 6 variables (no más) ====== */
+         :root {
+            /* Celular */
+            --color-mobile-portrait: #ffefe0; /* CELU Portrait */
+            --color-mobile-landscape: #ffd1a6; /* CELU Landscape */
+
+            /* iPad */
+            --color-ipad-portrait: #e7f6ff; /* iPad Portrait */
+            --color-ipad-landscape: #cfeaff; /* iPad Landscape */
+
+            /* Desktop */
+            --color-desktop-portrait: #e9ffe7; /* Desktop Portrait (por si lo fuerzan) */
+            --color-desktop-landscape: #c9f7c5; /* Desktop Landscape (<=1920) */
+         }
+
+         /* Cuando el viewport es MAYOR a 1920, cambiamos el valor de la
+         misma variable de desktop-landscape, SIN agregar una 7ma variable. */
+         @media (min-width: 1921px) {
+            :root {
+               --color-desktop-landscape: #a9e89f; /* Desktop >1920 */
+            }
+         }
+
+         /* ====== Reset & layout mínimo ====== */
+         html,
+         body {
+            height: 100%;
+            margin: 0;
+         }
+         body {
+            display: grid;
+            place-items: center;
+            color: #0b0b0b;
+            font-family:
+               ui-sans-serif,
+               system-ui,
+               -apple-system,
+               Segoe UI,
+               Roboto,
+               Inter,
+               Arial;
+            transition: background-color 0.2s ease;
+         }
+         .tag {
+            padding: 0.6rem 1rem;
+            border-radius: 0.75rem;
+            background: rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(2px);
+            font-weight: 600;
+            line-height: 1.2;
+            text-align: center;
+         }
+         .muted {
+            font-weight: 500;
+            opacity: 0.7;
+            font-size: 0.9rem;
+         }
+
+         /* ====== Mapeo de clases -> color de fondo ====== */
+         /* Celular */
+         body.device-mobile.orientation-portrait {
+            background: var(--color-mobile-portrait);
+         }
+         body.device-mobile.orientation-landscape {
+            background: var(--color-mobile-landscape);
+         }
+
+         /* iPad */
+         body.device-ipad.orientation-portrait {
+            background: var(--color-ipad-portrait);
+         }
+         body.device-ipad.orientation-landscape {
+            background: var(--color-ipad-landscape);
+         }
+
+         /* Desktop */
+         body.device-desktop.orientation-portrait {
+            background: var(--color-desktop-portrait);
+         }
+         body.device-desktop.orientation-landscape {
+            background: var(--color-desktop-landscape);
+         }
+      </style>
+   </head>
+   <body>
+      <div class="tag">
+         <div id="label"></div>
+         <div class="muted" id="vw"></div>
+      </div>
+
+      <script>
+         /* Detección robusta de iPad (incluye iPadOS que se reporta como "Mac") */
+         function isIPad() {
+            const ua = navigator.userAgent || '';
+            const isiPadUA = /\biPad\b/.test(ua);
+            const isiPadLike = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+            return isiPadUA || isiPadLike;
+         }
+
+         function isPhone() {
+            const ua = navigator.userAgent || '';
+            // Consideramos móviles comunes (sin contar iPad)
+            const isMobileUA = /\b(Mobi|Android|iPhone|iPod)\b/i.test(ua);
+            return isMobileUA && !isIPad();
+         }
+
+         function currentOrientation() {
+            // Fallback sólido por si no existe screen.orientation
+            const landscape =
+               (screen.orientation && screen.orientation.type.includes('landscape')) ||
+               window.innerWidth > window.innerHeight;
+            return landscape ? 'landscape' : 'portrait';
+         }
+
+         function applyClasses() {
+            const body = document.body;
+            body.classList.remove(
+               'device-mobile',
+               'device-ipad',
+               'device-desktop',
+               'orientation-landscape',
+               'orientation-portrait'
+            );
+
+            if (isIPad()) {
+               body.classList.add('device-ipad');
+            } else if (isPhone()) {
+               body.classList.add('device-mobile');
+            } else {
+               body.classList.add('device-desktop');
+            }
+
+            body.classList.add('orientation-' + currentOrientation());
+            updateLabel();
+         }
+
+         function updateLabel() {
+            const label = document.getElementById('label');
+            const vw = document.getElementById('vw');
+            const classes = [...document.body.classList].join(' ');
+            label.textContent = classes;
+            vw.textContent = `Viewport: ${window.innerWidth}×${window.innerHeight}`;
+         }
+
+         // Reaccionar a rotación y resize
+         window.addEventListener('orientationchange', applyClasses);
+         window.addEventListener('resize', applyClasses);
+
+         document.addEventListener('DOMContentLoaded', applyClasses);
+      </script>
+   </body>
+</html>
