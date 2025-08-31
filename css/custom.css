@@ -9,7 +9,9 @@ header {
 body {
    overflow-x: hidden;
 }
-
+body.no-scroll {
+   overflow: hidden !important;
+}
 body.dark {
    background-color: #131316 !important;
 }
