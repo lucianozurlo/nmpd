@@ -875,7 +875,7 @@
    }
 
    nav {
-      height: revert-layer;
+      height: revert-layer !important;
       /* min-height: 100vh; */
       position: fixed;
       overflow: hidden;
