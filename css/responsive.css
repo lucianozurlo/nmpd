@@ -136,7 +136,9 @@
    }
 }
 
-@media screen and (orientation: landscape) and (min-width: 1024px) and (max-width: 1366px) and (hover: none) and (pointer: coarse) {
+/* @media screen and (orientation: landscape) and (min-width: 1024px) and (max-width: 1366px) and (hover: none) and (pointer: coarse) { */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
    header {
       height: 60px !important;
    }
@@ -324,7 +326,9 @@
    }
 }
 
-@media screen and (orientation: portrait) and (min-width: 744px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+/* @media screen and (orientation: portrait) and (min-width: 744px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) { */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
    .ipad-port-ok {
       display: inherit !important;
    }
