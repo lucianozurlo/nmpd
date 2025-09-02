@@ -2025,9 +2025,19 @@ body.device-mobile.orientation-portrait.contactus footer {
 }
 
 /* MOBILE LANDSCAPE */
-body.device-mobile.orientation-landscape {
-  opacity: 0.1;
-  transition: 1s;
+body.device-mobile.orientation-landscape .rotate-device {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #0f1010;
+  background-image: url(../img/assets/rotate.png);
+  background-size: 100px 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
 }
 
 @media (max-height: 500px) and (orientation: landscape) {
