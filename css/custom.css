@@ -31,7 +31,6 @@ body.no-scroll {
 body.no-scroll,
 body.no-scroll #content-scroll {
    overflow: hidden !important;
-   position: fixed;
 }
 body.dark {
    background-color: #131316 !important;
