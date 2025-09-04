@@ -18,7 +18,10 @@ body.device-ipad.orientation-landscape .hero-arrow {
 body.device-ipad.orientation-landscape .nmp .hero-arrow span {
    border: 1.5px solid #222;
 }
-
+body.device-ipad.orientation-landscape nav {
+   height: calc(var(--vh) * 100);
+   height: calc(100 * var(--vh-fix));
+}
 /* body.device-ipad.orientation-landscape .flexnav {
    margin-left: 180px;
 } */
