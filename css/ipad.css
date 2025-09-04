@@ -537,7 +537,7 @@ body.device-ipad.orientation-portrait
    #caption-img
    .inner
    .from {
-   font-size: 5vw;
+   font-size: 3vw;
 }
 body.device-ipad.orientation-portrait
    #main.project-detail.detail-project
@@ -551,7 +551,7 @@ body.device-ipad.orientation-portrait
    #caption-img
    .inner
    .anio {
-   font-size: 2.5vw;
+   font-size: 2.3vw;
 }
 body.device-ipad.orientation-portrait #hero-bg-image {
    -webkit-animation: backgroundResize 1s ease-in-out forwards !important;
@@ -559,6 +559,7 @@ body.device-ipad.orientation-portrait #hero-bg-image {
    -webkit-animation-delay: 1.2s !important;
    animation-delay: 1.2s !important;
    /* transform: translate(55%, -15%) scale(2) !important; */
+   transform: translate(0, 6%) !important;
    background-size: 28vw !important;
    width: 100%;
    margin-left: unset;
