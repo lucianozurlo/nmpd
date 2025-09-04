@@ -25,11 +25,13 @@ header {
 body {
    overflow-x: hidden;
 }
+body.no-scroll {
+   position: fixed;
+}
 body.no-scroll,
 body.no-scroll #content-scroll {
    overflow: hidden !important;
    position: fixed;
-   pointer-events: none;
 }
 body.dark {
    background-color: #131316 !important;
