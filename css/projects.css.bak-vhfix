@@ -13,8 +13,7 @@
 
 .splide__track {
    width: calc(100% - 160px);
-   margin: calc(var(--vh) * 3) auto 0;
-   margin: calc(3 * var(--vh-fix)) auto 0;
+   margin: 3vh auto 0;
 }
 
 .splide__list {
@@ -105,10 +104,8 @@
    pointer-events: auto;
    position: absolute;
    top: 50%;
-   width: calc(var(--vh) * 6);
-   width: calc(6 * var(--vh-fix));
-   height: calc(var(--vh) * 6);
-   height: calc(6 * var(--vh-fix));
+   width: 6vh;
+   height: 6vh;
    border: none;
    background: none;
    cursor: pointer;
@@ -160,16 +157,12 @@
 }
 
 #project-nav {
-   height: calc((var(--vh)*100) + 1px);
-   height: calc((100*var(--vh-fix)) + 1px);
-   bottom: calc((var(--vh)*-100) - 1px);
-   bottom: calc((-100*var(--vh-fix)) - 1px);
+   height: calc(100vh + 1px);
+   bottom: calc(-100vh - 1px);
    display: flex;
    justify-content: center;
-   height: calc((var(--vh)*100) - 120px) !important;
-   height: calc((100*var(--vh-fix)) - 120px) !important;
-   min-height: calc((var(--vh)*100) - 120px) !important;
-   min-height: calc((100*var(--vh-fix)) - 120px) !important;
+   height: calc(100vh - 120px) !important;
+   min-height: calc(100vh - 120px) !important;
    min-height: -webkit-fit-content !important;
    min-height: -moz-fit-content !important;
    min-height: fit-content !important;
@@ -192,8 +185,7 @@
    display: flex;
    justify-content: space-between;
    position: relative !important;
-   padding-top: calc(var(--vh) * 18);
-   padding-top: calc(18 * var(--vh-fix));
+   padding-top: 18vh;
 }
 
 .next-project-image-bg {
@@ -210,8 +202,7 @@
    min-height: -webkit-fit-content !important;
    min-height: -moz-fit-content !important;
    min-height: fit-content !important;
-   max-height: calc((var(--vh)*100) - (var(--vh)*18) - 44px - 120px);
-   max-height: calc((100*var(--vh-fix)) - (18*var(--vh-fix)) - 44px - 120px);
+   max-height: calc(100vh - 18vh - 44px - 120px);
 }
 
 .pin-spacer {
@@ -333,12 +324,9 @@
    }
 
    #project-nav {
-      bottom: calc((var(--vh)*-100) - calc(var(--vwScale) * 1));
-      bottom: calc((-100*var(--vh-fix)) - calc(var(--vwScale) * 1));
-      height: calc((var(--vh)*100) - calc(var(--vwScale) * 120)) !important;
-      height: calc((100*var(--vh-fix)) - calc(var(--vwScale) * 120)) !important;
-      min-height: calc((var(--vh)*100) - calc(var(--vwScale) * 120)) !important;
-      min-height: calc((100*var(--vh-fix)) - calc(var(--vwScale) * 120)) !important;
+      bottom: calc(-100vh - calc(var(--vwScale) * 1));
+      height: calc(100vh - calc(var(--vwScale) * 120)) !important;
+      min-height: calc(100vh - calc(var(--vwScale) * 120)) !important;
    }
 
    .next-project-header {
@@ -347,8 +335,7 @@
    }
 
    #page-content .next-project-image-wrapper {
-      max-height: calc((var(--vh)*100) - (var(--vh)*18) - calc(var(--vwScale) * 44) - calc(var(--vwScale) * 120));
-      max-height: calc((100*var(--vh-fix)) - (18*var(--vh-fix)) - calc(var(--vwScale) * 44) - calc(var(--vwScale) * 120));
+      max-height: calc(100vh - 18vh - calc(var(--vwScale) * 44) - calc(var(--vwScale) * 120));
    }
 
    .next-project-wrap p {

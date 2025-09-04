@@ -1,24 +1,10 @@
-/* --- vh-fix (auto-inyectado) --- */
-:root{
-  /* Tu JS setea --vh = innerHeight*0.01 en iOS/iPadOS */
-  --vh: 1vh;
-  /* --vh-fix será 1dvh si hay soporte; si no, queda en 1vh */
-  --vh-fix: 1vh;
-}
-@supports (height: 100dvh) {
-  :root { --vh-fix: 1dvh; }
-}
-
-/* fin vh-fix */
 .preloader-wrap,
 header {
    max-width: 100vw;
 }
 .preloader-wrap {
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
-   max-height: calc(var(--vh) * 100);
-   max-height: calc(100 * var(--vh-fix));
+   height: 100vh;
+   max-height: 100vh;
 }
 body {
    overflow-x: hidden;
@@ -126,8 +112,7 @@ img {
 }
 
 #hvh {
-   height: calc(var(--vh) * 50);
-   height: calc(50 * var(--vh-fix));
+   height: 50vh;
 }
 
 .light-content .text,
@@ -514,10 +499,8 @@ header.over-sidebar #lang span {
 }
 
 #main.home #hero-caption .hero-title {
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
-   max-height: calc(var(--vh) * 100);
-   max-height: calc(100 * var(--vh-fix));
+   height: 100vh;
+   max-height: 100vh;
    display: flex !important;
    justify-content: center;
    align-items: center;
@@ -681,8 +664,7 @@ i.arrow-icon-down.white {
    justify-content: flex-start;
    flex-direction: column;
    height: 100% !important;
-   min-height: calc(var(--vh) * 100) !important;
-   min-height: calc(100 * var(--vh-fix)) !important;
+   min-height: 100vh !important;
 }
 
 #main.project-detail.detail-project #hero.has-image #caption-img {
@@ -690,8 +672,7 @@ i.arrow-icon-down.white {
    justify-content: flex-start;
    align-items: flex-start;
    width: 100vw;
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
    position: absolute;
    z-index: 111111;
 }
@@ -716,13 +697,11 @@ i.arrow-icon-down.white {
 
 #main.project-detail.detail-project #hero.has-image #hero-caption .inner h1 {
    align-items: flex-end;
-   margin-top: calc((var(--vh)*5) + 74px) !important;
-   margin-top: calc((5*var(--vh-fix)) + 74px) !important;
+   margin-top: calc(5vh + 74px) !important;
    /* margin-top: 110px !important; */
 }
 #main.project-detail.detail-project #hero.has-image #hero-caption .inner h1.lines {
-   margin-top: calc((var(--vh)*2) + 74px) !important;
-   margin-top: calc((2*var(--vh-fix)) + 74px) !important;
+   margin-top: calc(2vh + 74px) !important;
 }
 
 #main.project-detail.detail-project #hero.has-image #caption .inner,
@@ -760,8 +739,7 @@ i.arrow-icon-down.white {
 #main.project-detail.detail-project #hero.has-image #caption-img .inner .detail,
 #main.project-detail.detail-project #hero.has-image #hero-caption .inner .detail {
    text-align: left;
-   margin: calc(var(--vh) * 10) 0 0 0;
-   margin: calc(10 * var(--vh-fix)) 0 0 0;
+   margin: 10vh 0 0 0;
    margin: 0;
    line-height: 1;
    letter-spacing: -0.6vw;
@@ -940,17 +918,13 @@ i.arrow-icon-down.white {
 
 #hero-image-wrapper {
    max-width: 100vw;
-   max-height: calc(var(--vh) * 100);
-   max-height: calc(100 * var(--vh-fix));
-   height: calc(var(--vh) * 100) !important;
-   height: calc(100 * var(--vh-fix)) !important;
+   max-height: 100vh;
+   height: 100vh !important;
 }
 
 #hero-bg-image {
-   max-height: calc(var(--vh) * 100);
-   max-height: calc(100 * var(--vh-fix));
-   background-size: calc(var(--vh) * 78) !important;
-   background-size: calc(78 * var(--vh-fix)) !important;
+   max-height: 100vh;
+   background-size: 78vh !important;
    background-position: 15% 50%;
    background-repeat: no-repeat;
    -webkit-animation: 1s ease-in-out start-hero-bg;
@@ -980,8 +954,7 @@ i.arrow-icon-down.white {
    justify-content: center;
    align-items: center;
    width: 100%;
-   min-height: calc(var(--vh) * 100);
-   min-height: calc(100 * var(--vh-fix));
+   min-height: 100vh;
 }
 
 .projects-container {
@@ -994,8 +967,7 @@ i.arrow-icon-down.white {
    align-items: center;
    flex-wrap: wrap;
    overflow: hidden;
-   padding-bottom: calc(var(--vh) * 5);
-   padding-bottom: calc(5 * var(--vh-fix));
+   padding-bottom: 5vh;
 }
 
 .project {
@@ -1049,13 +1021,11 @@ a:hover.project img {
 }
 
 .scroll-bound {
-   height: calc(var(--vh) * 200);
-   height: calc(200 * var(--vh-fix));
+   height: 200vh;
 }
 
 #page-content.ccexquisite .ccexquisite-place .scroll-bound {
-   height: calc(var(--vh) * 160);
-   height: calc(160 * var(--vh-fix));
+   height: 160vh;
 }
 
 .scroll-bound .image-sequence {
@@ -1066,19 +1036,15 @@ a:hover.project img {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   height: calc((var(--vh)*80) - 100px);
-   height: calc((80*var(--vh-fix)) - 100px);
-   max-height: calc((var(--vh)*80) - 100px);
-   max-height: calc((80*var(--vh-fix)) - 100px);
-   padding-top: calc((var(--vh)*20) - 25px);
-   padding-top: calc((20*var(--vh-fix)) - 25px);
+   height: calc(80vh - 100px);
+   max-height: calc(80vh - 100px);
+   padding-top: calc(20vh - 25px);
 }
 
 .image-sequence img {
    max-width: 100%;
    height: auto;
-   max-height: calc((var(--vh)*80) - 100px);
-   max-height: calc((80*var(--vh-fix)) - 100px);
+   max-height: calc(80vh - 100px);
    -o-object-fit: cover;
    object-fit: cover;
 }
@@ -1088,13 +1054,10 @@ video {
 }
 
 .video-scroll {
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
    width: 100%;
-   min-height: calc(var(--vh) * 80);
-   min-height: calc(80 * var(--vh-fix));
-   max-height: calc(var(--vh) * 80);
-   max-height: calc(80 * var(--vh-fix));
+   min-height: 80vh;
+   max-height: 80vh;
    max-width: 80vw;
    margin-bottom: 10px;
    margin-top: 80px;
@@ -1107,14 +1070,12 @@ video {
    justify-content: center;
    width: 100%;
    margin: 0;
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
    max-height: unset;
 }
 
 .video-scroll.h-120 {
-   height: calc(var(--vh) * 120);
-   height: calc(120 * var(--vh-fix));
+   height: 120vh;
 }
 
 .home-iqperfetto {
@@ -1267,8 +1228,7 @@ video {
 }
 
 #main.contact #hero {
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
 }
 
 #main.contact #hero-caption {
@@ -1292,8 +1252,7 @@ video {
 }
 
 #main.contact #main-page-content .dark-section-wrapper {
-   height: calc((var(--vh)*100) - 200px);
-   height: calc((100*var(--vh-fix)) - 200px);
+   height: calc(100vh - 200px);
 }
 
 #main.contact .button-box {
@@ -1381,8 +1340,7 @@ video {
 }
 
 #main.project-detail .pilltrack-uses .content-half > img {
-   max-height: calc(var(--vh) * 75) !important;
-   max-height: calc(75 * var(--vh-fix)) !important;
+   max-height: 75vh !important;
 }
 
 .full.xlarge .one_full {
@@ -1400,10 +1358,8 @@ video {
 }
 
 #main.project-detail .content-full > img {
-   height: calc((var(--vh)*80) - 100px);
-   height: calc((80*var(--vh-fix)) - 100px);
-   max-height: calc((var(--vh)*80) - 100px);
-   max-height: calc((80*var(--vh-fix)) - 100px);
+   height: calc(80vh - 100px);
+   max-height: calc(80vh - 100px);
    width: calc(80vw - 100px);
    max-width: calc(80vw - 100px);
 }
@@ -1433,13 +1389,11 @@ video {
 }
 
 .max-height-110 {
-   max-height: calc(var(--vh) * 110) !important;
-   max-height: calc(110 * var(--vh-fix)) !important;
+   max-height: 110vh !important;
 }
 
 #main.project-detail .content-full > img {
-   max-height: calc(var(--vh) * 80) !important;
-   max-height: calc(80 * var(--vh-fix)) !important;
+   max-height: 80vh !important;
 }
 
 .full.xlarge h2 {
@@ -1718,11 +1672,9 @@ video {
 
 #project-nav .next-project-caption {
    padding: 0;
-   margin-top: calc(var(--vh) * 10);
-   margin-top: calc(10 * var(--vh-fix));
+   margin-top: 10vh;
    z-index: 111111;
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
    display: flex;
    align-items: center;
 }
@@ -1784,8 +1736,7 @@ video {
 }
 
 .all-works {
-   top: calc(var(--vh) * 11);
-   top: calc(11 * var(--vh-fix));
+   top: 11vh;
    z-index: 111111111;
 }
 
@@ -1839,8 +1790,7 @@ body {
 .bg-base {
    background-color: transparent !important;
    max-width: 100vw !important;
-   max-height: calc(var(--vh) * 100) !important;
-   max-height: calc(100 * var(--vh-fix)) !important;
+   max-height: 100vh !important;
    opacity: 1 !important;
    position: absolute;
    width: 100% !important;
@@ -2082,8 +2032,7 @@ body.contactus .socials.contact-center li a {
    #caption-img
    .inner
    h1.detail {
-   margin-top: calc(var(--vh) * 13);
-   margin-top: calc(13 * var(--vh-fix));
+   margin-top: 13vh;
 }
 
 .fusion-spots .spots-container {
@@ -2158,10 +2107,8 @@ body.contactus .socials.contact-center li a {
 }
 
 .iqperfetto-det2 .content-full img {
-   height: calc(var(--vh) * 80) !important;
-   height: calc(80 * var(--vh-fix)) !important;
-   max-height: calc(var(--vh) * 80) !important;
-   max-height: calc(80 * var(--vh-fix)) !important;
+   height: 80vh !important;
+   max-height: 80vh !important;
 }
 
 .iqperfetto-det2 .content-full .project-info-plus {
@@ -2202,10 +2149,8 @@ body.contactus .socials.contact-center li a {
 
 .image-hover {
    position: relative;
-   width: calc(var(--vh) * 60);
-   width: calc(60 * var(--vh-fix));
-   height: calc(var(--vh) * 60);
-   height: calc(60 * var(--vh-fix));
+   width: 60vh;
+   height: 60vh;
    overflow: hidden;
 }
 
@@ -2226,10 +2171,8 @@ body.contactus .socials.contact-center li a {
 
 .image-slider {
    position: relative;
-   width: calc(var(--vh) * 37.94);
-   width: calc(37.94 * var(--vh-fix));
-   height: calc(var(--vh) * 70);
-   height: calc(70 * var(--vh-fix));
+   width: 37.94vh;
+   height: 70vh;
    overflow: hidden;
 }
 
@@ -2337,8 +2280,7 @@ body.contactus .socials.contact-center li a {
 }
 
 .skinpro-views-2 .one_half .content-half img {
-   height: calc(var(--vh) * 77);
-   height: calc(77 * var(--vh-fix));
+   height: 77vh;
 }
 
 .skinpro-acc .content-full {
@@ -2350,8 +2292,7 @@ body.contactus .socials.contact-center li a {
 
 .skinpro-acc .content-full .video-scroll {
    margin-top: 0;
-   height: calc((var(--vh)*85) - 100px);
-   height: calc((85*var(--vh-fix)) - 100px);
+   height: calc(85vh - 100px);
    min-height: unset;
 }
 
@@ -2432,8 +2373,7 @@ body.contactus .socials.contact-center li a {
 }
 
 .pilltrack-buy-me {
-   padding-bottom: calc(var(--vh) * 5);
-   padding-bottom: calc(5 * var(--vh-fix));
+   padding-bottom: 5vh;
    margin-top: 5%;
 }
 
@@ -2455,8 +2395,7 @@ body.contactus .socials.contact-center li a {
 }
 
 #page-content.ccexquisite #video-restart.video-scroll {
-   min-height: calc((var(--vh)*80) - 100px);
-   min-height: calc((80*var(--vh-fix)) - 100px);
+   min-height: calc(80vh - 100px);
    margin-bottom: 20px;
 }
 
@@ -2540,8 +2479,7 @@ body.contactus .socials.contact-center li a {
 
 .kali-exploded .content-full img {
    width: auto !important;
-   max-height: calc(var(--vh) * 50) !important;
-   max-height: calc(50 * var(--vh-fix)) !important;
+   max-height: 50vh !important;
 }
 
 .kali-views1 .one_half {
@@ -2554,8 +2492,7 @@ body.contactus .socials.contact-center li a {
 }
 
 .kali-views1 .one_half .content-half img {
-   max-height: calc(var(--vh) * 80) !important;
-   max-height: calc(80 * var(--vh-fix)) !important;
+   max-height: 80vh !important;
 }
 
 .kali-views1 .one_half .content-half .project-info-plus {
@@ -2580,8 +2517,7 @@ body.contactus .socials.contact-center li a {
 }
 
 .kali-views3 .one_half .content-half img {
-   max-height: calc(var(--vh) * 80) !important;
-   max-height: calc(80 * var(--vh-fix)) !important;
+   max-height: 80vh !important;
 }
 
 .kali-views3 .one_half .content-half .project-info-plus {
@@ -2605,8 +2541,7 @@ body.contactus .socials.contact-center li a {
 }
 
 .kali-views4 .one_full .content-full img {
-   max-height: calc((var(--vh)*80) - 100px) !important;
-   max-height: calc((80*var(--vh-fix)) - 100px) !important;
+   max-height: calc(80vh - 100px) !important;
 }
 
 .kali-open {
@@ -2668,8 +2603,7 @@ body.contactus .socials.contact-center li a {
 .content-videos {
    padding: 0;
    max-width: 100vw;
-   max-height: calc(var(--vh) * 100);
-   max-height: calc(100 * var(--vh-fix));
+   max-height: 100vh;
    display: flex;
    justify-content: center;
 }
@@ -2698,25 +2632,20 @@ body.contactus .socials.contact-center li a {
    display: block;
    position: relative;
    z-index: 1;
-   height: calc((var(--vh)*80) - 100px);
-   height: calc((80*var(--vh-fix)) - 100px);
-   max-height: calc((var(--vh)*80) - 100px);
-   max-height: calc((80*var(--vh-fix)) - 100px);
+   height: calc(80vh - 100px);
+   max-height: calc(80vh - 100px);
    width: calc(80vw - 100px);
    max-width: calc(80vw - 100px);
-   padding-top: calc((var(--vh)*20) - 50px);
-   padding-top: calc((20*var(--vh-fix)) - 50px);
+   padding-top: calc(20vh - 50px);
 }
 
 .frame-seq {
-   max-height: calc(var(--vh) * 80);
-   max-height: calc(80 * var(--vh-fix));
+   max-height: 80vh;
    max-width: 100vw;
    -o-object-fit: contain;
    object-fit: contain;
 }
 
 body.contactus #contact {
-   height: calc((var(--vh)*100) - 120px);
-   height: calc((100*var(--vh-fix)) - 120px);
+   height: calc(100vh - 120px);
 }

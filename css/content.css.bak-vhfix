@@ -55,8 +55,7 @@
 }
 
 #hero.has-image #hero-caption {
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
    padding-top: 120px;
    padding-bottom: 160px;
    text-align: left;
@@ -73,8 +72,7 @@
 #hero-image-wrapper {
    position: absolute;
    width: 100vw;
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
    z-index: 0;
    margin: 0 auto;
    left: 0;
@@ -510,13 +508,11 @@
 }
 
 #main-page-content.project-page {
-   margin-bottom: calc((var(--vh)*200) - 120px);
-   margin-bottom: calc((200*var(--vh-fix)) - 120px);
+   margin-bottom: calc(200vh - 120px);
 }
 
 .hero-below-caption #main-page-content.project-page {
-   margin-bottom: calc((var(--vh)*200) - 120px);
-   margin-bottom: calc((200*var(--vh-fix)) - 120px);
+   margin-bottom: calc(200vh - 120px);
 }
 
 #main-content.portfolio-page {
@@ -717,22 +713,18 @@
 ---------------------------------------------------*/
 
 #project-nav {
-   height: calc(var(--vh) * 200);
-   height: calc(200 * var(--vh-fix));
+   height: 200vh;
    width: 100%;
    color: #fff;
    position: absolute;
    margin-bottom: 0;
-   bottom: calc(var(--vh) * -200);
-   bottom: calc(-200 * var(--vh-fix));
+   bottom: -200vh;
    overflow: hidden;
 }
 
 .hero-below-caption #project-nav {
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
-   bottom: calc(var(--vh) * -100);
-   bottom: calc(-100 * var(--vh-fix));
+   height: 100vh;
+   bottom: -100vh;
 }
 
 #project-nav.change-header {

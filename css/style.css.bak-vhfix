@@ -491,8 +491,7 @@ figure.has-parallax {
 
 .full figure.has-parallax {
    overflow: hidden;
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
 }
 
 figure img {
@@ -1745,8 +1744,7 @@ nav.open {
    }
 
    .fullscreen-menu nav {
-      height: calc(var(--vh) * 100);
-      height: calc(100 * var(--vh-fix));
+      height: 100vh;
       position: fixed;
       top: 0;
       left: 0;
@@ -2948,8 +2946,7 @@ nav.open {
    }
 
    nav {
-      height: calc(var(--vh) * 100);
-      height: calc(100 * var(--vh-fix));
+      height: 100vh;
       width: 100%;
       position: fixed;
       left: 0;

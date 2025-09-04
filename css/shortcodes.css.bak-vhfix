@@ -568,8 +568,7 @@
    position: relative;
    box-sizing: border-box;
    min-width: 100%;
-   max-height: calc(var(--vh) * 100);
-   max-height: calc(100 * var(--vh-fix));
+   max-height: 100vh;
    width: 100%;
    height: auto;
    background-size: cover;
@@ -2368,8 +2367,7 @@ input[type='submit'] {
 
 #map_canvas {
    display: block;
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
    position: relative;
    width: 100%;
 }
@@ -2657,8 +2655,7 @@ input[type='submit'] {
 
 .zoom-wrapper-thumb {
    width: 100%;
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
    position: absolute;
    top: 0;
    display: block;
@@ -2703,8 +2700,7 @@ input[type='submit'] {
 .slowed-text {
    position: absolute;
    height: auto;
-   min-height: calc(var(--vh) * 100);
-   min-height: calc(100 * var(--vh-fix));
+   min-height: 100vh;
    width: 100%;
    max-width: 980px;
    display: flex;
@@ -2780,8 +2776,7 @@ input[type='submit'] {
 
 .panels-container {
    position: relative;
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
    display: -ms-flexbox;
    justify-content: flex-start;
    align-items: center;
@@ -3024,8 +3019,7 @@ input[type='submit'] {
    position: relative;
    z-index: 0;
    width: 100%;
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
    display: block;
    overflow: hidden;
    -webkit-clip-path: inset(0% 30% 0% 30%);
@@ -3091,8 +3085,7 @@ input[type='submit'] {
 
 .carousel-shortcode-thumbs {
    position: relative;
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
    width: 100%;
    padding: 20px 40px;
    margin: 0 auto;
@@ -3214,8 +3207,7 @@ input[type='submit'] {
    margin-right: calc(50% - 50vw) !important;
    max-width: 1000% !important;
    width: 100vw !important;
-   height: calc(var(--vh) * 300);
-   height: calc(300 * var(--vh-fix));
+   height: 300vh;
    overflow: hidden;
 }
 
@@ -3236,12 +3228,10 @@ input[type='submit'] {
 
 .list-rotator-height {
    position: absolute;
-   top: calc(var(--vh) * -100);
-   top: calc(-100 * var(--vh-fix));
+   top: -100vh;
    left: 0;
    width: 100%;
-   height: calc(var(--vh) * 400);
-   height: calc(400 * var(--vh-fix));
+   height: 400vh;
    display: flex;
    justify-content: center;
    pointer-events: none;
@@ -3253,8 +3243,7 @@ input[type='submit'] {
    width: 100%;
    display: flex;
    perspective: 10000px;
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
    -webkit-mask-image: linear-gradient(transparent 25%, black 40%, black 60%, transparent 75%);
            mask-image: linear-gradient(transparent 25%, black 40%, black 60%, transparent 75%);
 }
@@ -3264,8 +3253,7 @@ input[type='submit'] {
    display: flex;
    flex-direction: column;
    width: 100%;
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
    margin: 0;
    transform-style: preserve-3d;
    transform-origin: 50% 50%;
@@ -3505,8 +3493,7 @@ input[type='submit'] {
    }
 
    #map_canvas {
-      height: calc(var(--vh) * 50);
-      height: calc(50 * var(--vh-fix));
+      height: 50vh;
    }
 
    .clients-table li {
@@ -3683,8 +3670,7 @@ input[type='submit'] {
    }
 
    .video-wrapper {
-      max-height: calc(var(--vh) * 50);
-      max-height: calc(50 * var(--vh-fix));
+      max-height: 50vh;
    }
 
    .control {
