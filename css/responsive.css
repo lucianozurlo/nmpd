@@ -992,9 +992,9 @@ body.device-ipad.orientation-portrait footer {
       line-height: calc(5vw) !important;
       text-align: left;
    }
-   body.device-desktop #hero-bg-image {
+   /* body.device-desktop #hero-bg-image {
       background-size: 40vw !important;
-   }
+   } */
 
    body.device-desktop
       #main.project-detail.detail-project
@@ -1041,13 +1041,13 @@ body.device-ipad.orientation-portrait footer {
       font-size: 1.4vw;
    }
 
-   body.device-desktop
+   /* body.device-desktop
       #main.project-detail.detail-project
       #hero.has-image
       #hero-description
       .inner {
       max-width: 40vw;
-   }
+   } */
 
    body.device-desktop .text,
    body.device-desktop .text p,
