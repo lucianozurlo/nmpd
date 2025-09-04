@@ -25,9 +25,6 @@ header {
 body {
    overflow-x: hidden;
 }
-body.no-scroll {
-   position: fixed;
-}
 body.no-scroll,
 body.no-scroll #content-scroll {
    overflow: hidden !important;
