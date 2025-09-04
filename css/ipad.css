@@ -44,7 +44,7 @@ body.device-ipad.orientation-landscape .fullscreen-menu .flexnav li ul li a {
    line-height: calc(4vw) !important;
 }
 body.device-ipad.orientation-landscape .fullscreen-menu .flexnav li ul.submenu {
-   /*  margin-left: 20px !important; */
+   margin-left: 2rem !important;
    margin-top: 0;
 }
 body.device-ipad.orientation-landscape .fullscreen-menu .flexnav li ul.submenu li {
