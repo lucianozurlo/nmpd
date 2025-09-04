@@ -66,6 +66,8 @@ body.device-ipad.orientation-landscape
    .from {
    font-size: calc(1rem + 0.6vw);
    line-height: calc(1rem + 0.6vw);
+   margin-top: 0.2rem;
+   margin-bottom: 0;
 }
 
 body.device-ipad.orientation-landscape .spot {
