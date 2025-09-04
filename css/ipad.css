@@ -823,5 +823,6 @@ body.device-ipad.orientation-portrait.contactus #contact {
    height: calc(100vh - 174px);
 }
 body.device-ipad.orientation-portrait footer {
-   position: relative;
+   position: fixed;
+   bottom: 0;
 }
