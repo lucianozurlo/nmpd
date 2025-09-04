@@ -687,9 +687,9 @@ i.arrow-icon-down.white {
    justify-content: center;
    justify-content: flex-start;
    flex-direction: column;
-   height: 100% !important;
-   min-height: calc(var(--vh) * 100) !important;
-   min-height: calc(100 * var(--vh-fix)) !important;
+   /* height: 100% !important; */
+   height: calc(var(--vh) * 100) !important;
+   height: calc(100 * var(--vh-fix)) !important;
 }
 
 #main.project-detail.detail-project #hero.has-image #caption-img {
