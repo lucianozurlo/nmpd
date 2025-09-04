@@ -330,7 +330,6 @@ body.device-ipad.orientation-portrait .icon-wrap {
    height: 74px;
 }
 /**/
-
 body.device-ipad.orientation-portrait.projects #hero-caption .inner {
    display: none !important;
 }
@@ -342,6 +341,7 @@ body.device-ipad.orientation-portrait #hero-bg-image,
 body.device-ipad.orientation-portrait #page-content .next-project-image-bg.alpha {
    background-position: 50% 70% !important;
 }
+
 body.device-ipad.orientation-portrait #page-content.fusion .ui-design .content-half.content-text {
    padding: 0;
    padding-left: 12vw;
@@ -352,4 +352,216 @@ body.device-ipad.orientation-portrait
    .grid-item
    > div:nth-child(2) {
    font-size: 13px;
+}
+body.device-ipad.orientation-portrait #page-content.fusion .fusion-spots .spots-container img {
+   max-width: 100%;
+}
+body.device-ipad.orientation-portrait #page-content.fusion .buy-me-content {
+   padding-left: 0;
+}
+
+body.device-ipad.orientation-portrait
+   #page-content.skinpro
+   #main.project-detail.detail-project
+   #hero.has-image
+   #caption-img
+   .inner
+   h1.less,
+body.device-ipad.orientation-portrait
+   #page-content.iqperfetto
+   #main.project-detail.detail-project
+   #hero.has-image
+   #caption-img
+   .inner
+   h1.less,
+body.device-ipad.orientation-portrait
+   #page-content.ccexquisite
+   #main.project-detail.detail-project
+   #hero.has-image
+   #caption-img
+   .inner
+   h1.less {
+   flex-direction: column !important;
+   line-height: 0.95;
+}
+body.device-ipad.orientation-portrait
+   #page-content.iqperfetto
+   #main.project-detail.detail-project
+   #hero.has-image
+   #caption-img
+   .inner
+   .detail
+   div:first-child,
+body.device-ipad.orientation-portrait
+   #page-content.iqperfetto
+   #main.project-detail.detail-project
+   #hero.has-image
+   #hero-caption
+   .inner
+   .detail
+   div:first-child,
+body.device-ipad.orientation-portrait
+   #page-content.ccexquisite
+   #main.project-detail.detail-project
+   #hero.has-image
+   #caption-img
+   .inner
+   .detail
+   div:first-child,
+body.device-ipad.orientation-portrait
+   #page-content.ccexquisite
+   #main.project-detail.detail-project
+   #hero.has-image
+   #hero-caption
+   .inner
+   .detail
+   div:first-child {
+   transform: translateY(0);
+   display: flex;
+   flex-direction: row;
+}
+
+body.device-ipad.orientation-portrait
+   #page-content.skinpro
+   #main.project-detail.detail-project
+   #hero.has-image
+   #caption-img
+   .inner
+   .detail
+   div:nth-child(2),
+body.device-ipad.orientation-portrait
+   #page-content.skinpro
+   #main.project-detail.detail-project
+   #hero.has-image
+   #hero-caption
+   .inner
+   .detail
+   div:nth-child(2),
+body.device-ipad.orientation-portrait
+   #page-content.iqperfetto
+   #main.project-detail.detail-project
+   #hero.has-image
+   #caption-img
+   .inner
+   .detail
+   div:nth-child(2),
+body.device-ipad.orientation-portrait
+   #page-content.iqperfetto
+   #main.project-detail.detail-project
+   #hero.has-image
+   #hero-caption
+   .inner
+   .detail
+   div:nth-child(2),
+body.device-ipad.orientation-portrait
+   #page-content.ccexquisite
+   #main.project-detail.detail-project
+   #hero.has-image
+   #caption-img
+   .inner
+   .detail
+   div:nth-child(2),
+body.device-ipad.orientation-portrait
+   #page-content.ccexquisite
+   #main.project-detail.detail-project
+   #hero.has-image
+   #hero-caption
+   .inner
+   .detail
+   div:nth-child(2) {
+   transform: translateY(0);
+   display: flex;
+   flex-direction: row;
+}
+body.device-ipad.orientation-portrait
+   #page-content.skinpro
+   #main.project-detail.detail-project
+   #hero.has-image
+   #hero-bg-image,
+body.device-ipad.orientation-portrait
+   #page-content.iqperfetto
+   #main.project-detail.detail-project
+   #hero.has-image
+   #hero-bg-image,
+body.device-ipad.orientation-portrait
+   #page-content.ccexquisite
+   #main.project-detail.detail-project
+   #hero.has-image
+   #hero-bg-image {
+   transform: translate(55%, -12%) scale(2) !important;
+}
+body.device-ipad.orientation-portrait
+   #main.project-detail.detail-project
+   #hero.has-image
+   #caption-img
+   .inner
+   h1 {
+   margin-top: 9vh !important;
+   font-size: 15vw !important;
+   letter-spacing: -1vw !important;
+}
+
+body.device-ipad.orientation-portrait #hero-background-layer {
+   position: relative !important;
+   transform: unset !important;
+   inset: unset !important;
+   max-height: unset !important;
+   min-height: 100% !important;
+}
+body.device-ipad.orientation-portrait
+   #main.project-detail.detail-project
+   #hero.has-image
+   #caption-img
+   .inner
+   .desc {
+   margin-top: 5px;
+   margin-bottom: 6px;
+}
+body.device-ipad.orientation-portrait
+   #main.project-detail.detail-project
+   #hero.has-image
+   #caption-img
+   .inner
+   .from,
+body.device-ipad.orientation-portrait
+   #main.project-detail.detail-project
+   #hero.has-image
+   #hero-caption
+   .inner
+   .from {
+   margin-top: 0;
+}
+body.device-ipad.orientation-portrait
+   #main.project-detail.detail-project
+   #hero.has-image
+   #caption-img
+   .inner
+   .from {
+   font-size: 3vw;
+}
+body.device-ipad.orientation-portrait
+   #main.project-detail.detail-project
+   #hero.has-image
+   #caption-img
+   .inner
+   .desc,
+body.device-ipad.orientation-portrait
+   #main.project-detail.detail-project
+   #hero.has-image
+   #caption-img
+   .inner
+   .anio {
+   font-size: 2.3vw;
+}
+body.device-ipad.orientation-portrait #hero-bg-image {
+   -webkit-animation: backgroundResize 1s ease-in-out forwards !important;
+   animation: backgroundResize 1s ease-in-out forwards !important;
+   -webkit-animation-delay: 1.2s !important;
+   animation-delay: 1.2s !important;
+   /* transform: translate(55%, -15%) scale(2) !important; */
+   transform: translate(0, 6%) scale(1) !important;
+   background-size: 28vw !important;
+   width: 100%;
+   margin-left: unset;
+   transition: all 0s !important;
 }
