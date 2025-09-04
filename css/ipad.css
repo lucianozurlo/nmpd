@@ -58,6 +58,16 @@ body.device-ipad.orientation-landscape .project .project-info h2 {
    letter-spacing: -2px !important;
 }
 
+body.device-ipad.orientation-landscape
+   #main.project-detail.detail-project
+   #hero.has-image
+   #hero-caption
+   .inner
+   .from {
+   font-size: calc(1rem + 0.6vw);
+   line-height: calc(1rem + 0.6vw);
+}
+
 body.device-ipad.orientation-landscape .spot {
    width: 14px;
    height: 14px;
