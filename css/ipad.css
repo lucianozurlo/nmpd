@@ -29,10 +29,16 @@ body.device-ipad.orientation-landscape .flexnav li,
 body.device-ipad.orientation-landscape .flexnav li ul li:marker {
    list-style: none;
 }
+
+body.device-ipad.orientation-landscape .fullscreen-menu .flexnav li a {
+   font-size: calc(2rem + 4.5vw);
+   line-height: calc(2rem + 4.5vw);
+}
+
 body.device-ipad.orientation-landscape .fullscreen-menu .flexnav li ul li a {
    text-align: left;
-   font-size: calc(3vw) !important;
-   line-height: calc(5vw) !important;
+   font-size: calc(2.5vw) !important;
+   line-height: calc(4vw) !important;
 }
 body.device-ipad.orientation-landscape .fullscreen-menu .flexnav li ul.submenu {
    /*  margin-left: 20px !important; */
