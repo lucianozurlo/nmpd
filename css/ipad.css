@@ -35,8 +35,8 @@ body.device-ipad.orientation-landscape .fullscreen-menu .flexnav li ul li a {
    line-height: calc(5vw) !important;
 }
 body.device-ipad.orientation-landscape .fullscreen-menu .flexnav li ul.submenu {
-   margin-left: unset !important;
-   margin-top: unset !important;
+   margin-left: 20px !important;
+   margin-top: 10px;
 }
 body.device-ipad.orientation-landscape .fullscreen-menu .flexnav li ul.submenu li {
    margin: 0;
@@ -260,6 +260,14 @@ body.device-ipad.orientation-portrait .content-full-width {
    padding-right: 12vw;
 }
 
+body.device-ipad.orientation-portrait .fullscreen-menu .flexnav li {
+   display: flex;
+   justify-content: center;
+}
+/* body.device-ipad.orientation-portrait .fullscreen-menu .flexnav li ul.submenu li {
+display: flex;
+justify-content: center;
+} */
 body.device-ipad.orientation-portrait header {
    height: 74px !important;
 }
