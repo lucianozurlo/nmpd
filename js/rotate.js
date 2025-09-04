@@ -1,91 +1,45 @@
 (() => {
-   // --- utilidades ---
-   const debounce = (fn, d = 200) => {
-      let t;
-      return (...a) => {
-         clearTimeout(t);
-         t = setTimeout(() => fn(...a), d);
-      };
-   };
-   const isPortrait = () => window.matchMedia('(orientation: portrait)').matches;
+   const docEl = document.documentElement;
 
-   // Espera a que innerWidth/innerHeight queden estables N frames seguidos
-   const waitViewportStable = (cb, stableFrames = 6) => {
-      let w = window.innerWidth,
-         h = window.innerHeight,
-         ok = 0;
-      const tick = () => {
-         const nw = window.innerWidth,
-            nh = window.innerHeight;
-         if (nw === w && nh === h) {
-            ok++;
-         } else {
-            w = nw;
-            h = nh;
-            ok = 0;
-         }
-         if (ok >= stableFrames) cb();
-         else requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-   };
+   // --- utilidades livianas ---
+   const isPortrait = () => matchMedia('(orientation: portrait)').matches;
 
-   // Reinyecta <link rel="stylesheet"> con cache-bust + re-eval <style>
-   const reloadStylesheets = () => {
-      // 1) <link rel="stylesheet">
-      document.querySelectorAll('link[rel~="stylesheet"]').forEach((link) => {
-         const clone = link.cloneNode(true);
-         const href = link.getAttribute('href');
-         if (href) {
-            const base = href.split('#')[0].split('?')[0];
-            const q = href.includes('?') ? '&' : '?';
-            clone.setAttribute('href', `${base}${q}o=${Date.now()}`);
-         }
-         clone.media = 'all';
-         link.replaceWith(clone);
+   // Un batch por frame para coalescer múltiples eventos (resize, orientationchange, etc.)
+   let rafId = null;
+   const scheduleApply = () => {
+      if (rafId) return;
+      rafId = requestAnimationFrame(() => {
+         rafId = null;
+         applyViewportFixes();
       });
-
-      // 2) <style> inline (Webpack/Vite inyectan muchos)
-      document.querySelectorAll('style').forEach((style) => {
-         style.disabled = true;
-         void style.offsetWidth; // reflow
-         style.disabled = false;
-      });
-
-      // 3) fix 100vh en iOS
-      document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
    };
 
-   // Fallback extremo: recargar página si todo falla
-   const hardReloadIfStubborn = () => {
-      setTimeout(() => {
-         // activalo si realmente lo necesitás:
-         // location.reload();
-      }, 900);
+   // Recalcula --vh y data-orientation sin recargar CSS
+   const applyViewportFixes = () => {
+      // Preferí visualViewport.height en iOS; fallback a innerHeight
+      const vhSource = window.visualViewport?.height || window.innerHeight;
+      docEl.style.setProperty('--vh', vhSource * 0.01 + 'px');
+      docEl.setAttribute('data-orientation', isPortrait() ? 'portrait' : 'landscape');
    };
 
-   let lastPortrait = isPortrait();
+   // Handler rápido, sin esperar “estabilidad” larga
+   const onViewportChange = () => {
+      // 1) actualización inmediata (coalescida por rAF)
+      scheduleApply();
 
-   const onMaybeRotate = debounce(() => {
-      const nowPortrait = isPortrait();
-      if (nowPortrait === lastPortrait) return; // no cambió orientación
-      lastPortrait = nowPortrait;
+      // 2) actualización “de seguridad” tras un pequeño settling
+      //    (Safari iOS a veces ajusta barras tras ~120–200ms)
+      clearTimeout(onViewportChange._t);
+      onViewportChange._t = setTimeout(applyViewportFixes, 160);
+   };
 
-      // Esperar a que el viewport termine de acomodarse y luego recargar CSS
-      waitViewportStable(() => {
-         reloadStylesheets();
-         // descomentar si necesitás ser ultra-agresivo:
-         // hardReloadIfStubborn();
-      });
-   }, 120);
-
-   // Escuchas "reales" de iPadOS
+   // Listeners mínimos y rápidos
    if (window.visualViewport) {
-      visualViewport.addEventListener('resize', onMaybeRotate, { passive: true });
+      visualViewport.addEventListener('resize', onViewportChange, { passive: true });
    }
-   window.addEventListener('orientationchange', onMaybeRotate, { passive: true });
-   window.addEventListener('resize', onMaybeRotate, { passive: true });
+   addEventListener('resize', onViewportChange, { passive: true });
+   addEventListener('orientationchange', onViewportChange, { passive: true });
 
-   // set inicial de --vh
-   document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+   // Set inicial
+   applyViewportFixes();
 })();
