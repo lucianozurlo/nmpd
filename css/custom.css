@@ -28,6 +28,8 @@ body {
 body.no-scroll,
 body.no-scroll #content-scroll {
    overflow: hidden !important;
+   -ms-scroll-chaining: none;
+   overscroll-behavior: none;
 }
 body.dark {
    background-color: #131316 !important;

@@ -2087,7 +2087,8 @@ Function First Load
             if ($('#menu-burger').hasClass('open')) {
                gsap.to('nav', { duration: 0.3, opacity: 1, ease: Power2.easeInOut });
 
-               $('body').addClass('no-scroll');
+               // $('body').addClass('no-scroll');
+               lockBodyScroll();
                gsap.set($('nav ul ul li'), { y: 0, opacity: 1 });
                //Fade In Navigation Lists
                gsap.set($('.menu-timeline .before-span'), { y: 160, opacity: 0 });
@@ -2137,7 +2138,8 @@ Function First Load
                   ease: Power2.easeIn,
                });
 
-               $('body').removeClass('no-scroll');
+               // $('body').removeClass('no-scroll');
+               unlockBodyScroll();
                setTimeout(function () {
                   $('.touch-button.active').trigger('click');
                   $('header').removeClass('over-sidebar');
