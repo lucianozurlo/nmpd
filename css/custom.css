@@ -668,7 +668,7 @@ i.arrow-icon-down.white {
    padding-right: 10px;
    font-size: 8vw;
    line-height: 1;
-   letter-spacing: -6px;
+   letter-spacing: -0.3rem;
    font-weight: 900;
    margin-bottom: 0;
 }
