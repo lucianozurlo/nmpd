@@ -563,6 +563,7 @@ body.device-ipad.orientation-portrait #hero-bg-image {
    background-size: 28vw !important;
    width: 100%;
    margin-left: unset;
+   transition: 0 !important;
 }
 
 body.device-ipad.orientation-portrait
