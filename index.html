@@ -492,73 +492,11 @@
 
       <script src="js/nmp.js"></script>
       <script src="js/plugins.js"></script>
-
       <script src="js/common.js"></script>
       <script src="js/contact.js"></script>
       <script src="js/scripts.js"></script>
       <script src="js/copy.js"></script>
-
-      <script>
-         const btn = document.getElementById('scrollBtn');
-         const btnTop = document.getElementById('scrollTopBtn');
-
-         btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({
-               top: window.innerHeight,
-               left: 0,
-               behavior: 'smooth',
-            });
-         });
-
-         btnTop.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({
-               top: 0,
-               left: 0,
-               behavior: 'smooth',
-            });
-         });
-      </script>
       <script src="js/responsive.js"></script>
-
-      <script>
-         // Helpers de scroll lock robusto (sirve también en iOS)
-         function lockBodyScroll() {
-            if ($('body').hasClass('no-scroll')) return;
-
-            const scrollY = window.scrollY || window.pageYOffset;
-            $('body')
-               .attr('data-scroll-lock', scrollY) // guardo posición
-               .css({
-                  position: 'fixed',
-                  top: -scrollY + 'px',
-                  left: 0,
-                  right: 0,
-                  width: '100%',
-                  overflow: 'hidden',
-               })
-               .addClass('no-scroll');
-
-            // Bloquea gestos táctiles (iOS)
-            $(window).on('touchmove.noscroll', (e) => e.preventDefault());
-            $(window).on('wheel.noscroll', (e) => e.preventDefault());
-         }
-
-         function unlockBodyScroll() {
-            if (!$('body').hasClass('no-scroll')) return;
-
-            const scrollY = parseInt($('body').attr('data-scroll-lock') || '0', 10);
-            $('body')
-               .removeClass('no-scroll')
-               .removeAttr('data-scroll-lock')
-               .css({ position: '', top: '', left: '', right: '', width: '', overflow: '' });
-
-            $(window).off('.noscroll'); // quita touchmove/wheel handlers
-
-            // Restaurar posición exacta
-            window.scrollTo(0, scrollY);
-         }
-      </script>
+      <script src="js/scroll.js"></script>
    </body>
 </html>

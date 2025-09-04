@@ -616,41 +616,9 @@
       <script src="../../js/video-scroll.js"></script>
       <script src="../../js/spots.js"></script>
       <script src="../../js/splide.min.js"></script>
+      <script src="../../js/alphaVideo.js"></script>
       <script src="../../js/projects.js"></script>
-
-      <script>
-         (function () {
-            const vid = document.getElementById('alphaVideo');
-
-            Object.assign(vid, {
-               muted: true,
-               defaultMuted: true,
-               playsInline: true,
-            });
-            vid.setAttribute('playsinline', '');
-            vid.setAttribute('webkit-playsinline', '');
-
-            const attemptPlay = () => {
-               const p = vid.play();
-               if (p) {
-                  p.catch(() => {
-                     const unlock = () => {
-                        vid.play();
-                        window.removeEventListener('touchstart', unlock, true);
-                     };
-                     window.addEventListener('touchstart', unlock, {
-                        once: true,
-                        passive: true,
-                        capture: true,
-                     });
-                  });
-               }
-            };
-
-            if (document.readyState !== 'loading') attemptPlay();
-            else document.addEventListener('DOMContentLoaded', attemptPlay);
-         })();
-      </script>
       <script src="../../js/responsive.js"></script>
+      <script src="../../js/scroll.js"></script>
    </body>
 </html>
