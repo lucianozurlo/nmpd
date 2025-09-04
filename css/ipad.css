@@ -559,7 +559,7 @@ body.device-ipad.orientation-portrait #hero-bg-image {
    -webkit-animation-delay: 1.2s !important;
    animation-delay: 1.2s !important;
    /* transform: translate(55%, -15%) scale(2) !important; */
-   transform: translate(0, 6%) !important;
+   transform: translate(0, 6%) scale(1) !important;
    background-size: 28vw !important;
    width: 100%;
    margin-left: unset;
