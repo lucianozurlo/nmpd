@@ -294,3 +294,62 @@ body.device-ipad.orientation-landscape.contactus footer {
 }
 
 /* IPAD LANDSCAPE */
+body.device-ipad.orientation-portrait .ipad-port-ok {
+   display: inherit !important;
+}
+body.device-ipad.orientation-portrait .ipad-port-no {
+   display: none !important;
+}
+body.device-ipad.orientation-portrait .content-max-width,
+body.device-ipad.orientation-portrait .content-full-width {
+   padding-left: 12vw;
+   padding-right: 12vw;
+}
+
+body.device-ipad.orientation-portrait .fullscreen-menu .flexnav li {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+body.device-ipad.orientation-portrait .fullscreen-menu .flexnav li ul.submenu {
+   margin-left: 0;
+   margin-top: 0;
+}
+
+body.device-ipad.orientation-portrait #header-container nav .flexnav .menu-item {
+   display: flex;
+   justify-content: center;
+}
+
+body.device-ipad.orientation-portrait header {
+   height: 74px !important;
+}
+body.device-ipad.orientation-portrait .icon-wrap {
+   width: 74px;
+   height: 74px;
+}
+/**/
+
+body.device-ipad.orientation-portrait.projects #hero-caption .inner {
+   display: none !important;
+}
+body.device-ipad.orientation-portrait #hero-description,
+body.device-ipad.orientation-portrait #caption-img {
+   display: flex !important;
+}
+body.device-ipad.orientation-portrait #hero-bg-image,
+body.device-ipad.orientation-portrait #page-content .next-project-image-bg.alpha {
+   background-position: 50% 70% !important;
+}
+body.device-ipad.orientation-portrait #page-content.fusion .ui-design .content-half.content-text {
+   padding: 0;
+   padding-left: 12vw;
+}
+body.device-ipad.orientation-portrait
+   #page-content.fusion
+   #main.project-detail
+   .grid-item
+   > div:nth-child(2) {
+   font-size: 13px;
+}
