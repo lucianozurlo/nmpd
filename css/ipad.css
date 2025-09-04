@@ -270,10 +270,12 @@ body.device-ipad.orientation-portrait .fullscreen-menu .flexnav li ul.submenu {
    margin-left: 0;
    margin-top: 0;
 }
-/* body.device-ipad.orientation-portrait .fullscreen-menu .flexnav li ul.submenu li {
-display: flex;
-justify-content: center;
-} */
+
+body.device-ipad.orientation-portrait #header-container nav .flexnav .menu-item {
+   display: flex;
+   justify-content: center;
+}
+
 body.device-ipad.orientation-portrait header {
    height: 74px !important;
 }
