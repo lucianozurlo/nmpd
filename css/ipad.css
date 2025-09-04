@@ -554,10 +554,9 @@ body.device-ipad.orientation-portrait
    font-size: 2.3vw;
 }
 body.device-ipad.orientation-portrait #hero-bg-image {
-   transform: translate(0, 6%) scale(1) !important;
-   background-size: 28vw !important;
-   width: 100%;
-   margin-left: unset;
+   transform: translate(55%, -15%) scale(2) !important;
+   /* transform: translate(0, 6%) scale(1) !important; */
+   background-size: 32vw !important;
 }
 
 body.device-ipad.orientation-portrait
