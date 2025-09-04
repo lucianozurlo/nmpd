@@ -448,6 +448,8 @@ header.over-sidebar #lang span {
 .fullscreen-menu .flexnav li a {
    font-size: calc(3rem + 4.5vw);
    line-height: calc(3rem + 4.5vw);
+   letter-spacing: -0.3rem;
+   padding: 0 0.6rem;
 }
 
 .fullscreen-menu .flexnav li ul.submenu {

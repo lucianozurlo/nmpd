@@ -30,13 +30,13 @@ body.device-ipad.orientation-landscape .flexnav li ul li:marker {
    list-style: none;
 }
 body.device-ipad.orientation-landscape .fullscreen-menu .flexnav li ul li a {
-   text-align: center;
+   text-align: left;
    font-size: calc(3vw) !important;
    line-height: calc(5vw) !important;
 }
 body.device-ipad.orientation-landscape .fullscreen-menu .flexnav li ul.submenu {
-   margin-left: 20px !important;
-   margin-top: 10px;
+   /*  margin-left: 20px !important; */
+   margin-top: 0;
 }
 body.device-ipad.orientation-landscape .fullscreen-menu .flexnav li ul.submenu li {
    margin: 0;
@@ -262,7 +262,13 @@ body.device-ipad.orientation-portrait .content-full-width {
 
 body.device-ipad.orientation-portrait .fullscreen-menu .flexnav li {
    display: flex;
+   flex-direction: column;
    justify-content: center;
+}
+
+.fullscreen-menu .flexnav li ul.submenu {
+   margin-left: 0;
+   margin-top: 0;
 }
 /* body.device-ipad.orientation-portrait .fullscreen-menu .flexnav li ul.submenu li {
 display: flex;
