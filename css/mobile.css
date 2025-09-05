@@ -38,8 +38,8 @@ body.device-mobile.orientation-portrait nav {
 }
 
 body.device-mobile.orientation-portrait #main.home #hero-caption .hero-title {
-   height: calc((var(--vh) * 100) - 120px);
-   height: calc((100 * var(--vh-fix)) - 120px);
+   height: calc((var(--vh) * 100));
+   height: calc((100 * var(--vh-fix)));
 }
 
 body.device-mobile.orientation-portrait
