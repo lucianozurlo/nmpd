@@ -186,8 +186,8 @@ body.device-ipad.orientation-landscape
    .content-full
    .spots-container
    .spot:nth-child(4) {
-   top: 60%;
-   left: 81.5%;
+   top: 58%;
+   left: 84.75%;
 }
 body.device-ipad.orientation-landscape #page-content.fusion .content-videos {
    max-width: 100%;

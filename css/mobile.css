@@ -1,12 +1,13 @@
+body.device-mobile .mob-ok {
+   display: inherit !important;
+}
+body.device-mobile .mob-no {
+   display: none !important;
+}
+
 /* MOBILE PORTRAID */
 body.device-mobile.orientation-portrait .trackbar {
    margin-top: -70px;
-}
-body.device-mobile.orientation-portrait .mob-ok {
-   display: inherit !important;
-}
-body.device-mobile.orientation-portrait .mob-no {
-   display: none !important;
 }
 
 body.device-mobile.orientation-portrait .mob-mb-40 {
@@ -37,16 +38,16 @@ body.device-mobile.orientation-portrait nav {
 }
 
 body.device-mobile.orientation-portrait #main.home #hero-caption .hero-title {
-   height: calc((var(--vh)*100) - 120px);
-   height: calc((100*var(--vh-fix)) - 120px);
+   height: calc((var(--vh) * 100) - 120px);
+   height: calc((100 * var(--vh-fix)) - 120px);
 }
 
 body.device-mobile.orientation-portrait
    #main.project-detail.detail-project
    #hero.has-image
    #hero-caption {
-   max-height: calc((var(--vh)*100) - 74px);
-   max-height: calc((100*var(--vh-fix)) - 74px);
+   max-height: calc((var(--vh) * 100) - 74px);
+   max-height: calc((100 * var(--vh-fix)) - 74px);
 }
 body.device-mobile.orientation-portrait .flexnav.opacity {
    gap: 10px !important;
@@ -1034,8 +1035,8 @@ body.device-mobile.orientation-portrait #page-content.skinpro .image-hover {
 }
 
 body.device-mobile.orientation-portrait #page-content.skinpro .wrapper-videos video {
-   padding-top: calc((var(--vh)*5) - 50px);
-   padding-top: calc((5*var(--vh-fix)) - 50px);
+   padding-top: calc((var(--vh) * 5) - 50px);
+   padding-top: calc((5 * var(--vh-fix)) - 50px);
 }
 
 body.device-mobile.orientation-portrait .skinpro-views-2.content-row.xlarge {
