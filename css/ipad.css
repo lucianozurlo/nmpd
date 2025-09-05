@@ -834,7 +834,7 @@ body.device-ipad.orientation-portrait #page-content.pilltrack .pilltrack-buy-me 
    margin-top: -20px !important;
 }
 
-body.device-ipad.orientation-portrait #page-content.pilltrack .pilltrack-uses .full.xlarge h2 {
+body.device-ipad.orientation-portrait #page-content.pilltrack .pilltrack-uses.full.xlarge h2 {
    display: inline-flex;
 }
 
