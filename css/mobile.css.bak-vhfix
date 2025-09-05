@@ -29,24 +29,21 @@ body.device-mobile.orientation-portrait .percentage {
 }
 
 body.device-mobile.orientation-portrait nav {
-   height: calc(var(--vh) * 100) !important;
-   height: calc(100 * var(--vh-fix)) !important;
+   height: 100vh !important;
    /* min-height: 100vh; */
    position: fixed;
    overflow: hidden;
 }
 
 body.device-mobile.orientation-portrait #main.home #hero-caption .hero-title {
-   height: calc((var(--vh)*100) - 120px);
-   height: calc((100*var(--vh-fix)) - 120px);
+   height: calc(100vh - 120px);
 }
 
 body.device-mobile.orientation-portrait
    #main.project-detail.detail-project
    #hero.has-image
    #hero-caption {
-   max-height: calc((var(--vh)*100) - 74px);
-   max-height: calc((100*var(--vh-fix)) - 74px);
+   max-height: calc(100vh - 74px);
 }
 body.device-mobile.orientation-portrait .flexnav.opacity {
    gap: 10px !important;
@@ -131,8 +128,7 @@ body.device-mobile.orientation-portrait #itemsWrapper .inline-flex {
 }
 
 body.device-mobile.orientation-portrait #contact {
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
+   height: 100vh;
 }
 body.device-mobile.orientation-portrait #contact .inner h2 {
    font-size: calc(0.6rem + 7vw);
@@ -303,25 +299,21 @@ body.device-mobile.orientation-portrait #hero-bg-image {
 
 @-webkit-keyframes backgroundResize {
    0% {
-      background-size: auto calc(var(--vh) * 100);
-      background-size: auto calc(100 * var(--vh-fix));
+      background-size: auto 100vh;
    }
 
    100% {
-      background-size: auto calc(var(--vh) * 70);
-      background-size: auto calc(70 * var(--vh-fix));
+      background-size: auto 70vh;
    }
 }
 
 @keyframes backgroundResize {
    0% {
-      background-size: auto calc(var(--vh) * 100);
-      background-size: auto calc(100 * var(--vh-fix));
+      background-size: auto 100vh;
    }
 
    100% {
-      background-size: auto calc(var(--vh) * 70);
-      background-size: auto calc(70 * var(--vh-fix));
+      background-size: auto 70vh;
    }
 }
 
@@ -382,8 +374,7 @@ body.device-mobile.orientation-portrait .next-project-header {
 }
 
 body.device-mobile.orientation-portrait #page-content .next-project-image-bg.alpha {
-   background-size: auto calc(var(--vh) * 100);
-   background-size: auto calc(100 * var(--vh-fix));
+   background-size: auto 100vh;
 }
 
 body.device-mobile.orientation-portrait
@@ -517,8 +508,7 @@ body.device-mobile.orientation-portrait
    #caption-img
    .inner
    h1 {
-   margin-top: calc(var(--vh) * 11) !important;
-   margin-top: calc(11 * var(--vh-fix)) !important;
+   margin-top: 11vh !important;
    font-size: 17.5vw !important;
    letter-spacing: -1.3vw !important;
 }
@@ -1017,16 +1007,13 @@ body.device-mobile.orientation-portrait .skinpro-views .content-full {
 }
 
 body.device-mobile.orientation-portrait .skinpro-views .video-scroll {
-   min-height: calc(var(--vh) * 65);
-   min-height: calc(65 * var(--vh-fix));
+   min-height: 65vh;
 }
 
 body.device-mobile.orientation-portrait #page-content.skinpro .image-hover {
    position: relative;
-   width: calc(var(--vh) * 60);
-   width: calc(60 * var(--vh-fix));
-   height: calc(var(--vh) * 60);
-   height: calc(60 * var(--vh-fix));
+   width: 60vh;
+   height: 60vh;
    overflow: hidden;
    width: 100%;
    transform: translateX(7%);
@@ -1034,8 +1021,7 @@ body.device-mobile.orientation-portrait #page-content.skinpro .image-hover {
 }
 
 body.device-mobile.orientation-portrait #page-content.skinpro .wrapper-videos video {
-   padding-top: calc((var(--vh)*5) - 50px);
-   padding-top: calc((5*var(--vh-fix)) - 50px);
+   padding-top: calc(5vh - 50px);
 }
 
 body.device-mobile.orientation-portrait .skinpro-views-2.content-row.xlarge {
@@ -1155,10 +1141,8 @@ body.device-mobile.orientation-portrait .kali-open .scroll-bound .image-sequence
 body.device-mobile.orientation-portrait .wellted-exploded .scroll-bound .image-sequence {
    justify-content: center;
    align-items: center;
-   height: calc(var(--vh) * 100);
-   height: calc(100 * var(--vh-fix));
-   max-height: calc(var(--vh) * 100);
-   max-height: calc(100 * var(--vh-fix));
+   height: 100vh;
+   max-height: 100vh;
    padding-top: 50px;
 }
 
@@ -1307,8 +1291,7 @@ body.device-mobile.orientation-portrait .kali-exploded .content-full .project-in
 }
 
 body.device-mobile.orientation-portrait .kali-views3 .one_half .content-half img {
-   max-height: calc(var(--vh) * 70) !important;
-   max-height: calc(70 * var(--vh-fix)) !important;
+   max-height: 70vh !important;
 }
 
 body.device-mobile.orientation-portrait .kali-views4 {

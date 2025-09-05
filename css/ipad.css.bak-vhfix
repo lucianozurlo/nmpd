@@ -8,10 +8,8 @@ body.device-ipad.orientation-landscape .icon-wrap {
    height: 60px;
 }
 body.device-ipad.orientation-landscape #main.home #hero-caption .hero-title {
-   height: calc((var(--vh)*100) - 60px);
-   height: calc((100*var(--vh-fix)) - 60px);
-   max-height: calc((var(--vh)*100) - 60px);
-   max-height: calc((100*var(--vh-fix)) - 60px);
+   height: calc(100vh - 60px);
+   max-height: calc(100vh - 60px);
 }
 body.device-ipad.orientation-landscape .hero-arrow {
    width: 32px;
@@ -223,8 +221,7 @@ body.device-ipad.orientation-landscape
    .kali-exploded
    .content-full
    > img {
-   max-height: calc(var(--vh) * 50) !important;
-   max-height: calc(50 * var(--vh-fix)) !important;
+   max-height: 50vh !important;
 }
 body.device-ipad.orientation-landscape
    #page-content.kali
@@ -263,10 +260,8 @@ body.device-ipad.orientation-landscape.contactus .page-nav-caption {
    align-items: center;
 }
 body.device-ipad.orientation-landscape.contactus #contact {
-   max-height: calc((var(--vh)*100) - 100px);
-   max-height: calc((100*var(--vh-fix)) - 100px);
-   height: calc((var(--vh)*100) - 100px);
-   height: calc((100*var(--vh-fix)) - 100px);
+   max-height: calc(100vh - 100px);
+   height: calc(100vh - 100px);
 }
 body.device-ipad.orientation-landscape.contactus #contact img {
    max-width: 75px;
@@ -501,8 +496,7 @@ body.device-ipad.orientation-portrait
    #caption-img
    .inner
    h1 {
-   margin-top: calc(var(--vh) * 9) !important;
-   margin-top: calc(9 * var(--vh-fix)) !important;
+   margin-top: 9vh !important;
    font-size: 15vw !important;
    letter-spacing: -1vw !important;
 }
@@ -613,10 +607,8 @@ body.device-ipad.orientation-portrait
 
 /**/
 body.device-ipad.orientation-portrait #main.home #hero-caption .hero-title {
-   height: calc((var(--vh)*100) - 74px);
-   height: calc((100*var(--vh-fix)) - 74px);
-   max-height: calc((var(--vh)*100) - 74px);
-   max-height: calc((100*var(--vh-fix)) - 74px);
+   height: calc(100vh - 74px);
+   max-height: calc(100vh - 74px);
 }
 
 body.device-ipad.orientation-portrait #page-content.iqperfetto .iqperfetto-spots .spots-container {
@@ -869,8 +861,7 @@ body.device-ipad.orientation-portrait
 }
 
 body.device-ipad.orientation-portrait.contactus #contact {
-   height: calc((var(--vh)*100) - 100px);
-   height: calc((100*var(--vh-fix)) - 100px);
+   height: calc(100vh - 100px);
 }
 body.device-ipad.orientation-portrait footer {
    position: relative;

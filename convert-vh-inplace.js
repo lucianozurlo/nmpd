@@ -23,6 +23,8 @@ const INPUT_FILES = [
    'css/all.min.css',
    'css/custom.css',
    'css/projects.css',
+   'css/ipad.css',
+   'css/mobile.css',
 ];
 
 const HEADER_TARGET = 'css/custom.css'; // dónde inyectar :root vars si no están

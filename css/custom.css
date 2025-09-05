@@ -1,9 +1,11 @@
 /* --- vh-fix (auto-inyectado) --- */
 :root {
    /* Tu JS setea --vh = innerHeight*0.01 en iOS/iPadOS */
-   --vh: 1vh;
+   --vh: calc(var(--vh) * 1);
+   --vh: calc(1 * var(--vh-fix));
    /* --vh-fix será 1dvh si hay soporte; si no, queda en 1vh */
-   --vh-fix: 1vh;
+   --vh-fix: calc(var(--vh) * 1);
+   --vh-fix: calc(1 * var(--vh-fix));
 }
 @supports (height: 100dvh) {
    :root {
