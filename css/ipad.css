@@ -95,7 +95,6 @@ body.device-ipad.orientation-landscape .text p,
 body.device-ipad.orientation-landscape #hero-description p,
 body.device-ipad.orientation-landscape .buy-me p {
    font-size: 1rem;
-   line-height: 1rem;
 }
 
 body.device-ipad.orientation-landscape .spot {
@@ -307,7 +306,6 @@ body.device-ipad.orientation-portrait .text p,
 body.device-ipad.orientation-portrait #hero-description p,
 body.device-ipad.orientation-portrait .buy-me p {
    font-size: 1rem;
-   line-height: 1rem;
 }
 
 body.device-ipad.orientation-portrait .ipad-port-ok {
