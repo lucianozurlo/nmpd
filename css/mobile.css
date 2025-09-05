@@ -1151,7 +1151,7 @@ body.device-mobile.orientation-portrait .pilltrack .full.xlarge .one_full .conte
    flex-direction: column;
 }
 body.device-mobile.orientation-portrait .full.xlarge.pilltrack-buy-me .one_full .content-full {
-   padding: 0;
+   padding: 0 !important;
 }
 /* body.device-mobile.orientation-portrait .pilltrack .one_half.uses img {
    transform: translateX(-8%);
