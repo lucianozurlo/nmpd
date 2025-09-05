@@ -291,7 +291,8 @@ body.device-mobile.orientation-portrait
 
 body.device-mobile.orientation-portrait #hero-bg-image,
 body.device-mobile.orientation-portrait #page-content .next-project-image-bg.alpha {
-   background-position: 50% 70% !important;
+   /* background-position: 50% 70% !important; */
+   background-position: unset !important;
 }
 
 body.device-mobile.orientation-portrait #hero-bg-image {
