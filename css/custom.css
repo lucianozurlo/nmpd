@@ -73,7 +73,9 @@ a.disabled {
 .lowercase {
    text-transform: lowercase !important;
 }
-
+.flex-column {
+   flex-direction: column;
+}
 img {
    -o-object-fit: contain !important;
    object-fit: contain !important;
@@ -2059,8 +2061,11 @@ body.contactus .socials.contact-center li a {
 
 .buy-me {
    width: 100%;
+   gap: 50px;
    display: flex;
    justify-content: center;
+   flex-direction: column;
+   align-items: center;
 }
 
 .buy-me a {
@@ -2083,6 +2088,50 @@ body.contactus .socials.contact-center li a {
    line-height: 1.4;
    font-weight: 400;
    letter-spacing: -1px;
+}
+.behance-process {
+   display: flex;
+   flex-direction: row;
+   gap: 16px;
+   align-items: center;
+   transition: all 0.2s ease-in-out;
+}
+.behance-process i {
+   color: #222;
+   background-color: #fff;
+   height: 60px;
+   width: 60px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 28px;
+   transform: scale(1);
+   transition: all 0.2s ease-in-out;
+}
+.behance-process h4 {
+   font-size: 28px;
+   font-weight: 400;
+   text-transform: unset;
+   margin-bottom: 0;
+   line-height: 1;
+   letter-spacing: -0.05rem;
+   opacity: 1;
+   transition: all 0.2s ease-in-out;
+}
+a:hover.behance-process {
+   opacity: 1;
+}
+a:hover.behance-process i {
+   transform: scale(1.1);
+}
+a:hover.behance-process h4 {
+   opacity: 0.8;
+}
+
+body.light .behance-process i {
+   color: #fff;
+   background-color: #222;
 }
 
 #page-content.fusion
@@ -2445,6 +2494,9 @@ body.contactus .socials.contact-center li a {
    padding-bottom: calc(5 * var(--vh-fix));
    margin-top: 5%;
 }
+.pilltrack-buy-me .flex-column {
+   gap: 150px;
+}
 
 .pilltrack-buy-me img {
    margin-left: -10%;
@@ -2624,6 +2676,13 @@ body.contactus .socials.contact-center li a {
 
 .kali-cap img.cap {
    max-width: 50vw !important;
+}
+
+#page-content.wellted .behance-process {
+   margin-top: 70px;
+}
+#page-content.ccexquisite .ccexquisite-views {
+   margin-bottom: 70px;
 }
 
 #page-content.iqperfetto
