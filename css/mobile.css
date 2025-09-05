@@ -292,7 +292,7 @@ body.device-mobile.orientation-portrait
 body.device-mobile.orientation-portrait #hero-bg-image,
 body.device-mobile.orientation-portrait #page-content .next-project-image-bg.alpha {
    /* background-position: 50% 70% !important; */
-   transform: translateY(30%) scale(0.8) !important;
+   transform: translateY(24%) scale(0.8) !important;
    width: 100% !important;
    margin-left: 0 !important;
    background-position: unset !important;
