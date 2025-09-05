@@ -101,9 +101,6 @@ body.device-ipad.orientation-landscape .spot {
    width: 14px;
    height: 14px;
 }
-body.device-ipad.orientation-landscape .spots-container.spot-w {
-   width: 100%;
-}
 
 body.device-ipad.orientation-landscape
    #page-content.fusion
@@ -362,6 +359,16 @@ body.device-ipad.orientation-portrait
    > div:nth-child(2) {
    font-size: 13px;
 }
+
+body.device-ipad.orientation-portrait #main.project-detail .grid-item img {
+   max-width: 100%;
+   width: 100%;
+}
+
+body.device-ipad.orientation-portrait .spots-container.spot-w {
+   width: 100%;
+}
+
 body.device-ipad.orientation-portrait #page-content.fusion .fusion-spots .spots-container img {
    max-width: 100%;
 }
