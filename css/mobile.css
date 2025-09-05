@@ -363,7 +363,11 @@ body.device-mobile.orientation-portrait
    #main.project-detail.detail-project
    #hero.has-image
    #hero-bg-image {
-   transform: translate(50%, -9%) scale(2) !important;
+   /* transform: translate(50%, -9%) scale(2) !important; */
+   transform: translateY(20%) scale(0.8) !important;
+   width: 100%;
+   margin-left: 0;
+   background-position: unset !important;
 }
 
 body.device-mobile.orientation-portrait #page-content.skinpro .title-accessories {
