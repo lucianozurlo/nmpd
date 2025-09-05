@@ -659,6 +659,16 @@ body.device-mobile.orientation-portrait .content-half.buy-me-content {
    width: 100% !important;
 }
 
+body.device-mobile.orientation-portrait .behance-process i {
+   height: 50px;
+   width: 50px;
+   font-size: 22px;
+}
+body.device-mobile.orientation-portrait .behance-process h4 {
+   text-align: left;
+   font-size: 22px;
+}
+
 body.device-mobile.orientation-portrait #page-content.fusion .ui-design .content-half p,
 body.device-mobile.orientation-portrait
    #page-content.fusion
