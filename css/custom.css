@@ -62,8 +62,7 @@ a:hover.link-underline {
 a.disabled {
    pointer-events: none !important;
 }
-body.device-desktop .mob-ok,
-body.device-desktop .ipad-ok {
+.mob-ok {
    display: none !important;
 }
 
@@ -2241,7 +2240,7 @@ body.light .behance-process i {
 
 .iqperfetto-det3 {
    transform: translate(-35%, 100%);
-   margin-bottom: 25%;
+   margin-bottom: 45%;
 }
 
 .iqperfetto-det3 .one_full {
