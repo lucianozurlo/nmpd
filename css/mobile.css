@@ -1134,7 +1134,12 @@ body.device-mobile.orientation-portrait .pilltrack-uses .last .content-half {
    right: 0;
 }
 
-body.device-mobile.orientation-portrait .pilltrack-uses .full.xlarge .one_half.last .content-half {
+body.device-mobile.orientation-portrait
+   .pilltrack-uses
+   .full.xlarge
+   .one_half.last
+   .content-half
+   img {
    padding: 0 0 3vw 0 !important;
 }
 
