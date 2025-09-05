@@ -1240,7 +1240,7 @@ body.device-mobile.orientation-portrait #main.project-detail .content-full > img
 }
 
 body.device-mobile.orientation-portrait .ccexquisite-views {
-   margin: 5% 0;
+   margin: -160px 0 0 !important;
 }
 body.device-mobile.orientation-portrait
    #page-content.ccexquisite
