@@ -299,11 +299,11 @@ body.device-mobile.orientation-portrait #page-content .next-project-image-bg.alp
 }
 
 body.device-mobile.orientation-portrait #hero-bg-image {
-   -webkit-animation: backgroundResize 1s ease-in-out forwards !important;
+   /* -webkit-animation: backgroundResize 1s ease-in-out forwards !important;
    animation: backgroundResize 1s ease-in-out forwards !important;
    -webkit-animation-delay: 1.2s !important;
-   animation-delay: 1.2s !important;
-   transform: translate(50%, -15%) scale(2) !important;
+   animation-delay: 1.2s !important; */
+   /* transform: translate(50%, -15%) scale(2) !important; */
 }
 
 @-webkit-keyframes backgroundResize {
