@@ -2685,6 +2685,10 @@ body.light .behance-process i {
    max-width: 50vw !important;
 }
 
+#page-content.kali .behance-process {
+   margin-top: 3rem;
+}
+
 #page-content.wellted .behance-process {
    margin-top: 70px;
 }
