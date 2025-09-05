@@ -1108,7 +1108,7 @@ body.device-mobile.orientation-portrait .pilltrack-led h2 {
 
 body.device-mobile.orientation-portrait .pilltrack-led .last .content-half h2 img {
    margin-left: 30px;
-   padding-top: 8px;
+   padding-top: 54px;
    max-height: 42px !important;
 }
 
@@ -1119,6 +1119,10 @@ body.device-mobile.orientation-portrait .full.xlarge.pilltrack-led .one_half.las
 
 body.device-mobile.orientation-portrait .full.xlarge.pilltrack-led .one_half.last .content-half {
    padding: 10px 12vw 10px 12vw !important;
+}
+
+body.device-mobile.orientation-portrait .pilltrack-uses.full.xlarge .one_half.last .content-half {
+   padding: 30px 0 0 !important;
 }
 
 body.device-mobile.orientation-portrait .pilltrack-uses.content-row.xlarge {
@@ -1142,9 +1146,9 @@ body.device-mobile.orientation-portrait .pilltrack .full.xlarge .one_full .conte
    flex-direction: column;
 }
 
-body.device-mobile.orientation-portrait .pilltrack .one_half.uses img {
+/* body.device-mobile.orientation-portrait .pilltrack .one_half.uses img {
    transform: translateX(-8%);
-}
+} */
 
 body.device-mobile.orientation-portrait .pilltrack-buy-me .buy-me {
    position: relative;
