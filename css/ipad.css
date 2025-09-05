@@ -101,6 +101,10 @@ body.device-ipad.orientation-landscape .spot {
    width: 14px;
    height: 14px;
 }
+body.device-ipad.orientation-landscape .spots-container.spot-w {
+   width: 100%;
+}
+
 body.device-ipad.orientation-landscape
    #page-content.fusion
    .ui-design

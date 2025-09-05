@@ -1,6 +1,6 @@
 (() => {
    // --- utils ---
-   const debounce = (fn, d = 200) => {
+   const debounce = (fn, d = 180) => {
       let t;
       return (...a) => {
          clearTimeout(t);
@@ -33,77 +33,48 @@
       requestAnimationFrame(tick);
    };
 
-   // Swap seguro de un <link rel="stylesheet"> esperando load (con timeout)
-   const swapLink = (oldLink) =>
-      new Promise((resolve) => {
-         const href = oldLink.getAttribute('href');
-         if (!href) return resolve();
-
-         // Siempre partir del href "base" (sin query/hash) y bustear caché
-         const base = href.split('#')[0].split('?')[0];
-         const q = href.includes('?') ? '&' : '?';
-         const bust = `${base}${q}o=${Date.now()}`;
-
-         const newLink = document.createElement('link');
-
-         // Copiar TODOS los atributos excepto href/rel (no toques media/origin/etc.)
-         for (const { name, value } of Array.from(oldLink.attributes)) {
-            if (name === 'href' || name === 'rel') continue;
-            newLink.setAttribute(name, value);
-         }
-         newLink.setAttribute('rel', 'stylesheet');
-         newLink.setAttribute('href', bust);
-
-         let done = false;
-         const finish = () => {
-            if (done) return;
-            done = true;
-            // Remover el viejo sólo cuando el nuevo esté listo (o al timeout)
-            oldLink.remove();
-            resolve();
-         };
-
-         newLink.addEventListener('load', finish, { once: true });
-         newLink.addEventListener('error', finish, { once: true });
-         // Fallback por si Safari nunca dispara 'load' (caso real en rotaciones repetidas)
-         const t = setTimeout(finish, 2000);
-
-         // Insertar el nuevo al lado del viejo para evitar FOUC
-         oldLink.parentNode.insertBefore(newLink, oldLink.nextSibling);
+   // Forzar re-evaluación sin red (sin cambiar href)
+   const reapplyStyles = () => {
+      // 1) “Flip” de media en todos los <link rel="stylesheet">
+      document.querySelectorAll('link[rel~="stylesheet"]').forEach((link) => {
+         const prev = link.media; // puede ser "" (equivale a "all") o una media query
+         link.media = 'not all'; // desactiva
+         // reflow forzado
+         void link.offsetWidth;
+         link.media = prev || 'all'; // reactiva (Safari re-evalúa media queries)
       });
 
-   // Re-evaluar <style> inline (sin deshabilitar) para evitar que queden “pegados”
-   const reEvalInlineStyles = () => {
+      // 2) Nudge a <style> inline (Webpack/Vite) para re-evaluar sin togglear disabled
       document.querySelectorAll('style').forEach((style) => {
-         // Nudge sin modificar reglas efectivas (espacio al final)
          style.textContent = style.textContent + ' ';
       });
-   };
 
-   // Recarga robusta de hojas de estilo (sin carreras)
-   let reloading = false;
-   let lastReloadAt = 0;
-   const reloadStylesheets = async () => {
-      if (reloading) return;
-      reloading = true;
-
-      const links = Array.from(document.querySelectorAll('link[rel="stylesheet"][href]'));
-      // Swap en paralelo y esperar a todos
-      await Promise.all(links.map(swapLink));
-
-      reEvalInlineStyles();
+      // 3) Fix 100vh móvil
       setVH();
 
-      lastReloadAt = Date.now();
-      reloading = false;
+      // 4) Segundo pase (por si el viewport termina de “acomodarse” tarde)
+      setTimeout(() => {
+         document.querySelectorAll('link[rel~="stylesheet"]').forEach((link) => {
+            const prev = link.media;
+            link.media = 'not all';
+            void link.offsetWidth;
+            link.media = prev || 'all';
+         });
+         setVH();
+      }, 200);
    };
 
-   // Fallback extremo: si en 3 s no se aplicó nada, una vez forzar reload dura
+   // (opcional) watchdog: si por algún motivo no hay hojas aplicadas, recarga dura 1 vez
    let hardReloadUsed = false;
-   const fallbackHardReload = () => {
-      if (!hardReloadUsed && Date.now() - lastReloadAt > 3000) {
-         hardReloadUsed = true;
-         location.reload();
+   const watchdog = () => {
+      try {
+         const sheetCount = document.styleSheets.length;
+         if (sheetCount === 0 && !hardReloadUsed) {
+            hardReloadUsed = true;
+            location.reload();
+         }
+      } catch (_) {
+         /* ignore CORS */
       }
    };
 
@@ -111,28 +82,19 @@
 
    const onMaybeRotate = debounce(() => {
       const nowPortrait = isPortrait();
-      if (nowPortrait === lastPortrait) return; // sin cambio real de orientación
+      if (nowPortrait === lastPortrait) return;
       lastPortrait = nowPortrait;
 
-      // Esperar a que el viewport deje de “bailar” y recargar CSS de forma segura
-      waitViewportStable(async () => {
-         await reloadStylesheets();
-         // Si Safari se hace el vivo y no aplicó, fallback (una sola vez)
-         setTimeout(fallbackHardReload, 1200);
+      waitViewportStable(() => {
+         reapplyStyles();
+         setTimeout(watchdog, 900);
       });
    }, 140);
 
-   // Escuchas reales en iPadOS
+   // Listeners
    if (window.visualViewport) {
-      visualViewport.addEventListener(
-         'resize',
-         debounce(() => {
-            setVH();
-         }, 80),
-         { passive: true }
-      );
+      visualViewport.addEventListener('resize', debounce(setVH, 80), { passive: true });
    }
-
    window.addEventListener('orientationchange', onMaybeRotate, { passive: true });
    window.addEventListener('resize', onMaybeRotate, { passive: true });
 
