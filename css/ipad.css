@@ -365,6 +365,12 @@ body.device-ipad.orientation-portrait #main.project-detail .grid-item img {
    width: 100%;
 }
 
+#main.project-detail .grid-container2x2 {
+   row-gap: 10px;
+   -moz-column-gap: 30px;
+   column-gap: 30px;
+}
+
 body.device-ipad.orientation-portrait .spots-container.spot-w {
    width: 100%;
 }
