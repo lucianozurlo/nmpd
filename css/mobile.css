@@ -993,8 +993,8 @@ body.device-mobile.orientation-portrait .iqperfetto-det2 .content-full {
 
 body.device-mobile.orientation-portrait .iqperfetto-det3 {
    transform: unset;
-   margin-bottom: 50px;
-   margin-top: 20px;
+   margin-bottom: 120px;
+   margin-top: 50px;
 }
 
 body.device-mobile.orientation-portrait .iqperfetto-det3 .one_full .content-half img {
