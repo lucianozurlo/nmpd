@@ -750,8 +750,8 @@ body.device-ipad.orientation-portrait
    transform: translate(40%, 470%);
 }
 body.device-ipad.orientation-portrait #page-content.iqperfetto .iqperfetto-det3 {
-   transform: translate(-30%, 170%);
-   margin-bottom: 45%;
+   transform: translate(-30%, 100%);
+   margin-bottom: 30%;
 }
 body.device-ipad.orientation-portrait #page-content.iqperfetto .iqperfetto-det3 .project-info-plus {
    text-align: center;
@@ -763,8 +763,9 @@ body.device-ipad.orientation-portrait #page-content.iqperfetto .iqperfetto-det3 
 }
 
 body.device-ipad.orientation-portrait #page-content.iqperfetto .buy-me {
-   transform: translateX(12vw);
+   /* transform: translateX(12vw); */
    justify-content: flex-start;
+   margin-bottom: -20%;
 }
 
 body.device-ipad.orientation-portrait #page-content.skinpro #main-page-content {
