@@ -292,19 +292,20 @@ body.device-mobile.orientation-portrait
 body.device-mobile.orientation-portrait #hero-bg-image,
 body.device-mobile.orientation-portrait #page-content .next-project-image-bg.alpha {
    /* background-position: 50% 70% !important; */
-   transform: translateY(24%) scale(0.8) !important;
+   transform: scale(0.8) !important;
    width: 100% !important;
+   margin-top: 45%;
    margin-left: 0 !important;
    background-position: unset !important;
 }
 
-body.device-mobile.orientation-portrait #hero-bg-image {
-   /* -webkit-animation: backgroundResize 1s ease-in-out forwards !important;
+/* body.device-mobile.orientation-portrait #hero-bg-image {
+   -webkit-animation: backgroundResize 1s ease-in-out forwards !important;
    animation: backgroundResize 1s ease-in-out forwards !important;
    -webkit-animation-delay: 1.2s !important;
-   animation-delay: 1.2s !important; */
-   /* transform: translate(50%, -15%) scale(2) !important; */
-}
+   animation-delay: 1.2s !important;
+   transform: translate(50%, -15%) scale(2) !important;
+} */
 
 @-webkit-keyframes backgroundResize {
    0% {
