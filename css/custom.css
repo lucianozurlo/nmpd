@@ -2185,10 +2185,11 @@ body.light .behance-process i {
 }
 
 .iqperfetto-spots .spots-container {
-   width: 50% !important;
+   /* width: 50% !important; */
+   width: 80% !important;
    margin-top: -25%;
    margin-left: 0%;
-   transform: translateX(40%);
+   /* transform: translateX(40%); */
 }
 
 .iqperfetto-spots .spots-container img {
