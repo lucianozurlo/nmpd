@@ -46,8 +46,8 @@ body.device-mobile.orientation-portrait
    #main.project-detail.detail-project
    #hero.has-image
    #hero-caption {
-   max-height: calc((var(--vh) * 100) - 74px);
-   max-height: calc((100 * var(--vh-fix)) - 74px);
+   max-height: calc((var(--vh) * 100));
+   max-height: calc((100 * var(--vh-fix)));
 }
 body.device-mobile.orientation-portrait .flexnav.opacity {
    gap: 10px !important;
@@ -299,7 +299,7 @@ body.device-mobile.orientation-portrait #hero-bg-image {
    animation: backgroundResize 1s ease-in-out forwards !important;
    -webkit-animation-delay: 1.2s !important;
    animation-delay: 1.2s !important;
-   transform: translate(50%, -25%) scale(2) !important;
+   transform: translate(50%, -15%) scale(2) !important;
 }
 
 @-webkit-keyframes backgroundResize {
@@ -540,7 +540,8 @@ body.device-mobile.orientation-portrait
    #caption-img
    .inner
    .from {
-   font-size: 5vw;
+   font-size: 6vw;
+   margin-bottom: 2vw;
 }
 
 body.device-mobile.orientation-portrait
@@ -555,7 +556,7 @@ body.device-mobile.orientation-portrait
    #caption-img
    .inner
    .anio {
-   font-size: 3.5vw;
+   font-size: 4.5vw;
 }
 
 body.device-mobile.orientation-portrait
