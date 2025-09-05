@@ -1,105 +1,102 @@
 (() => {
-   // === Utils ===
-   const debounce = (fn, d = 90) => {
-      let t;
-      return (...a) => {
-         clearTimeout(t);
-         t = setTimeout(() => fn(...a), d);
-      };
-   };
-   const isPortrait = () => window.matchMedia('(orientation: portrait)').matches;
-
-   const afterFrames = (n, cb) => {
-      const step = () => (--n <= 0 ? cb() : requestAnimationFrame(step));
-      requestAnimationFrame(step);
-   };
-
-   // Usa visualViewport si existe (mejor señal en iPadOS)
-   const getVWVH = () => {
-      const vv = window.visualViewport;
-      if (vv) return { w: Math.round(vv.width), h: Math.round(vv.height) };
-      return { w: window.innerWidth, h: window.innerHeight };
-   };
-
-   // Espera a que el viewport esté "calmo" N frames seguidos (con tolerancia)
-   const waitViewportCalm = (cb, stableFrames = 2, tol = 2) => {
-      let { w, h } = getVWVH(),
-         ok = 0;
-      const tick = () => {
-         const { w: nw, h: nh } = getVWVH();
-         if (Math.abs(nw - w) <= tol && Math.abs(nh - h) <= tol) ok++;
-         else {
-            w = nw;
-            h = nh;
-            ok = 0;
-         }
-         if (ok >= stableFrames) cb();
-         else requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-   };
-
+   const isPortrait = () => matchMedia('(orientation: portrait)').matches;
    const setVH = () => {
       document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
    };
 
-   // Flip súper liviano: re-eval media queries sin tocar href ni bajar archivos
-   const flipLinks = () => {
-      document.querySelectorAll('link[rel~="stylesheet"]').forEach((link) => {
-         const prev = link.media;
-         link.media = 'not all';
-         void document.documentElement.offsetWidth; // reflow
-         link.media = prev || 'all';
+   // Clona un <link> (mismo href y attrs), espera load/timeout y luego quita el viejo.
+   const twinLink = (oldLink) =>
+      new Promise((resolve) => {
+         // Sólo hojas con href
+         const href = oldLink.getAttribute('href');
+         if (!href) return resolve();
+
+         const nu = document.createElement('link');
+         for (const { name, value } of Array.from(oldLink.attributes)) {
+            if (name === 'rel') continue; // lo seteamos abajo
+            nu.setAttribute(name, value);
+         }
+         nu.setAttribute('rel', 'stylesheet');
+
+         let settled = false;
+         const done = () => {
+            if (settled) return;
+            settled = true;
+            oldLink.remove();
+            resolve();
+         };
+         nu.addEventListener('load', done, { once: true });
+         nu.addEventListener('error', done, { once: true });
+         setTimeout(done, 400); // respaldo corto, mantiene fluidez
+
+         oldLink.parentNode.insertBefore(nu, oldLink.nextSibling);
       });
+
+   const twinAllStyles = async () => {
+      const links = Array.from(document.querySelectorAll('link[rel~="stylesheet"][href]'));
+      if (!links.length) return;
+      await Promise.all(links.map(twinLink));
+      // “Nudge” a <style> inline para re-evaluar sin deshabilitar
+      document.querySelectorAll('style').forEach((s) => (s.textContent += ' '));
    };
 
-   // Nudge a <style> inline sólo en el pass final (evita trabajo extra en fast-path)
-   const nudgeInlineStyles = () => {
-      document.querySelectorAll('style').forEach((style) => {
-         style.textContent = style.textContent + ' ';
-      });
+   // Overlay sutil (fallback cuando no hay View Transitions)
+   const withOverlay = async (fn) => {
+      const o = document.createElement('div');
+      o.style.cssText = `
+      position:fixed;inset:0;pointer-events:none;opacity:0;
+      transition:opacity 120ms ease;
+      background: rgba(0,0,0,0.02); /* casi imperceptible */
+    `;
+      document.body.appendChild(o);
+      requestAnimationFrame(() => (o.style.opacity = '1'));
+
+      try {
+         await fn();
+      } finally {
+         o.style.opacity = '0';
+         o.addEventListener('transitionend', () => o.remove(), { once: true });
+      }
    };
 
-   // Secuencia rápida + estable: inmediato y luego afinado
-   let rotating = false;
-   let lastPortrait = isPortrait();
+   let rotating = false,
+      lastPortrait = isPortrait();
 
-   const fastPass = () => {
-      // Fast-path: aplica YA para que el usuario lo sienta instantáneo
+   const doSwap = async () => {
+      document.documentElement.classList.add('rotating'); // congela scroll, etc.
       setVH();
-      flipLinks();
-      // Reforzá con un segundo flip tras 2 frames (más suave que esperar 200ms)
-      afterFrames(2, flipLinks);
+      await twinAllStyles();
+      requestAnimationFrame(() => {
+         document.documentElement.classList.remove('rotating');
+         rotating = false;
+      });
    };
 
-   const finalPass = () => {
-      waitViewportCalm(
-         () => {
-            setVH();
-            flipLinks();
-            nudgeInlineStyles(); // sólo aquí, cuando todo está estable
-            rotating = false;
-         },
-         3,
-         2
-      );
-   };
-
-   const onRotateMaybe = () => {
-      const nowPortrait = isPortrait();
-      if (nowPortrait === lastPortrait || rotating) return;
+   const runRotation = async () => {
+      if (rotating) return;
       rotating = true;
-      lastPortrait = nowPortrait;
-      fastPass(); // inmediato
-      finalPass(); // afinado breve
+
+      // Si hay View Transitions, usamos snapshot del frame anterior
+      if (document.startViewTransition) {
+         await document.startViewTransition(() => doSwap()).finished;
+      } else {
+         await withOverlay(doSwap);
+      }
+   };
+
+   const onMaybeRotate = () => {
+      const now = isPortrait();
+      if (now === lastPortrait) return;
+      lastPortrait = now;
+      runRotation();
    };
 
    // Listeners
    if (window.visualViewport) {
-      visualViewport.addEventListener('resize', debounce(setVH, 50), { passive: true });
+      visualViewport.addEventListener('resize', () => setVH(), { passive: true });
    }
-   window.addEventListener('orientationchange', onRotateMaybe, { passive: true });
-   window.addEventListener('resize', debounce(onRotateMaybe, 80), { passive: true });
+   window.addEventListener('orientationchange', onMaybeRotate, { passive: true });
+   window.addEventListener('resize', onMaybeRotate, { passive: true });
 
    // Inicial
    setVH();
