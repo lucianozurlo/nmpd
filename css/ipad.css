@@ -363,6 +363,7 @@ body.device-ipad.orientation-portrait
 body.device-ipad.orientation-portrait #main.project-detail .grid-item img {
    max-width: 100%;
    width: 100%;
+   height: 100%;
 }
 
 #main.project-detail .grid-container2x2 {
