@@ -1,7 +1,7 @@
-.mob-ok {
+body.device-mobile .mob-ok {
    display: inherit !important;
 }
-.mob-no {
+body.device-mobile .mob-no {
    display: none !important;
 }
 
