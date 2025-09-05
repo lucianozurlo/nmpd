@@ -27,6 +27,9 @@
    .iqperfetto-det2 .content-full {
       transform: translate(29%, 0%);
    }
+   .iqperfetto-det3 {
+      margin-top: 35%;
+   }
 }
 
 @media (max-width: 1279px) {
