@@ -1071,9 +1071,9 @@ a:hover.project img {
    height: calc(200 * var(--vh-fix));
 }
 
-#main-page-content {
+/* #main-page-content {
    overflow-x: hidden;
-}
+} */
 
 #page-content.ccexquisite .ccexquisite-place .scroll-bound {
    height: calc(var(--vh) * 160);

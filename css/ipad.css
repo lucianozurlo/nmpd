@@ -844,6 +844,15 @@ body.device-ipad.orientation-portrait #page-content.pilltrack h2 img {
 }
 
 body.device-ipad.orientation-portrait
+   #page-content.pilltrack
+   .pilltrack-buy-me
+   .content-full
+   > img {
+   margin-top: 100px;
+   height: unset !important;
+}
+
+body.device-ipad.orientation-portrait
    #page-content.ccexquisite
    .ccexquisite-color
    .wrapper-videos
