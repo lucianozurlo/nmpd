@@ -798,6 +798,7 @@ body.device-ipad.orientation-portrait
 
 body.device-ipad.orientation-portrait #page-content.skinpro .title-accessories {
    margin-top: 150px;
+   margin-bottom: 60px;
 }
 body.device-ipad.orientation-portrait #page-content.skinpro .title-accessories .content-full {
    width: 100%;
@@ -818,7 +819,7 @@ body.device-ipad.orientation-portrait #page-content.skinpro .skinpro-acc .wrappe
 }
 
 body.device-ipad.orientation-portrait #page-content.skinpro .skinpro-buy-me {
-   transform: translateY(4%);
+   transform: translateY(50%);
 }
 
 body.device-ipad.orientation-portrait #page-content.skinpro #main-page-content,
@@ -831,6 +832,17 @@ body.device-ipad.orientation-portrait #page-content.pilltrack .pilltrack-uses {
 }
 body.device-ipad.orientation-portrait #page-content.pilltrack .pilltrack-buy-me {
    margin-top: -20px !important;
+}
+
+body.device-ipad.orientation-portrait
+   #page-content.pilltrack
+   .pilltrack-led
+   .last
+   .content-half
+   h2
+   img {
+   max-height: 30px !important;
+   transform: translateY(-0.6vw);
 }
 
 body.device-ipad.orientation-portrait
