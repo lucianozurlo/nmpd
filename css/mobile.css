@@ -1156,8 +1156,7 @@ body.device-mobile.orientation-portrait .pilltrack-buy-me .buy-me {
    position: relative;
    margin-top: -100px;
 }
-body.device-mobile.orientation-portrait .pilltrack-buy-me .buy-me,
-body.device-mobile.orientation-portrait .pilltrack-buy-me .buy-me * {
+body.device-mobile.orientation-portrait .pilltrack-buy-me .buy-me a {
    width: 90% !important;
    padding: 0 5%;
    display: flex;
