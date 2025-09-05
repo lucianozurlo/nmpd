@@ -30,9 +30,9 @@
   }
 
 #project-nav {
-    bottom: calc(-100vh - calc(var(--vwScale) * 1));
-    height: calc(100vh - calc(var(--vwScale) * 120)) !important;
-    min-height: calc(100vh - calc(var(--vwScale) * 120)) !important;
+    bottom: calc((-100*var(--vh-fix)) - calc(var(--vwScale) * 1));
+    height: calc((100*var(--vh-fix)) - calc(var(--vwScale) * 120)) !important;
+    min-height: calc((100*var(--vh-fix)) - calc(var(--vwScale) * 120)) !important;
   }
 
 .next-project-header {
@@ -41,7 +41,7 @@
   }
 
 #page-content .next-project-image-wrapper {
-    max-height: calc(100vh - 18vh - calc(var(--vwScale) * 44) - calc(var(--vwScale) * 120));
+    max-height: calc((100*var(--vh-fix)) - (18*var(--vh-fix)) - calc(var(--vwScale) * 44) - calc(var(--vwScale) * 120));
   }
 
 .next-project-wrap p {
