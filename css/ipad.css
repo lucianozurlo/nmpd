@@ -513,6 +513,8 @@ body.device-ipad.orientation-portrait #hero-background-layer {
    inset: unset !important;
    max-height: unset !important;
    min-height: 100% !important;
+   height: calc(var(--vh) * 100);
+   height: calc(100 * var(--vh-fix));
 }
 body.device-ipad.orientation-portrait
    #main.project-detail.detail-project
