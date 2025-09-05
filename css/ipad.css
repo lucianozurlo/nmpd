@@ -96,7 +96,15 @@ body.device-ipad.orientation-landscape #hero-description p,
 body.device-ipad.orientation-landscape .buy-me p {
    font-size: 1rem;
 }
-
+body.device-ipad.orientation-landscape .behance-process i {
+   height: 50px;
+   width: 50px;
+   font-size: 22px;
+}
+body.device-ipad.orientation-landscape .behance-process h4 {
+   text-align: left;
+   font-size: 22px;
+}
 body.device-ipad.orientation-landscape .spot {
    width: 14px;
    height: 14px;
@@ -300,6 +308,15 @@ body.device-ipad.orientation-landscape.contactus footer {
 }
 
 /* IPAD LANDSCAPE */
+body.device-ipad.orientation-portrait .behance-process i {
+   height: 50px;
+   width: 50px;
+   font-size: 22px;
+}
+body.device-ipad.orientation-portrait .behance-process h4 {
+   text-align: left;
+   font-size: 22px;
+}
 
 body.device-ipad.orientation-portrait .text,
 body.device-ipad.orientation-portrait .text p,
