@@ -1,3 +1,10 @@
+body.device-ipad .ipad-ok {
+   display: inherit !important;
+}
+body.device-ipad .ipad-no {
+   display: none !important;
+}
+
 /* IPAD LANDSCAPE */
 
 body.device-ipad.orientation-landscape.header {
@@ -398,7 +405,8 @@ body.device-ipad.orientation-portrait #main.project-detail .grid-item img {
 }
 
 body.device-ipad.orientation-portrait .spots-container.spot-w {
-   width: 100%;
+   width: 100% !important;
+   transform: unset;
 }
 
 body.device-ipad.orientation-portrait #page-content.fusion .fusion-spots .spots-container img {
