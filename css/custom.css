@@ -2514,6 +2514,7 @@ body.light .behance-process i {
    bottom: 0;
    width: 90%;
    justify-content: flex-end;
+   padding-bottom: 50px;
 }
 
 .pilltrack-buy-me .buy-me h2 {
