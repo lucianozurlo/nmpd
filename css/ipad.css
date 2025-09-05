@@ -838,13 +838,7 @@ body.device-ipad.orientation-portrait #page-content.pilltrack .pilltrack-uses .f
    display: inline-flex;
 }
 
-body.device-ipad.orientation-portrait
-   #page-content.pilltrack
-   .pilltrack-led
-   .last
-   .content-half
-   h2
-   img {
+body.device-ipad.orientation-portrait #page-content.pilltrack h2 img {
    max-height: 30px !important;
    transform: translateY(-0.6vw);
 }
