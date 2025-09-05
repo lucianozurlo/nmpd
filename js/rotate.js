@@ -1,6 +1,6 @@
 (() => {
-   // --- utils ---
-   const debounce = (fn, d = 180) => {
+   // === Utils ===
+   const debounce = (fn, d = 90) => {
       let t;
       return (...a) => {
          clearTimeout(t);
@@ -9,19 +9,25 @@
    };
    const isPortrait = () => window.matchMedia('(orientation: portrait)').matches;
 
-   const setVH = () => {
-      document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+   const afterFrames = (n, cb) => {
+      const step = () => (--n <= 0 ? cb() : requestAnimationFrame(step));
+      requestAnimationFrame(step);
    };
 
-   // Espera a que innerWidth/innerHeight queden estables N frames seguidos
-   const waitViewportStable = (cb, stableFrames = 6) => {
-      let w = window.innerWidth,
-         h = window.innerHeight,
+   // Usa visualViewport si existe (mejor señal en iPadOS)
+   const getVWVH = () => {
+      const vv = window.visualViewport;
+      if (vv) return { w: Math.round(vv.width), h: Math.round(vv.height) };
+      return { w: window.innerWidth, h: window.innerHeight };
+   };
+
+   // Espera a que el viewport esté "calmo" N frames seguidos (con tolerancia)
+   const waitViewportCalm = (cb, stableFrames = 2, tol = 2) => {
+      let { w, h } = getVWVH(),
          ok = 0;
       const tick = () => {
-         const nw = window.innerWidth,
-            nh = window.innerHeight;
-         if (nw === w && nh === h) ok++;
+         const { w: nw, h: nh } = getVWVH();
+         if (Math.abs(nw - w) <= tol && Math.abs(nh - h) <= tol) ok++;
          else {
             w = nw;
             h = nh;
@@ -33,70 +39,67 @@
       requestAnimationFrame(tick);
    };
 
-   // Forzar re-evaluación sin red (sin cambiar href)
-   const reapplyStyles = () => {
-      // 1) “Flip” de media en todos los <link rel="stylesheet">
-      document.querySelectorAll('link[rel~="stylesheet"]').forEach((link) => {
-         const prev = link.media; // puede ser "" (equivale a "all") o una media query
-         link.media = 'not all'; // desactiva
-         // reflow forzado
-         void link.offsetWidth;
-         link.media = prev || 'all'; // reactiva (Safari re-evalúa media queries)
-      });
+   const setVH = () => {
+      document.documentElement.style.setProperty('--vh', window.innerHeight * 0.01 + 'px');
+   };
 
-      // 2) Nudge a <style> inline (Webpack/Vite) para re-evaluar sin togglear disabled
+   // Flip súper liviano: re-eval media queries sin tocar href ni bajar archivos
+   const flipLinks = () => {
+      document.querySelectorAll('link[rel~="stylesheet"]').forEach((link) => {
+         const prev = link.media;
+         link.media = 'not all';
+         void document.documentElement.offsetWidth; // reflow
+         link.media = prev || 'all';
+      });
+   };
+
+   // Nudge a <style> inline sólo en el pass final (evita trabajo extra en fast-path)
+   const nudgeInlineStyles = () => {
       document.querySelectorAll('style').forEach((style) => {
          style.textContent = style.textContent + ' ';
       });
-
-      // 3) Fix 100vh móvil
-      setVH();
-
-      // 4) Segundo pase (por si el viewport termina de “acomodarse” tarde)
-      setTimeout(() => {
-         document.querySelectorAll('link[rel~="stylesheet"]').forEach((link) => {
-            const prev = link.media;
-            link.media = 'not all';
-            void link.offsetWidth;
-            link.media = prev || 'all';
-         });
-         setVH();
-      }, 200);
    };
 
-   // (opcional) watchdog: si por algún motivo no hay hojas aplicadas, recarga dura 1 vez
-   let hardReloadUsed = false;
-   const watchdog = () => {
-      try {
-         const sheetCount = document.styleSheets.length;
-         if (sheetCount === 0 && !hardReloadUsed) {
-            hardReloadUsed = true;
-            location.reload();
-         }
-      } catch (_) {
-         /* ignore CORS */
-      }
-   };
-
+   // Secuencia rápida + estable: inmediato y luego afinado
+   let rotating = false;
    let lastPortrait = isPortrait();
 
-   const onMaybeRotate = debounce(() => {
-      const nowPortrait = isPortrait();
-      if (nowPortrait === lastPortrait) return;
-      lastPortrait = nowPortrait;
+   const fastPass = () => {
+      // Fast-path: aplica YA para que el usuario lo sienta instantáneo
+      setVH();
+      flipLinks();
+      // Reforzá con un segundo flip tras 2 frames (más suave que esperar 200ms)
+      afterFrames(2, flipLinks);
+   };
 
-      waitViewportStable(() => {
-         reapplyStyles();
-         setTimeout(watchdog, 900);
-      });
-   }, 140);
+   const finalPass = () => {
+      waitViewportCalm(
+         () => {
+            setVH();
+            flipLinks();
+            nudgeInlineStyles(); // sólo aquí, cuando todo está estable
+            rotating = false;
+         },
+         3,
+         2
+      );
+   };
+
+   const onRotateMaybe = () => {
+      const nowPortrait = isPortrait();
+      if (nowPortrait === lastPortrait || rotating) return;
+      rotating = true;
+      lastPortrait = nowPortrait;
+      fastPass(); // inmediato
+      finalPass(); // afinado breve
+   };
 
    // Listeners
    if (window.visualViewport) {
-      visualViewport.addEventListener('resize', debounce(setVH, 80), { passive: true });
+      visualViewport.addEventListener('resize', debounce(setVH, 50), { passive: true });
    }
-   window.addEventListener('orientationchange', onMaybeRotate, { passive: true });
-   window.addEventListener('resize', onMaybeRotate, { passive: true });
+   window.addEventListener('orientationchange', onRotateMaybe, { passive: true });
+   window.addEventListener('resize', debounce(onRotateMaybe, 80), { passive: true });
 
    // Inicial
    setVH();
