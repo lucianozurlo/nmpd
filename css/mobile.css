@@ -1157,6 +1157,12 @@ body.device-mobile.orientation-portrait .full.xlarge.pilltrack-buy-me .one_full 
    transform: translateX(-8%);
 } */
 
+body.device-mobile.orientation-portrait .pilltrack-buy-me {
+   padding-bottom: 0;
+   margin-top: 10%;
+   margin-bottom: 100px;
+}
+
 body.device-mobile.orientation-portrait .pilltrack-buy-me .buy-me {
    position: relative;
    margin-top: -100px;
@@ -1171,13 +1177,7 @@ body.device-mobile.orientation-portrait .pilltrack-buy-me .buy-me a {
 
 body.device-mobile.orientation-portrait .pilltrack-buy-me .buy-me-content img {
    width: 125% !important;
-   margin-left: -5% !important;
-}
-
-body.device-mobile.orientation-portrait .pilltrack-buy-me {
-   padding-bottom: 0;
-   margin-top: 10%;
-   margin-bottom: 100px;
+   margin-left: 10% !important;
 }
 
 body.device-mobile.orientation-portrait .pilltrack-buy-me img {
