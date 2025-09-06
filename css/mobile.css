@@ -645,7 +645,7 @@ body.device-mobile.orientation-portrait .wrapper-videos video {
    max-width: unset;
 }
 body.device-mobile.orientation-portrait .video-scroll {
-   max-width: 90%;
+   max-width: 100%;
    margin: 0 5% !important;
    height: unset !important;
 }
@@ -1218,11 +1218,11 @@ body.device-mobile.orientation-portrait .ccexquisite-place .image-sequence img,
 body.device-mobile.orientation-portrait .ccexquisite-color .image-sequence img,
 body.device-mobile.orientation-portrait .ccexquisite-exploded .image-sequence img,
 body.device-mobile.orientation-portrait .kali-ope .image-sequence img {
-   width: 90%;
+   width: 100%;
 }
 
 body.device-mobile.orientation-portrait .ccexquisite-color .video-scroll {
-   max-width: 90% !important;
+   max-width: 100% !important;
    min-height: unset;
    margin-bottom: 25% !important;
 }
