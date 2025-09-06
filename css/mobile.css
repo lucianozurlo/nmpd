@@ -1227,6 +1227,21 @@ body.device-mobile.orientation-portrait .ccexquisite-color .video-scroll {
    margin-bottom: 25% !important;
 }
 
+body.device-mobile.orientation-portrait
+   .full.xlarge.ccexquisite-color-title
+   .one_half
+   .content-half {
+   padding: 0;
+}
+
+body.device-mobile.orientation-portrait
+   #page-content.ccexquisite
+   .ccexquisite-color
+   .wrapper-videos
+   video {
+   margin: -70px 0 !important;
+}
+
 body.device-mobile.orientation-portrait .ccexquisite-exploded-t {
    margin-top: 0;
 }
@@ -1393,10 +1408,6 @@ body.device-mobile.orientation-portrait
    .scroll-bound
    .image-sequence {
    margin: -150px 0 !important;
-}
-
-body.device-mobile.orientation-portrait #page-content.ccexquisite .wrapper-videos video {
-   margin: -50px 0 !important;
 }
 
 body.device-mobile.orientation-portrait .next-project-wrap p {
