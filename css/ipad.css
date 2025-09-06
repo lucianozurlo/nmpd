@@ -307,8 +307,12 @@ body.device-ipad.orientation-landscape.contactus footer {
    bottom: 0;
 }
 
+body.device-ipad.orientation-landscape #page-content.iqperfetto .iqperfetto-det2 {
+   margin-top: -10%;
+}
 body.device-ipad.orientation-landscape #page-content.iqperfetto .iqperfetto-det3 {
-   margin-bottom: 30%;
+   margin-bottom: 40%;
+   margin-top: 20%;
 }
 
 body.device-ipad.orientation-landscape #page-content.iqperfetto .iqperfetto-spots .spots-container {
