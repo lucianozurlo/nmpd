@@ -1234,10 +1234,6 @@ body.device-mobile.orientation-portrait
    padding: 0;
 }
 
-body.device-mobile.orientation-portrait #page-content.ccexquisite .content-max-width {
-   overflow: hidden;
-}
-
 body.device-mobile.orientation-portrait
    #page-content.ccexquisite
    .ccexquisite-color
