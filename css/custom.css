@@ -1471,7 +1471,6 @@ video {
    width: 95%;
    margin: 0 auto;
 }
-
 #main.project-detail .content-full > img {
    height: calc((var(--vh) * 80) - 100px);
    height: calc((80 * var(--vh-fix)) - 100px);
