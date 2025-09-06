@@ -8,10 +8,10 @@ body.device-ipad.orientation-landscape .icon-wrap {
    height: 60px;
 }
 body.device-ipad.orientation-landscape #main.home #hero-caption .hero-title {
-   height: calc((var(--vh) * 100) - 60px);
-   height: calc((100 * var(--vh-fix)) - 60px);
-   max-height: calc((var(--vh) * 100) - 60px);
-   max-height: calc((100 * var(--vh-fix)) - 60px);
+   height: calc((var(--vh) * 100));
+   height: calc((100 * var(--vh-fix)));
+   max-height: calc((var(--vh) * 100));
+   max-height: calc((100 * var(--vh-fix)));
 }
 body.device-ipad.orientation-landscape .hero-arrow {
    width: 32px;
