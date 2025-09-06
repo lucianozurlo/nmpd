@@ -833,6 +833,14 @@ body.device-ipad.orientation-portrait #page-content.pilltrack #main-page-content
    padding-bottom: 0 !important;
 }
 
+body.device-ipad.orientation-landscape
+   #page-content.pilltrack
+   .pilltrack-led.full.xlarge
+   .one_half.last
+   .content-half {
+   padding: 10px 12vw 10px 0px !important;
+}
+
 body.device-ipad.orientation-portrait #page-content.pilltrack .pilltrack-uses {
    padding-bottom: 0 !important;
 }
