@@ -1221,6 +1221,11 @@ body.device-mobile.orientation-portrait .kali-ope .image-sequence img {
    width: 100%;
 }
 
+body.device-mobile.orientation-portrait #page-content.ccexquisite .ccexquisite-color-title {
+   margin-top: calc((var(--vh) * 8));
+   margin-top: calc((8 * var(--vh-fix)));
+}
+
 body.device-mobile.orientation-portrait .ccexquisite-color .video-scroll {
    max-width: 100% !important;
    min-height: unset;
@@ -1263,12 +1268,15 @@ body.device-mobile.orientation-portrait #main.project-detail .content-full > img
    max-height: unset !important;
 }
 
-body.device-mobile.orientation-portrait #page-content.ccexquisite .content-max-width {
-   overflow: hidden;
-}
-
 body.device-mobile.orientation-portrait .ccexquisite-views {
    margin: -160px 0 0 !important;
+}
+body.device-mobile.orientation-portrait
+   #page-content.ccexquisite
+   .ccexquisite-views
+   .content-full
+   > img {
+   display: block;
 }
 
 body.device-mobile.orientation-portrait
