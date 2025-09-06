@@ -2726,6 +2726,14 @@ a:hover.link-underline {
     margin-top: calc(var(--vwScale) * 80);
   }
 
+.wrapper-videos video {
+    height: calc((80 * var(--vh-fix)) - calc(var(--vwScale) * 100));
+    max-height: calc((80 * var(--vh-fix)) - calc(var(--vwScale) * 100));
+    width: calc(80vw - calc(var(--vwScale) * 100));
+    max-width: calc(80vw - calc(var(--vwScale) * 100));
+    padding-top: calc((20 * var(--vh-fix)) - calc(var(--vwScale) * 50));
+  }
+
 .project .project-info h2 {
     margin-bottom: calc(var(--vwScale) * 7);
   }
@@ -2983,6 +2991,10 @@ body.contactus .socials.contact-center li a {
     gap: calc(var(--vwScale) * 150);
   }
 
+.pilltrack-buy-me .buy-me {
+    padding-bottom: calc(var(--vwScale) * 50);
+  }
+
 .pilltrack-buy-me .buy-me h2 {
     margin-bottom: calc(var(--vwScale) * 50);
   }
@@ -3058,14 +3070,6 @@ body.contactus .socials.contact-center li a {
 
 .wellted-details {
     margin-top: calc(var(--vwScale) * 150) !important;
-  }
-
-.wrapper-videos video {
-    height: calc((80 * var(--vh-fix)) - calc(var(--vwScale) * 100));
-    max-height: calc((80 * var(--vh-fix)) - calc(var(--vwScale) * 100));
-    width: calc(80vw - calc(var(--vwScale) * 100));
-    max-width: calc(80vw - calc(var(--vwScale) * 100));
-    padding-top: calc((20 * var(--vh-fix)) - calc(var(--vwScale) * 50));
   }
 
 body.contactus #contact {
