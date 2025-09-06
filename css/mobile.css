@@ -1263,9 +1263,14 @@ body.device-mobile.orientation-portrait #main.project-detail .content-full > img
    max-height: unset !important;
 }
 
+body.device-mobile.orientation-portrait #page-content.ccexquisite .content-max-width {
+   overflow: hidden;
+}
+
 body.device-mobile.orientation-portrait .ccexquisite-views {
    margin: -160px 0 0 !important;
 }
+
 body.device-mobile.orientation-portrait
    #page-content.ccexquisite
    .ccexquisite-place
