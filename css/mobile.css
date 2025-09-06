@@ -1228,7 +1228,7 @@ body.device-mobile.orientation-portrait .ccexquisite-exploded-t .content-full {
 
 body.device-mobile.orientation-portrait .ccexquisite-views .max-height-110,
 body.device-mobile.orientation-portrait #main.project-detail .content-full > img {
-   width: 90%;
+   width: 100%;
    margin: 0 auto;
    display: flex;
    justify-content: center;
