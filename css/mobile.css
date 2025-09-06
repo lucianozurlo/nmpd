@@ -820,6 +820,15 @@ body.device-mobile.orientation-portrait #page-content.fusion .views .spots-conta
    padding: 60px 0;
 }
 
+body.device-mobile.orientation-portrait
+   #page-content.fusion
+   .full.xlarge.views-fusion
+   .one_full
+   .content-full {
+   margin-top: -20% !important;
+   margin-bottom: -10% !important;
+}
+
 body.device-mobile.orientation-portrait #page-content.iqperfetto #main-page-content,
 body.device-mobile.orientation-portrait #page-content.skinpro #main-page-content,
 body.device-mobile.orientation-portrait #page-content.pilltrack #main-page-content {
