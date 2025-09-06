@@ -653,6 +653,13 @@ body.device-ipad.orientation-portrait .full.xlarge .one_half.last .content-half 
    width: 100%;
 }
 
+body.device-ipad.orientation-portrait .full.xlarge .one_half.last .content-half {
+   margin-left: 0;
+   margin-bottom: 0;
+   padding: 10px 12vw 10px 0;
+   max-width: 100%;
+   width: 100%;
+}
 body.device-ipad.orientation-portrait #page-content.iqperfetto #main-page-content {
    padding-bottom: 100px !important;
    overflow-x: hidden;
@@ -837,15 +844,14 @@ body.device-ipad.orientation-portrait #page-content.pilltrack #main-page-content
    padding-bottom: 0 !important;
 }
 
-body.device-ipad.orientation-landscape
+body.device-ipad.orientation-portrait
    #page-content.pilltrack
    .pilltrack-led.full.xlarge
    .one_half.last
    .content-half {
    padding: 10px 12vw 10px 0px !important;
 }
-
-body.device-ipad.orientation-landscape #page-content.pilltrack .pilltrack-led .last .content-half {
+body.device-ipad.orientation-portrait #page-content.pilltrack .pilltrack-led .last .content-half {
    transform: translateX(0%);
 }
 
