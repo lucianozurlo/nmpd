@@ -1233,6 +1233,14 @@ body.device-mobile.orientation-portrait .ccexquisite-color .video-scroll {
 }
 
 body.device-mobile.orientation-portrait
+   #page-content.ccexquisite
+   #main-page-content
+   div:nth-child(6)
+   .content-max-width {
+   overflow: hidden;
+}
+
+body.device-mobile.orientation-portrait
    .full.xlarge.ccexquisite-color-title
    .one_half
    .content-half {
