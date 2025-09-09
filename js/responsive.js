@@ -1,4 +1,3 @@
-/* Detección robusta de iPad (incluye iPadOS que se reporta como "Mac") */
 function isIPad() {
   const ua = navigator.userAgent || '';
   const isiPadUA = /\biPad\b/.test(ua);
@@ -8,13 +7,11 @@ function isIPad() {
 
 function isPhone() {
   const ua = navigator.userAgent || '';
-  // Consideramos móviles comunes (sin contar iPad)
   const isMobileUA = /\b(Mobi|Android|iPhone|iPod)\b/i.test(ua);
   return isMobileUA && !isIPad();
 }
 
 function currentOrientation() {
-  // Fallback sólido por si no existe screen.orientation
   const landscape =
     (screen.orientation && screen.orientation.type.includes('landscape')) || window.innerWidth > window.innerHeight;
   return landscape ? 'landscape' : 'portrait';
@@ -50,7 +47,6 @@ function updateLabel() {
   vw.textContent = `Viewport: ${window.innerWidth}×${window.innerHeight}`;
 }
 
-// Reaccionar a rotación y resize
 window.addEventListener('orientationchange', applyClasses);
 window.addEventListener('resize', applyClasses);
 
