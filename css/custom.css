@@ -2122,11 +2122,11 @@ body.contactus .socials.contact-center li a {
 
 .buy-me {
    width: 100%;
-   gap: 50px;
+   gap: 40px;
    display: flex;
    justify-content: center;
-   flex-direction: column;
-   align-items: center;
+   flex-direction: row;
+   align-items: flex-start;
 }
 
 .buy-me a {
@@ -2157,6 +2157,18 @@ body.contactus .socials.contact-center li a {
    align-items: center;
    transition: all 0.2s ease-in-out;
 }
+.behance-process.buy {
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+.behance-process.buy .buy-me-main {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 16px;
+}
+
 .behance-process i {
    color: #222;
    background-color: #fff;
@@ -2207,6 +2219,10 @@ body.light .behance-process i {
 
 .fusion-spots .spots-container {
    transform: translateX(-5%);
+}
+
+.fusion-views {
+   margin-top: 170px;
 }
 
 .fusion-views .content-half.max-width-unset {
@@ -2564,7 +2580,7 @@ body.light .behance-process i {
    margin-left: -10%;
 }
 
-.pilltrack-buy-me .buy-me {
+/* .pilltrack-buy-me .buy-me {
    position: absolute;
    bottom: 0;
    width: 90%;
@@ -2576,7 +2592,7 @@ body.light .behance-process i {
    width: 90%;
    line-height: 0.9;
    margin-bottom: 50px;
-}
+} */
 
 #page-content.ccexquisite #video-restart.video-scroll {
    min-height: calc((var(--vh) * 80) - 100px);
