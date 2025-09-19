@@ -2122,13 +2122,16 @@ body.contactus .socials.contact-center li a {
 
 .buy-me {
    width: 100%;
-   gap: 40px;
+   gap: 67px;
    display: flex;
    justify-content: center;
    flex-direction: row;
    align-items: flex-start;
 }
 
+#page-content.fusion .buy-me {
+   margin-top: 100px;
+}
 .buy-me a {
    text-align: center;
    opacity: 1;
@@ -2182,9 +2185,24 @@ body.contactus .socials.contact-center li a {
    transform: scale(1);
    transition: all 0.2s ease-in-out;
 }
+
+.behance-process.buy .buy-me-main .bag {
+   height: 60px;
+   width: 60px;
+   background-image: url('../img/buy-me-bag-dark.svg');
+   border-radius: 50%;
+   background-color: #fff;
+   transition: all 0.2s ease-in-out;
+}
+
+.light-section .behance-process.buy .buy-me-main .bag {
+   background-image: url('../img/buy-me-bag.svg');
+   background-color: #222;
+}
+
 .behance-process h4 {
    font-size: 28px;
-   font-weight: 400;
+   font-weight: 300;
    text-transform: unset;
    margin-bottom: 0;
    line-height: 1;
@@ -2192,17 +2210,26 @@ body.contactus .socials.contact-center li a {
    opacity: 1;
    transition: all 0.2s ease-in-out;
 }
+.behance-process.buy p {
+   opacity: 0;
+   transition: all 0.2s ease-in-out;
+}
+
 a:hover.behance-process {
    opacity: 1;
 }
-a:hover.behance-process i {
+a:hover.behance-process i,
+a:hover.behance-process.buy .buy-me-main .bag {
    transform: scale(1.1);
 }
 a:hover.behance-process h4 {
    opacity: 0.8;
 }
-
-body.light .behance-process i {
+a:hover.behance-process.buy p {
+   opacity: 0.6;
+}
+body.light .behance-process i,
+body.light .behance-process img {
    color: #fff;
    background-color: #222;
 }
@@ -2247,7 +2274,11 @@ body.light .behance-process i {
 }
 
 #page-content.fusion .buy-me {
-   margin-bottom: 100px !important;
+   margin-top: 90px !important;
+}
+#page-content.iqperfetto .buy-me,
+#page-content.wellted .buy-me {
+   margin-top: 30px !important;
 }
 
 .iqperfetto-ultra {

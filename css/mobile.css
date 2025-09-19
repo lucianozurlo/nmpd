@@ -652,6 +652,12 @@ body.device-mobile.orientation-portrait .video-scroll {
 
 body.device-mobile.orientation-portrait .buy-me {
    flex-direction: column;
+   gap: 30px;
+   align-items: center;
+}
+
+body.device-mobile.orientation-portrait .buy-me a {
+   width: 240px;
 }
 
 body.device-mobile.orientation-portrait .buy-me p {
@@ -669,11 +675,13 @@ body.device-mobile.orientation-portrait .content-half.buy-me-content {
    width: 100%;
 } */
 
-body.device-mobile.orientation-portrait .behance-process i {
+body.device-mobile.orientation-portrait .behance-process i,
+body.device-mobile.orientation-portrait .behance-process.buy .buy-me-main .bag {
    height: 50px;
    width: 50px;
    font-size: 22px;
 }
+
 body.device-mobile.orientation-portrait .behance-process h4 {
    text-align: left;
    font-size: 22px;
@@ -894,9 +902,9 @@ body.device-mobile.orientation-portrait
    position: relative;
 }
 
-body.device-mobile.orientation-portrait #page-content.fusion .buy-me {
+/* body.device-mobile.orientation-portrait #page-content.fusion .buy-me {
    margin-bottom: 0 !important;
-}
+} */
 body.device-mobile.orientation-portrait #page-content.iqperfetto .iqperfetto-det1 {
    margin-top: 30px !important;
 }
