@@ -2984,6 +2984,10 @@ body.contactus .socials.contact-center li a {
     height: calc((85 * var(--vh-fix)) - calc(var(--vwScale) * 100));
   }
 
+.skinpro-buy-me {
+    margin-top: calc(var(--vwScale) * 100);
+  }
+
 .skinpro-acc {
     margin-top: calc(var(--vwScale) * -200) !important;
   }

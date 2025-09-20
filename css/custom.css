@@ -2523,10 +2523,7 @@ body.light .behance-process img {
 }
 
 .skinpro-buy-me {
-   position: absolute;
-   bottom: 0;
-   padding-right: 10% !important;
-   justify-content: flex-end;
+   margin-top: 100px;
 }
 
 .skinpro-acc {

@@ -1100,10 +1100,16 @@ body.device-mobile.orientation-portrait .skinpro-buy-me {
    position: relative;
    width: 100% !important;
    padding: 0 !important;
-   margin: 0 !important;
+   margin: 50px 0 0 !important;
    margin-bottom: 100px !important;
 }
 
+body.device-mobile.orientation-portrait
+   .skinpro-buy-me.full.xlarge
+   .one_full
+   .content-full.buy-me-content {
+   padding: 0 !important;
+}
 body.device-mobile.orientation-portrait .pilltrack-led .content-half img {
    width: 100%;
    max-height: unset !important;
